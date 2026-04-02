@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conseil - BK ENTREPRISE</title>
+  <meta name="description" content="Conseil stratégique, cadrage de projets, accompagnement digital et image professionnelle avec BK ENTREPRISE." />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Fond noir luxueux */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      color: #ffffff;
+      overflow-x: hidden;
+      background: #000000;
+      position: relative;
+    }
+
+    /* Overlay doré avec étoiles générées en CSS */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 200%;
+      height: 200%;
+      background: transparent;
+      z-index: -1;
+      box-shadow:
+        50px 100px #FFD700, 200px 300px #FFD700, 400px 150px #FFD700,
+        600px 500px #FFD700, 800px 250px #FFD700, 1000px 700px #FFD700,
+        1200px 600px #FFD700, 1400px 850px #FFD700, 1600px 450px #FFD700,
+        1800px 300px #FFD700, 200px 900px #FFD700, 400px 1100px #FFD700,
+        600px 1000px #FFD700, 800px 1300px #FFD700, 1000px 1200px #FFD700;
+      animation: moveStars 300s linear infinite;
+    }
+
+    @keyframes moveStars {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(-1200px, -600px); }
+    }
+
+    /* Overlay sur la vidéo hero pour lisibilité */
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo BK ENTREPRISE" /></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="services-it.html">IT</a>
+      <a href="evenement.html">Événementiel</a>
+      <a href="conseil.html" class="active">Conseil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero small-hero">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="videos/presentation5.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Conseil</p>
+        <h1>Vision, cadrage & accompagnement</h1>
+        <p class="hero-text">Nous clarifions vos objectifs, structurons vos projets et renforçons votre image pour un impact immédiat.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-tag">Stratégie</span>
+            <h3>Conseil digital</h3>
+            <p>Optimisez votre présence en ligne et renforcez votre image professionnelle avec des recommandations concrètes et efficaces.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-tag">Projet</span>
+            <h3>Cadrage & organisation</h3>
+            <p>Priorisation, planification et structuration des actions pour faire avancer vos projets de manière fluide et claire.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-tag">Marque</span>
+            <h3>Positionnement</h3>
+            <p>Travail sur l’image perçue, la crédibilité et la manière de mieux présenter votre activité pour vous démarquer.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-tag">Accompagnement</span>
+            <h3>Suivi personnalisé</h3>
+            <p>Une relation directe et proactive pour assurer cohérence et lisibilité dans toutes vos décisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="section showcase">
+      <div class="container">
+        <div class="showcase-grid">
+
+          <article class="showcase-card large reveal">
+            <div class="media-wrap">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="videos/presentation6.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="showcase-content">
+              <span class="service-tag">Accompagnement</span>
+              <h3>Une approche structurée et claire</h3>
+              <p>Des conseils concrets et une vision globale pour avancer avec confiance et efficacité.</p>
+            </div>
+          </article>
+
+          <article class="showcase-card reveal">
+            <div class="media-wrap">
+              <img src="images/project3.jpg" alt="Conseil digital BK ENTREPRISE" />
+            </div>
+            <div class="showcase-content">
+              <span class="service-tag">Conseil</span>
+              <h3>Image & stratégie</h3>
+              <p>Un cadre clair pour renforcer l’impact de votre activité et améliorer votre perception professionnelle.</p>
+            </div>
+          </article>
+
+          <article class="showcase-card reveal">
+            <div class="media-wrap">
+              <img src="images/project1.jpg" alt="Accompagnement BK ENTREPRISE" />
+            </div>
+            <div class="showcase-content">
+              <span class="service-tag">Projet</span>
+              <h3>Orientation & exécution</h3>
+              <p>Des choix mieux définis pour un résultat professionnel, cohérent et visible.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 BK ENTREPRISE — IT, événementiel, conseil, design & communication</p>
+  </footer>
+
+  <script src="scripte.js"></script>
+</body>
+</html>

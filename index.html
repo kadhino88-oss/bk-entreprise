@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BK Entreprise | Création de site internet, services IT, communication digitale</title>
+  <meta name="description" content="BK Entreprise accompagne les entrepreneurs, commerces et entreprises avec des services de création de site internet, services IT, communication visuelle, gestion des réseaux sociaux, événementiel et conseil digital." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="création site internet, services IT, communication digitale, gestion réseaux sociaux, création web, site vitrine, prestataire digital, communication visuelle, BK Entreprise" />
+  <link rel="canonical" href="https://www.bk-entreprise.com/" />
+
+  <meta property="og:title" content="BK Entreprise | Création de site internet, services IT, communication digitale" />
+  <meta property="og:description" content="Création de site internet, services IT, communication visuelle, réseaux sociaux, événementiel et conseil pour entreprises et entrepreneurs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bk-entreprise.com/" />
+  <meta property="og:image" content="https://www.bk-entreprise.com/images/logo.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BK Entreprise | Création de site internet, services IT, communication digitale" />
+  <meta name="twitter:description" content="BK Entreprise accompagne les entreprises avec des solutions web, IT et communication digitale." />
+  <meta name="twitter:image" content="https://www.bk-entreprise.com/images/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "BK Entreprise",
+    "url": "https://www.bk-entreprise.com/",
+    "logo": "https://www.bk-entreprise.com/images/logo.png",
+    "description": "BK Entreprise propose la création de site internet, les services IT, la communication digitale, la communication visuelle, l'événementiel et le conseil.",
+    "areaServed": "France",
+    "serviceType": [
+      "Création de site internet",
+      "Services IT",
+      "Communication digitale",
+      "Communication visuelle",
+      "Gestion des réseaux sociaux",
+      "Événementiel",
+      "Conseil"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-dark: #071a2f;
+      --bg-mid: #0b2747;
+      --bg-light: #0f3b68;
+      --accent: #f5b041;
+      --accent-2: #00c2ff;
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --card: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 50px rgba(0,0,0,0.28);
+      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10) 1px, transparent 1.6px),
+        radial-gradient(circle at 80% 25%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
+        radial-gradient(circle at 35% 75%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
+        linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 45%, var(--bg-light) 100%);
+      background-size: 220px 220px, 300px 300px, 260px 260px, cover;
+      background-attachment: fixed;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.35;
+      background-image:
+        radial-gradient(2px 2px at 10% 18%, rgba(255,255,255,0.90), transparent 60%),
+        radial-gradient(2px 2px at 22% 74%, rgba(255,255,255,0.75), transparent 60%),
+        radial-gradient(1.8px 1.8px at 37% 42%, rgba(255,255,255,0.85), transparent 60%),
+        radial-gradient(2px 2px at 56% 20%, rgba(255,255,255,0.70), transparent 60%),
+        radial-gradient(1.5px 1.5px at 68% 58%, rgba(255,255,255,0.70), transparent 60%),
+        radial-gradient(2px 2px at 83% 33%, rgba(255,255,255,0.82), transparent 60%),
+        radial-gradient(1.5px 1.5px at 92% 76%, rgba(255,255,255,0.65), transparent 60%);
+      animation: starsFloat 10s linear infinite alternate;
+    }
+
+    @keyframes starsFloat {
+      0% { opacity: 0.2; transform: translateY(0); }
+      100% { opacity: 0.38; transform: translateY(-8px); }
+    }
+
+    header, nav, section, footer, .container, .card, .hero, .overlay, .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; display: block; }
+
+    .container { width: min(1180px, 92%); margin: 0 auto; }
+    .section { padding: 90px 0; }
+
+    .section-title, .section-subtitle, .card h3, .card h4, .hero h1, .hero h2 {
+      position: relative;
+    }
+
+    .section-title a, .section-subtitle a, .card h3 a, .card h4 a, .hero h1 a, .hero h2 a {
+      color: inherit;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .section-title a:hover, .section-subtitle a:hover, .card h3 a:hover, .card h4 a:hover, .hero h1 a:hover, .hero h2 a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(245,176,65,0.35);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(12px);
+      background: rgba(7,26,47,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 14px rgba(255,255,255,0.08));
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-weight: 600;
+      opacity: 0.92;
+      transition: 0.25s ease;
+      padding: 8px 0;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .btn, .btn-outline {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--accent), #ffcf6b);
+      color: #071a2f;
+      box-shadow: 0 14px 28px rgba(245,176,65,0.28);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,26,47,0.58), rgba(7,26,47,0.84)),
+                  radial-gradient(circle at center, rgba(0,194,255,0.10), transparent 45%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      padding: 120px 0 80px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.6rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .grid-2, .grid-3, .grid-4, .grid-5 {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      transition: 0.35s ease;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(245,176,65,0.28);
+    }
+
+    .card img, .card video {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      margin-bottom: 18px;
+    }
+
+    .card video { min-height: 220px; max-height: 220px; }
+    .card img { min-height: 220px; max-height: 220px; }
+
+    .card h3, .card h4 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p { color: var(--muted); }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .portfolio-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      transition: 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245,176,65,0.28);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portfolio-caption { padding: 14px 16px 18px; }
+    .portfolio-caption h4 { font-size: 1rem; margin-bottom: 6px; }
+    .portfolio-caption p { color: var(--muted); font-size: 0.92rem; }
+
+    .kpi-boxes {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .kpi {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .kpi strong {
+      font-size: 1.8rem;
+      display: block;
+      color: var(--accent);
+    }
+
+    .kpi span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .media-showcase {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .media-showcase video, .media-showcase img {
+      border-radius: 18px;
+      min-height: 240px;
+      max-height: 320px;
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(245,176,65,0.16), rgba(0,194,255,0.12));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .small {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .seo-text {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      background: rgba(0,0,0,0.12);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .portfolio-grid, .grid-4, .grid-3, .grid-2, .kpi-boxes, .media-showcase {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle { display: inline-block; }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 0 6px;
+      }
+
+      .nav-links.open { display: flex; }
+
+      .portfolio-grid, .grid-4, .grid-3, .grid-2, .kpi-boxes, .media-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content { padding: 110px 0 70px; }
+      .hero-actions { flex-direction: column; }
+
+      .card img, .card video, .media-showcase img, .media-showcase video, .portfolio-item img {
+        min-height: auto;
+        max-height: none;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container navbar">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="Logo BK Entreprise création web et services IT">
+        <div class="logo-text">BK ENTREPRISE</div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">Menu</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="services-it.html">Services IT</a>
+        <a href="evenement.html">Événementiel</a>
+        <a href="conseil.html">Conseil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="videos/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content reveal">
+      <div class="hero-badge">Création de site internet • Services IT • Communication digitale • Réseaux sociaux • Conseil</div>
+
+      <h1>
+        <a href="contact.html">BK Entreprise, votre partenaire en création de site internet, services IT et communication digitale</a>
+      </h1>
+
+      <p>
+        BK Entreprise accompagne les entrepreneurs, commerces, indépendants et entreprises dans la création de site internet professionnel, l’amélioration de leur image de marque, la communication visuelle, les services IT et le développement de leur visibilité en ligne. Notre objectif est simple : vous aider à présenter une activité sérieuse, crédible, moderne et visible sur Google.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="contact.html">Demander un devis</a>
+        <a class="btn-outline" href="portfolio.html">Voir nos réalisations</a>
+      </div>
+
+      <div class="kpi-boxes">
+        <div class="kpi">
+          <strong>Web</strong>
+          <span>Création de site vitrine et présence en ligne</span>
+        </div>
+        <div class="kpi">
+          <strong>IT</strong>
+          <span>Services informatiques et accompagnement digital</span>
+        </div>
+        <div class="kpi">
+          <strong>Image</strong>
+          <span>Communication visuelle plus professionnelle</span>
+        </div>
+        <div class="kpi">
+          <strong>Impact</strong>
+          <span>Visibilité, crédibilité et confiance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><a href="services-it.html">BK Entreprise : une solution digitale complète</a></h2>
+      <p class="section-subtitle small" style="margin-top:10px;">
+        <a href="portfolio.html">Des prestations pensées pour renforcer votre présence en ligne, votre image et votre visibilité.</a>
+      </p>
+
+      <div class="grid-3" style="margin-top: 28px;">
+        <div class="card">
+          <img src="images/project1.jpg" alt="Création digitale et site internet professionnel">
+          <h3><a href="services-it.html">Création digitale</a></h3>
+          <p>Nous concevons des supports digitaux modernes pour présenter votre activité avec clarté, rassurer vos prospects et améliorer votre présence sur internet.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/project2.jpg" alt="Image de marque et communication visuelle professionnelle">
+          <h3><a href="portfolio.html">Image de marque</a></h3>
+          <p>Nous travaillons votre identité visuelle et votre communication pour donner une image plus sérieuse, plus cohérente et plus professionnelle à votre entreprise.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/project3.jpg" alt="Accompagnement digital sur mesure pour entreprises">
+          <h3><a href="contact.html">Accompagnement sur mesure</a></h3>
+          <p>Chaque projet est adapté à votre secteur, à vos objectifs, à votre budget et au niveau d’exigence attendu par vos clients.</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top: 24px;">
+        <div class="card">
+          <img src="images/project4.jpg" alt="Valorisation de projets web, IT et événementiels">
+          <h3><a href="evenement.html">Valorisation de vos projets</a></h3>
+          <p>Du site internet à l’événementiel, nous vous aidons à améliorer votre présentation, votre crédibilité et votre impact auprès de votre public.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/project5.jpg" alt="Positionnement premium pour entreprise et commerce">
+          <h3><a href="conseil.html">Positionnement premium</a></h3>
+          <p>Notre objectif est de faire monter la valeur perçue de votre activité grâce à une présentation plus élégante, plus claire et plus convaincante.</p>
+        </div>
+      </div>
+
+      <p class="seo-text">
+        BK Entreprise intervient en France et à distance pour accompagner les professionnels qui ont besoin d’un site internet vitrine, d’un accompagnement en communication digitale, d’une stratégie de visibilité ou d’un soutien sur des besoins IT. Nous aidons nos clients à mieux présenter leurs services, à développer leur notoriété et à convertir davantage grâce à un contenu plus clair et plus professionnel.
+      </p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="services">
+    <div class="container">
+      <h2 class="section-title"><a href="services-it.html">Nos prestations digitales, web et IT</a></h2>
+      <p class="section-subtitle small" style="margin-top:10px;">
+        <a href="services-it.html">Des solutions concrètes pour les entreprises, indépendants et porteurs de projet.</a>
+      </p>
+
+      <div class="grid-3" style="margin-top: 28px;">
+        <a class="card" href="services-it.html">
+          <video autoplay muted loop playsinline>
+            <source src="videos/presentation.mp4" type="video/mp4">
+          </video>
+          <h3>Création de site internet et services IT</h3>
+          <p>Création de site vitrine, optimisation de pages, amélioration du contenu, structure web, accompagnement digital et prestations IT pour développer votre activité sur internet.</p>
+        </a>
+
+        <a class="card" href="evenement.html">
+          <video autoplay muted loop playsinline>
+            <source src="videos/presentation1.mp4" type="video/mp4">
+          </video>
+          <h3>Événementiel et communication</h3>
+          <p>Valorisation d’événements, supports visuels, communication professionnelle et mise en avant de vos temps forts avec une image plus forte.</p>
+        </a>
+
+        <a class="card" href="conseil.html">
+          <video autoplay muted loop playsinline>
+            <source src="videos/presentation2.mp4" type="video/mp4">
+          </video>
+          <h3>Conseil et stratégie digitale</h3>
+          <p>Accompagnement pour clarifier votre offre, améliorer votre communication, renforcer votre crédibilité et mieux structurer votre présence en ligne.</p>
+        </a>
+      </div>
+
+      <p class="seo-text">
+        Nos services s’adressent aux entreprises qui veulent gagner en visibilité sur Google, améliorer leur communication digitale, moderniser leur image ou lancer un site internet professionnel. Nous mettons en place des contenus plus lisibles, plus rassurants et mieux pensés pour le référencement naturel.
+      </p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><a href="portfolio.html">Nos réalisations et projets déjà menés</a></h2>
+      <p class="section-subtitle small" style="margin-top:10px;">
+        <a href="portfolio.html">Découvrez un aperçu des contenus et visuels déjà réalisés par BK Entreprise.</a>
+      </p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="images/project6.jpg" alt="Exemple de réalisation web et visuelle 1">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 01</h4>
+            <p>Illustration d’un travail professionnel déjà livré par BK Entreprise.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project7.jpg" alt="Exemple de réalisation web et visuelle 2">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 02</h4>
+            <p>Support visuel ou communication digitale adaptée au besoin du client.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project8.jpg" alt="Exemple de réalisation web et visuelle 3">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 03</h4>
+            <p>Contenu pensé pour renforcer l’image de marque et la présentation de l’activité.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project9.png" alt="Exemple de réalisation web et visuelle 4">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 04</h4>
+            <p>Travail graphique destiné à améliorer la lisibilité et la valeur perçue.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project10.jpg" alt="Exemple de réalisation web et visuelle 5">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 05</h4>
+            <p>Exemple de contenu réalisé pour la communication ou la promotion.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project11.jpg" alt="Exemple de réalisation web et visuelle 6">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 06</h4>
+            <p>Visuel conçu pour donner une image plus sérieuse et plus professionnelle.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project12.jpg" alt="Exemple de réalisation web et visuelle 7">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 07</h4>
+            <p>Exemple de travail concret intégré au portfolio BK Entreprise.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project13.png" alt="Exemple de réalisation web et visuelle 8">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 08</h4>
+            <p>Support graphique produit pour un projet client sur mesure.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project14.png" alt="Exemple de réalisation web et visuelle 9">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 09</h4>
+            <p>Visuel de présentation ou de vente pour renforcer la visibilité d’un service.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project15.jpg" alt="Exemple de réalisation web et visuelle 10">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 10</h4>
+            <p>Réalisation intégrée pour montrer la diversité des prestations proposées.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project16.jpg" alt="Exemple de réalisation web et visuelle 11">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 11</h4>
+            <p>Travail illustrant l’expérience et le savoir-faire de BK Entreprise.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project17.jpg" alt="Exemple de réalisation web et visuelle 12">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 12</h4>
+            <p>Exemple de support conçu pour renforcer la visibilité d’un projet.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project18.jpg" alt="Exemple de réalisation web et visuelle 13">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 13</h4>
+            <p>Contenu démontrant le sérieux et la créativité de l’entreprise.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project19.jpg" alt="Exemple de réalisation web et visuelle 14">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 14</h4>
+            <p>Illustration supplémentaire de travaux déjà réalisés pour des besoins réels.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project20.jpg" alt="Exemple de réalisation web et visuelle 15">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 15</h4>
+            <p>Exemple de rendu professionnel destiné à rassurer de futurs clients.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project21.png" alt="Exemple de réalisation web et visuelle 16">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 16</h4>
+            <p>Support de communication ou contenu graphique réalisé sur mesure.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project22.png" alt="Exemple de réalisation web et visuelle 17">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 17</h4>
+            <p>Travail visuel supplémentaire intégré pour valoriser les réalisations passées.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project23.jpg" alt="Exemple de réalisation web et visuelle 18">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 18</h4>
+            <p>Illustration d’une prestation déjà effectuée dans le cadre d’un projet client.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project24.png" alt="Exemple de réalisation web et visuelle 19">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 19</h4>
+            <p>Exemple concret montrant la variété des contenus pouvant être livrés.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project25.jpg" alt="Exemple de réalisation web et visuelle 20">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 20</h4>
+            <p>Support graphique mis en avant pour enrichir la crédibilité du portfolio.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project26.png" alt="Exemple de réalisation web et visuelle 21">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 21</h4>
+            <p>Contenu professionnel conçu pour illustrer une prestation livrée.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project27.jpg" alt="Exemple de réalisation web et visuelle 22">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 22</h4>
+            <p>Exemple de travail finalisé au service de la communication du client.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project28.jpg" alt="Exemple de réalisation web et visuelle 23">
+          <div class="portfolio-caption">
+            <h4>Création réalisée 23</h4>
+            <p>Illustration de la diversité des réalisations déjà accomplies.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="seo-text">
+        Ce portfolio permet de montrer à vos visiteurs que BK Entreprise ne propose pas seulement une promesse, mais aussi des exemples concrets de travaux réalisés. C’est important pour rassurer vos prospects, renforcer votre crédibilité et améliorer le taux de contact.
+      </p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2 class="section-title"><a href="portfolio.html">Mise en avant vidéo et présentation visuelle</a></h2>
+      <p class="section-subtitle small" style="margin-top:10px;">
+        <a href="portfolio.html">Des contenus vidéo pour valoriser les prestations et renforcer l’ambiance premium du site.</a>
+      </p>
+
+      <div class="media-showcase" style="margin-top: 28px;">
+        <video autoplay muted loop playsinline>
+          <source src="videos/presentation3.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline>
+          <source src="videos/presentation4.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline>
+          <source src="videos/presentation5.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline>
+          <source src="videos/presentation6.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline>
+          <source src="videos/presentation7.mp4" type="video/mp4">
+        </video>
+        <img src="images/project24.png" alt="Présentation visuelle premium BK Entreprise">
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="why-us">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="section-title"><a href="contact.html">Pourquoi choisir BK Entreprise</a></h2>
+        <p class="small" style="margin-top: 10px;">
+          BK Entreprise accompagne les professionnels qui veulent améliorer leur site internet, leur visibilité sur Google, leur communication digitale et leur image de marque. Nous ne faisons pas que du visuel : nous travaillons votre présentation globale pour vous aider à inspirer confiance et attirer plus de clients.
+        </p>
+
+        <div class="grid-3" style="margin-top: 26px;">
+          <div class="card">
+            <h3><a href="services-it.html">Une offre complète</a></h3>
+            <p>Création de site internet, services IT, design, communication visuelle, réseaux sociaux, événementiel et conseil stratégique.</p>
+          </div>
+
+          <div class="card">
+            <h3><a href="portfolio.html">Des réalisations visibles</a></h3>
+            <p>Vous montrez des exemples concrets déjà réalisés, ce qui renforce la confiance et la crédibilité auprès de vos prospects.</p>
+          </div>
+
+          <div class="card">
+            <h3><a href="contact.html">Un rendu plus professionnel</a></h3>
+            <p>Le but est de donner à votre activité une présentation plus forte, plus claire, plus moderne et plus vendeuse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="temoignages">
+    <div class="container">
+      <h2 class="section-title"><a href="contact.html">Une approche appréciée pour la qualité et l’image</a></h2>
+
+      <div class="grid-3" style="margin-top: 28px;">
+        <div class="card">
+          <h3>Image plus professionnelle</h3>
+          <p>“Le rendu final donne une autre dimension à l’activité. L’image est plus sérieuse, plus claire et plus convaincante.”</p>
+        </div>
+
+        <div class="card">
+          <h3>Présence digitale plus forte</h3>
+          <p>“Le travail sur le site, les visuels et la structure des contenus apporte davantage de crédibilité.”</p>
+        </div>
+
+        <div class="card">
+          <h3>Meilleure valorisation</h3>
+          <p>“Les réalisations et la présentation du savoir-faire donnent confiance dès les premières secondes.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="contact-home">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="section-title"><a href="contact.html">Parlons de votre projet</a></h2>
+        <p class="small" style="margin: 12px 0 22px;">
+          Vous cherchez un site internet professionnel, une meilleure communication digitale, un accompagnement IT ou une stratégie plus claire pour développer votre activité ? BK Entreprise vous aide à construire une présence crédible, moderne et efficace.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="contact.html">Nous contacter</a>
+          <a class="btn-outline" href="services-it.html">Découvrir nos services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div>
+        <strong>BK ENTREPRISE</strong>
+        <p class="small">Création de site internet • Services IT • Communication visuelle • Réseaux sociaux • Événementiel • Conseil</p>
+      </div>
+
+      <div style="display:flex; gap:18px; flex-wrap:wrap;">
+        <a href="index.html">Accueil</a>
+        <a href="services-it.html">Services IT</a>
+        <a href="evenement.html">Événementiel</a>
+        <a href="conseil.html">Conseil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.88;
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add('show');
+        }
+      });
+    };
+
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
+</body>
+</html>
