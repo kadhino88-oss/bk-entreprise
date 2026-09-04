@@ -3,243 +3,894 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - BK ENTREPRISE</title>
-  <meta name="description" content="Découvrez les réalisations IT, événementielles, visuelles et digitales de BK ENTREPRISE." />
+
+  <title>Portfolio - Réalisations web, visuelles et digitales | BK ENTREPRISE</title>
+  <meta name="description" content="Découvrez les réalisations web, visuelles, événementielles et digitales de BK ENTREPRISE à travers une sélection de projets, supports et contenus professionnels." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bk-entreprise.com/portfolio.html" />
+
+  <meta property="og:title" content="Portfolio - Réalisations web, visuelles et digitales | BK ENTREPRISE" />
+  <meta property="og:description" content="Découvrez les réalisations IT, événementielles, visuelles et digitales de BK ENTREPRISE." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bk-entreprise.com/portfolio.html" />
+  <meta property="og:image" content="https://www.bk-entreprise.com/images/logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio - BK ENTREPRISE" />
+  <meta name="twitter:description" content="Découvrez les réalisations web, visuelles, événementielles et digitales de BK ENTREPRISE." />
+  <meta name="twitter:image" content="https://www.bk-entreprise.com/images/logo.png" />
+
   <link rel="icon" href="images/logo.png" />
-  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Portfolio BK Entreprise",
+    "url": "https://www.bk-entreprise.com/portfolio.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "BK Entreprise",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bk-entreprise.com/images/logo.png"
+      }
+    },
+    "description": "Portfolio regroupant des réalisations web, visuelles, événementielles et digitales de BK Entreprise.",
+    "about": [
+      "Création de sites internet",
+      "Communication visuelle",
+      "Événementiel",
+      "Supports promotionnels",
+      "Présence digitale"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-dark: #071a2f;
+      --bg-mid: #0b2747;
+      --bg-light: #0f3b68;
+      --accent: #f5b041;
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --card: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 50px rgba(0,0,0,0.28);
+      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10) 1px, transparent 1.6px),
+        radial-gradient(circle at 80% 25%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
+        radial-gradient(circle at 35% 75%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
+        linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 45%, var(--bg-light) 100%);
+      background-size: 220px 220px, 300px 300px, 260px 260px, cover;
+      background-attachment: fixed;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.35;
+      background-image:
+        radial-gradient(2px 2px at 10% 18%, rgba(255,255,255,0.90), transparent 60%),
+        radial-gradient(2px 2px at 22% 74%, rgba(255,255,255,0.75), transparent 60%),
+        radial-gradient(1.8px 1.8px at 37% 42%, rgba(255,255,255,0.85), transparent 60%),
+        radial-gradient(2px 2px at 56% 20%, rgba(255,255,255,0.70), transparent 60%),
+        radial-gradient(1.5px 1.5px at 68% 58%, rgba(255,255,255,0.70), transparent 60%),
+        radial-gradient(2px 2px at 83% 33%, rgba(255,255,255,0.82), transparent 60%),
+        radial-gradient(1.5px 1.5px at 92% 76%, rgba(255,255,255,0.65), transparent 60%);
+      animation: starsFloat 10s linear infinite alternate;
+    }
+
+    @keyframes starsFloat {
+      0% { opacity: 0.2; transform: translateY(0); }
+      100% { opacity: 0.38; transform: translateY(-8px); }
+    }
+
+    header, nav, section, footer, .container, .card, .hero, .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(12px);
+      background: rgba(7,26,47,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-weight: 600;
+      opacity: 0.92;
+      transition: 0.25s ease;
+      padding: 8px 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .header-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 8px;
+      padding-left: 12px;
+      border-left: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .header-social a {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .header-social a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .page-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-hero {
+      background:
+        linear-gradient(180deg, rgba(7,26,47,0.72), rgba(7,26,47,0.88)),
+        radial-gradient(circle at center, rgba(0,194,255,0.10), transparent 45%);
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 120px 0 60px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 720px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .small {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      transition: 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245,176,65,0.28);
+    }
+
+    .portfolio-item img,
+    .portfolio-item video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portfolio-caption {
+      padding: 14px 16px 18px;
+    }
+
+    .portfolio-caption h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .portfolio-caption p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .cta-box,
+    .social-card {
+      background: linear-gradient(135deg, rgba(245,176,65,0.16), rgba(0,194,255,0.12));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 10px;
+    }
+
+    .social-card {
+      padding: 26px;
+      background: rgba(255,255,255,0.07);
+      transition: 0.35s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(245,176,65,0.32);
+    }
+
+    .social-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(245,176,65,0.22), rgba(0,194,255,0.18));
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .social-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .social-card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .social-card span {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      background: rgba(0,0,0,0.12);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .footer-social a {
+      color: var(--muted);
+    }
+
+    .footer-social a:hover {
+      color: var(--accent);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .portfolio-grid,
+      .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 0 6px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .header-social {
+        border-left: 0;
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+      .portfolio-grid,
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 110px 0 60px;
+      }
+
+      .portfolio-item img,
+      .portfolio-item video {
+        height: auto;
+        min-height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo BK ENTREPRISE" /></a>
-    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-    <nav class="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="services-it.html">IT</a>
-      <a href="evenement.html">Événementiel</a>
-      <a href="conseil.html">Conseil</a>
-      <a href="portfolio.html" class="active">Portfolio</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
+  <header class="topbar">
+    <div class="container navbar">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="Logo BK ENTREPRISE" />
+        <div class="logo-text">BK ENTREPRISE</div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">Menu</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Accueil</a>
+        <a href="services-it.html">Services IT</a>
+        <a href="evenement.html">Événementiel</a>
+        <a href="conseil.html">Conseil</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="profil.html">Profil</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="header-social">
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="page-hero portfolio-hero">
-      <div class="container reveal">
+      <div class="container hero-content reveal">
         <p class="eyebrow">Portfolio</p>
         <h1>Nos réalisations</h1>
-        <p class="hero-text">Sites internet, visuels, communication, vidéos de présentation et prestations terrain.</p>
+        <p class="hero-text">
+          Sites internet, visuels, communication, contenus vidéo de présentation et réalisations
+          conçus pour renforcer l’image, la visibilité et la crédibilité de chaque projet.
+        </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Réalisations</p>
+          <h2>Des créations concrètes pour illustrer notre savoir-faire.</h2>
+          <p class="small" style="margin-top: 12px;">
+            Retrouvez ici une sélection de supports visuels, de vidéos, de projets digitaux et de réalisations déjà conçus par BK Entreprise.
+          </p>
+        </div>
+
         <div class="portfolio-grid">
           <article class="portfolio-item reveal">
-            <img src="images/project1.jpg" alt="Projet IT 1" />
-            <div class="portfolio-caption">Projet IT 1</div>
+            <img src="images/project6.jpg" alt="Flyer de présentation BK Entreprise — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Flyer de présentation BK Entreprise</h3>
+              <p>Flyer généraliste présentant l'ensemble des services proposés par BK Entreprise.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
-            <img src="images/project2.jpg" alt="Événement 1" />
-            <div class="portfolio-caption">Événement 1</div>
+            <img src="images/project7.jpg" alt="Affiche événementielle — Petit-Lancy — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Affiche événementielle — Petit-Lancy</h3>
+              <p>Affiche publicitaire réalisée pour un événement à Petit-Lancy, Genève.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project8.jpg" alt="Logo — DK Tendance — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — DK Tendance</h3>
+              <p>Création du logo de la boutique de vêtements DK Tendance, à Annemasse.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project10.jpg" alt="Flyer — salon de coiffure (Bonne) — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Flyer — salon de coiffure (Bonne)</h3>
+              <p>Flyer conçu pour un salon de coiffure situé à Bonne.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project11.jpg" alt="Visuel — Trésor by Ninel — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Visuel — Trésor by Ninel</h3>
+              <p>Visuel réalisé pour la boutique e-commerce Trésor by Ninel.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project12.jpg" alt="Logo — Abiba Hair — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — Abiba Hair</h3>
+              <p>Création du logo du salon de coiffure Abiba Hair.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project13.png" alt="Carte de visite — Chez Édouard — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Carte de visite — Chez Édouard</h3>
+              <p>Carte de visite conçue pour le restaurant Chez Édouard, à Annemasse.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project14.png" alt="Flyer — repas de Noël, O'Saveurs d'Afrique — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Flyer — repas de Noël, O'Saveurs d'Afrique</h3>
+              <p>Flyer conçu pour le repas de Noël du restaurant O'Saveurs d'Afrique.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project15.jpg" alt="Logo — Market Les Saveurs d'Afrik — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — Market Les Saveurs d'Afrik</h3>
+              <p>Conception du logo de l'épicerie Market Les Saveurs d'Afrik, à Annemasse.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project16.jpg" alt="Logo — Association des Ivoiriens de Haute-Savoie — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — Association des Ivoiriens de Haute-Savoie</h3>
+              <p>Conception du logo officiel de l'Association des Ivoiriens de Haute-Savoie.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project17.jpg" alt="Flyer — dîner de gala, Cœur d'Allet — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Flyer — dîner de gala, Cœur d'Allet</h3>
+              <p>Flyer conçu pour le dîner de gala organisé par l'association Cœur d'Allet.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project18.jpg" alt="Affiche — association Akouani — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Affiche — association Akouani</h3>
+              <p>Affiche officielle réalisée pour l'association Akouani.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project19.jpg" alt="Logo — restaurant Le Baron — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — restaurant Le Baron</h3>
+              <p>Création du logo officiel du restaurant Le Baron.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project20.jpg" alt="Logo — US Annemasse Ambilly Gaillard — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — US Annemasse Ambilly Gaillard</h3>
+              <p>Logo officiel conçu pour une compétition organisée par le club US Annemasse Ambilly Gaillard.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project21.png" alt="Photo publicitaire — Trésor by Ninel — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Photo publicitaire — Trésor by Ninel</h3>
+              <p>Photo publicitaire réalisée pour le compte de notre client Trésor by Ninel.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project22.png" alt="Logo — restaurant Chez Édouard — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo — restaurant Chez Édouard</h3>
+              <p>Conception du logo officiel du restaurant Chez Édouard.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project23.jpg" alt="Menu boissons — Le Baron — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Menu boissons — Le Baron</h3>
+              <p>Conception du menu boissons pour notre partenaire le restaurant Le Baron.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project24.png" alt="Menu repas — Le Baron — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Menu repas — Le Baron</h3>
+              <p>Conception du menu repas pour le compte de notre client le restaurant Le Baron.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project26.png" alt="Logo (v2) — Association des Ivoiriens de Haute-Savoie — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Logo (v2) — Association des Ivoiriens de Haute-Savoie</h3>
+              <p>Second logo officiel conçu pour l'Association des Ivoiriens de Haute-Savoie.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project27.jpg" alt="Faire-part de décès — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Faire-part de décès</h3>
+              <p>Conception d'un faire-part pour un décès.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project28.jpg" alt="Faire-part — détails des obsèques — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Faire-part — détails des obsèques</h3>
+              <p>Intérieur du faire-part avec les détails des obsèques.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project1.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Montage vidéo — visuel de présentation</h3>
+              <p>Extrait d'un montage vidéo réalisé pour la mise en avant d'une activité.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item reveal">
+            <img src="images/project2.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Montage vidéo — identité visuelle</h3>
+              <p>Extrait d'un montage vidéo pensé pour renforcer l'image d'une marque.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation</div>
+            <div class="portfolio-caption">
+              <h3>Présentation vidéo</h3>
+              <p>Contenu vidéo de valorisation pour donner plus d’impact à une présentation.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/hero-video.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Hero Video</div>
+            <div class="portfolio-caption">
+              <h3>Vidéo d’accueil</h3>
+              <p>Vidéo immersive conçue pour renforcer l’ambiance et l’image de marque.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation1.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 1</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 1</h3>
+              <p>Vidéo de présentation destinée à mettre en avant un univers ou une activité.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation2.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 2</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 2</h3>
+              <p>Contenu dynamique pensé pour rendre la communication plus forte et plus visible.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation3.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 3</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 3</h3>
+              <p>Vidéo orientée valorisation visuelle et amélioration de la présence de marque.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation4.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 4</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 4</h3>
+              <p>Support vidéo destiné à accompagner un projet, une marque ou un événement.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation5.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 5</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 5</h3>
+              <p>Contenu visuel travaillé pour soutenir une image plus sérieuse et plus moderne.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation6.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 6</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 6</h3>
+              <p>Vidéo pensée pour apporter de la fluidité et une meilleure mise en avant.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
             <video autoplay muted loop playsinline preload="metadata">
               <source src="videos/presentation7.mp4" type="video/mp4" />
             </video>
-            <div class="portfolio-caption">Présentation 7</div>
+            <div class="portfolio-caption">
+              <h3>Présentation 7</h3>
+              <p>Dernier support vidéo de la série destiné à renforcer l’univers de présentation.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
-            <img src="images/project3.jpg" alt="Projet IT 2" />
-            <div class="portfolio-caption">Projet IT 2</div>
+            <img src="images/project3.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Montage vidéo — mise en avant produit</h3>
+              <p>Extrait d'un montage vidéo destiné à mettre en valeur un produit ou un service.</p>
+            </div>
           </article>
 
           <article class="portfolio-item reveal">
-            <img src="images/project4.jpg" alt="Événement 2" />
-            <div class="portfolio-caption">Événement 2</div>
+            <img src="images/project4.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
+            <div class="portfolio-caption">
+              <h3>Montage vidéo — communication de marque</h3>
+              <p>Extrait d'un montage vidéo réalisé dans le cadre d'une communication de marque.</p>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="portfolio-item reveal">
-            <img src="images/project6.jpg" alt="Réalisation project6" />
-            <div class="portfolio-caption">Création réalisée 01</div>
-          </article>
+    <section class="section reveal" id="social-media">
+      <div class="container">
+        <div class="cta-box">
+          <h2 style="margin-bottom: 12px;">Retrouvez aussi BK Entreprise sur les réseaux</h2>
+          <p class="small" style="margin-bottom: 24px;">
+            Notre univers visuel, digital et créatif se prolonge sur TikTok, Instagram et Facebook.
+          </p>
 
-          <article class="portfolio-item reveal">
-            <img src="images/project7.jpg" alt="Réalisation project7" />
-            <div class="portfolio-caption">Création réalisée 02</div>
-          </article>
+          <div class="social-grid">
+            <a class="social-card" href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">🎵</div>
+              <h3>TikTok</h3>
+              <p>Vidéos, ambiance, visibilité et contenus dynamiques autour de BK Entreprise.</p>
+              <span>@bkentreprise7</span>
+            </a>
 
-          <article class="portfolio-item reveal">
-            <img src="images/project8.jpg" alt="Réalisation project8" />
-            <div class="portfolio-caption">Création réalisée 03</div>
-          </article>
+            <a class="social-card" href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">📸</div>
+              <h3>Instagram</h3>
+              <p>Visuels, publications et contenus haut de gamme pour mettre en valeur notre univers et nos projets.</p>
+              <span>@bk_entreprise7</span>
+            </a>
 
-          <article class="portfolio-item reveal">
-            <img src="images/project9.png" alt="Réalisation project9" />
-            <div class="portfolio-caption">Création réalisée 04</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project10.jpg" alt="Réalisation project10" />
-            <div class="portfolio-caption">Création réalisée 05</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project11.jpg" alt="Réalisation project11" />
-            <div class="portfolio-caption">Création réalisée 06</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project12.jpg" alt="Réalisation project12" />
-            <div class="portfolio-caption">Création réalisée 07</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project13.png" alt="Réalisation project13" />
-            <div class="portfolio-caption">Création réalisée 08</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project14.png" alt="Réalisation project14" />
-            <div class="portfolio-caption">Création réalisée 09</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project15.jpg" alt="Réalisation project15" />
-            <div class="portfolio-caption">Création réalisée 10</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project16.jpg" alt="Réalisation project16" />
-            <div class="portfolio-caption">Création réalisée 11</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project17.jpg" alt="Réalisation project17" />
-            <div class="portfolio-caption">Création réalisée 12</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project18.jpg" alt="Réalisation project18" />
-            <div class="portfolio-caption">Création réalisée 13</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project19.jpg" alt="Réalisation project19" />
-            <div class="portfolio-caption">Création réalisée 14</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project20.jpg" alt="Réalisation project20" />
-            <div class="portfolio-caption">Création réalisée 15</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project21.png" alt="Réalisation project21" />
-            <div class="portfolio-caption">Création réalisée 16</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project22.png" alt="Réalisation project22" />
-            <div class="portfolio-caption">Création réalisée 17</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project23.jpg" alt="Réalisation project23" />
-            <div class="portfolio-caption">Création réalisée 18</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project24.png" alt="Réalisation project24" />
-            <div class="portfolio-caption">Création réalisée 19</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project25.jpg" alt="Réalisation project25" />
-            <div class="portfolio-caption">Création réalisée 20</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project26.png" alt="Réalisation project26" />
-            <div class="portfolio-caption">Création réalisée 21</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project27.jpg" alt="Réalisation project27" />
-            <div class="portfolio-caption">Création réalisée 22</div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project28.jpg" alt="Réalisation project28" />
-            <div class="portfolio-caption">Création réalisée 23</div>
-          </article>
+            <a class="social-card" href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">📘</div>
+              <h3>Facebook</h3>
+              <p>Page professionnelle, communication, publications et présence digitale autour de nos activités.</p>
+              <span>Voir la page</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2026 BK ENTREPRISE — IT, événementiel, conseil, design & communication</p>
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div>
+        <strong>BK ENTREPRISE</strong>
+        <p class="small">Création web • Communication visuelle • Réseaux sociaux • Événementiel • Conseil</p>
+
+        <div class="footer-social">
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:18px; flex-wrap:wrap;">
+        <a href="index.html">Accueil</a>
+        <a href="services-it.html">Services IT</a>
+        <a href="evenement.html">Événementiel</a>
+        <a href="conseil.html">Conseil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="profil.html">Profil</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="scripte.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.88;
+
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add('show');
+        }
+      });
+    };
+
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
 </body>
 </html>

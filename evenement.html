@@ -4,83 +4,837 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Événementiel – Organisation et communication événementielle | BK ENTREPRISE</title>
-  <meta name="description" content="Organisation, coordination, communication et valorisation d’événements professionnels avec BK ENTREPRISE." />
+  <title>Événementiel - Organisation et communication événementielle | BK ENTREPRISE</title>
+  <meta name="description" content="BK Entreprise accompagne les entreprises, commerces et organisateurs avec des prestations d’organisation, de coordination, de communication et de valorisation événementielle." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.bk-entreprise.com/evenement.html" />
 
+  <meta property="og:title" content="Événementiel - Organisation et communication événementielle | BK ENTREPRISE" />
+  <meta property="og:description" content="Organisation, coordination, communication et valorisation d’événements professionnels avec BK ENTREPRISE." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bk-entreprise.com/evenement.html" />
+  <meta property="og:image" content="https://www.bk-entreprise.com/images/logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Événementiel - BK ENTREPRISE" />
+  <meta name="twitter:description" content="Organisation, coordination, communication et valorisation d’événements professionnels." />
+  <meta name="twitter:image" content="https://www.bk-entreprise.com/images/logo.png" />
+
   <link rel="icon" href="images/logo.png" />
-  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "BK Entreprise",
+    "url": "https://www.bk-entreprise.com/evenement.html",
+    "logo": "https://www.bk-entreprise.com/images/logo.png",
+    "description": "BK Entreprise accompagne les entreprises, commerces et organisateurs avec des prestations d’organisation, de coordination, de communication et de valorisation événementielle.",
+    "areaServed": "France",
+    "sameAs": [
+      "https://www.tiktok.com/@bkentreprise7",
+      "https://www.instagram.com/bk_entreprise7/",
+      "https://facebook.com/profile.php?id=61576414298574"
+    ],
+    "serviceType": [
+      "Organisation événementielle",
+      "Coordination terrain",
+      "Communication événementielle",
+      "Supports visuels",
+      "Valorisation d'événements"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-dark: #071a2f;
+      --bg-mid: #0b2747;
+      --bg-light: #0f3b68;
+      --accent: #f5b041;
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --card: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 50px rgba(0,0,0,0.28);
+      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10) 1px, transparent 1.6px),
+        radial-gradient(circle at 80% 25%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
+        radial-gradient(circle at 35% 75%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
+        linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 45%, var(--bg-light) 100%);
+      background-size: 220px 220px, 300px 300px, 260px 260px, cover;
+      background-attachment: fixed;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.35;
+      background-image:
+        radial-gradient(2px 2px at 10% 18%, rgba(255,255,255,0.90), transparent 60%),
+        radial-gradient(2px 2px at 22% 74%, rgba(255,255,255,0.75), transparent 60%),
+        radial-gradient(1.8px 1.8px at 37% 42%, rgba(255,255,255,0.85), transparent 60%),
+        radial-gradient(2px 2px at 56% 20%, rgba(255,255,255,0.70), transparent 60%),
+        radial-gradient(1.5px 1.5px at 68% 58%, rgba(255,255,255,0.70), transparent 60%),
+        radial-gradient(2px 2px at 83% 33%, rgba(255,255,255,0.82), transparent 60%),
+        radial-gradient(1.5px 1.5px at 92% 76%, rgba(255,255,255,0.65), transparent 60%);
+      animation: starsFloat 10s linear infinite alternate;
+    }
+
+    @keyframes starsFloat {
+      0% { opacity: 0.2; transform: translateY(0); }
+      100% { opacity: 0.38; transform: translateY(-8px); }
+    }
+
+    header, nav, section, footer, .container, .card, .hero, .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title a,
+    .card h3 a,
+    .hero h1 a {
+      color: inherit;
+      transition: 0.3s ease;
+    }
+
+    .section-title a:hover,
+    .card h3 a:hover,
+    .hero h1 a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(245,176,65,0.35);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(12px);
+      background: rgba(7,26,47,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-weight: 600;
+      opacity: 0.92;
+      transition: 0.25s ease;
+      padding: 8px 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .header-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 8px;
+      padding-left: 12px;
+      border-left: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .header-social a {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .header-social a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .btn,
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--accent), #ffcf6b);
+      color: #071a2f;
+      box-shadow: 0 14px 28px rgba(245,176,65,0.28);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .page-hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,26,47,0.58), rgba(7,26,47,0.84)),
+                  radial-gradient(circle at center, rgba(0,194,255,0.10), transparent 45%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 120px 0 80px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 680px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .services-grid,
+    .showcase-grid,
+    .benefits-grid,
+    .social-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .services-grid,
+    .benefits-grid,
+    .social-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .showcase-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .showcase-card.large {
+      grid-column: span 2;
+    }
+
+    .service-card,
+    .showcase-card,
+    .benefit-card,
+    .social-card,
+    .seo-box,
+    .cta-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      transition: 0.35s ease;
+      overflow: hidden;
+    }
+
+    .service-card:hover,
+    .showcase-card:hover,
+    .benefit-card:hover,
+    .social-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(245,176,65,0.28);
+    }
+
+    .service-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .service-card h3,
+    .showcase-content h3,
+    .benefit-card h3,
+    .social-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .service-card p,
+    .showcase-content p,
+    .benefit-card p,
+    .social-card p,
+    .seo-box p {
+      color: var(--muted);
+    }
+
+    .media-wrap {
+      margin-bottom: 18px;
+    }
+
+    .media-wrap img,
+    .media-wrap video {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    .media-wrap img,
+    .media-wrap video {
+      min-height: 240px;
+      max-height: 320px;
+    }
+
+    .social-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(245,176,65,0.22), rgba(0,194,255,0.18));
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .social-card span {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(245,176,65,0.16), rgba(0,194,255,0.12));
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .seo-box {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .seo-box p + p {
+      margin-top: 16px;
+    }
+
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      background: rgba(0,0,0,0.12);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .footer-social a {
+      color: var(--muted);
+    }
+
+    .footer-social a:hover {
+      color: var(--accent);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .services-grid,
+      .benefits-grid,
+      .social-grid,
+      .showcase-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .showcase-card.large {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 0 6px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .header-social {
+        border-left: 0;
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+      .services-grid,
+      .benefits-grid,
+      .social-grid,
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 110px 0 70px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .media-wrap img,
+      .media-wrap video {
+        min-height: auto;
+        max-height: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo BK ENTREPRISE" /></a>
-    <button class="menu-toggle">☰</button>
-    <nav class="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="services-it.html">IT</a>
-      <a href="evenement.html" class="active">Événementiel</a>
-      <a href="conseil.html">Conseil</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="topbar">
+    <div class="container navbar">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="Logo BK ENTREPRISE" />
+        <div class="logo-text">BK ENTREPRISE</div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">Menu</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Accueil</a>
+        <a href="services-it.html">Services IT</a>
+        <a href="evenement.html" class="active">Événementiel</a>
+        <a href="conseil.html">Conseil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="profil.html">Profil</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="header-social">
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
-
-    <section class="page-hero small-hero">
-      <video autoplay muted loop playsinline>
+    <section class="page-hero">
+      <video autoplay muted loop playsinline preload="metadata">
         <source src="videos/presentation3.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
+
+      <div class="container hero-content reveal">
         <p class="eyebrow">Événementiel</p>
-        <h1>Organisation, coordination & valorisation terrain</h1>
-        <p>Une présence plus fluide, plus fiable et professionnelle pour vos événements.</p>
+        <h1><a href="contact.html">Organisation, coordination et valorisation de vos événements</a></h1>
+        <p class="hero-text">
+          BK Entreprise vous accompagne dans l’organisation, la coordination et la communication
+          de vos événements afin de leur donner une image plus fluide, plus crédible et plus professionnelle.
+        </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Nos prestations événementielles</p>
+          <h2>Une présence terrain plus claire, plus structurée et plus valorisante.</h2>
+        </div>
+
         <div class="services-grid">
-          <article class="service-card">
+          <article class="service-card reveal">
+            <span class="service-tag">Organisation</span>
             <h3>Organisation complète</h3>
-            <p>Planification, suivi et gestion d’événements.</p>
+            <p>Planification, suivi, préparation et gestion d’événements pour assurer un déroulement plus fluide et mieux maîtrisé.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
+            <span class="service-tag">Coordination</span>
             <h3>Présence terrain</h3>
-            <p>Accompagnement sur place avec professionnalisme.</p>
+            <p>Accompagnement sur place avec sérieux, professionnalisme et sens de l’organisation pour encadrer les temps forts.</p>
           </article>
 
-          <article class="service-card">
-            <h3>Communication</h3>
-            <p>Création de visuels et supports promotionnels.</p>
+          <article class="service-card reveal">
+            <span class="service-tag">Communication</span>
+            <h3>Communication événementielle</h3>
+            <p>Création de visuels, contenus et supports promotionnels pour donner plus d’impact à vos événements.</p>
           </article>
 
-          <article class="service-card">
-            <h3>Supports visuels</h3>
-            <p>Flyers, affiches et contenus pour vos événements.</p>
+          <article class="service-card reveal">
+            <span class="service-tag">Supports visuels</span>
+            <h3>Flyers, affiches et contenus</h3>
+            <p>Conception de supports visuels adaptés à vos besoins pour valoriser vos événements avant, pendant et après leur diffusion.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SEO -->
-    <section style="padding:40px 0; max-width:900px; margin:auto; color:#ccc;">
-      <h2>Organisation événementielle professionnelle</h2>
-      <p>BK Entreprise accompagne les entreprises dans l’organisation d’événements afin d’améliorer leur visibilité et leur image.</p>
-      <p>Nos services incluent la coordination, la communication et la gestion globale pour un résultat professionnel.</p>
-      <p>Un événement bien organisé permet de renforcer la crédibilité et d’attirer plus de clients.</p>
+    <section class="section showcase">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Mise en avant</p>
+          <h2>Une organisation plus visible et une image mieux maîtrisée.</h2>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="showcase-card large reveal">
+            <div class="media-wrap">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="videos/presentation4.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="showcase-content">
+              <span class="service-tag">Valorisation</span>
+              <h3>Des événements mieux présentés</h3>
+              <p>Une communication plus soignée et une organisation plus visible permettent de renforcer l’impact, la crédibilité et la perception de qualité autour de votre événement.</p>
+            </div>
+          </article>
+
+          <article class="showcase-card reveal">
+            <div class="media-wrap">
+              <img src="images/project7.jpg" alt="Projet événementiel BK ENTREPRISE" />
+            </div>
+            <div class="showcase-content">
+              <span class="service-tag">Projet</span>
+              <h3>Communication sur le terrain</h3>
+              <p>Des supports bien pensés et une présence bien organisée créent une meilleure expérience pour le public et les partenaires.</p>
+            </div>
+          </article>
+
+          <article class="showcase-card reveal">
+            <div class="media-wrap">
+              <img src="images/project12.jpg" alt="Support événementiel BK ENTREPRISE" />
+            </div>
+            <div class="showcase-content">
+              <span class="service-tag">Supports</span>
+              <h3>Image plus professionnelle</h3>
+              <p>Des contenus et des visuels mieux préparés renforcent l’identité de votre événement et inspirent davantage confiance.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Pourquoi nous choisir</p>
+          <h2>Un accompagnement plus rigoureux et plus valorisant.</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <h3>Une meilleure organisation</h3>
+            <p>Chaque étape est pensée pour offrir un déroulement plus clair, plus fluide et plus professionnel.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <h3>Une image plus forte</h3>
+            <p>Un événement bien présenté renforce la perception de qualité et améliore la crédibilité de votre structure.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <h3>Des supports plus efficaces</h3>
+            <p>Les visuels, affiches et contenus permettent d’attirer davantage l’attention et de mieux communiquer autour de l’événement.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <h3>Un accompagnement global</h3>
+            <p>Au-delà de l’organisation, nous travaillons aussi la valorisation, la visibilité et la cohérence de votre communication.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="social-media">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="section-title"><a href="contact.html">Retrouvez aussi BK Entreprise sur les réseaux</a></h2>
+          <p class="small" style="margin: 12px 0 24px;">
+            Notre univers événementiel et visuel se prolonge sur TikTok, Instagram et Facebook pour partager nos projets,
+            nos créations et notre actualité.
+          </p>
+
+          <div class="social-grid">
+            <a class="social-card" href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">🎵</div>
+              <h3>TikTok</h3>
+              <p>Vidéos, ambiance, visibilité et contenus dynamiques autour de BK Entreprise.</p>
+              <span>@bkentreprise7</span>
+            </a>
+
+            <a class="social-card" href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">📸</div>
+              <h3>Instagram</h3>
+              <p>Visuels, publications et contenus haut de gamme pour mettre en valeur notre univers et nos réalisations.</p>
+              <span>@bk_entreprise7</span>
+            </a>
+
+            <a class="social-card" href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon">📘</div>
+              <h3>Facebook</h3>
+              <p>Page professionnelle, communication, publications et présence digitale autour de nos activités.</p>
+              <span>Voir la page</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="seo-box reveal">
+          <div class="section-heading">
+            <p class="section-label">Référencement</p>
+            <h2>Organisation événementielle professionnelle</h2>
+          </div>
+
+          <p>
+            BK Entreprise accompagne les entreprises, les commerces et les organisateurs dans l’organisation d’événements afin d’améliorer leur visibilité, leur image et la qualité perçue de leurs prestations.
+          </p>
+
+          <p>
+            Nos services incluent la coordination, la communication, la préparation des supports visuels et la gestion globale des temps forts pour assurer un résultat plus professionnel et plus cohérent.
+          </p>
+
+          <p>
+            Un événement bien organisé, bien présenté et bien communiqué permet de renforcer la crédibilité d’une structure, d’attirer davantage l’attention et de valoriser durablement son image.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="section-title"><a href="contact.html">Parlons de votre événement</a></h2>
+          <p class="small" style="margin: 12px 0 22px;">
+            Vous avez besoin d’un accompagnement pour organiser, coordonner ou mieux valoriser votre événement ?
+            BK Entreprise vous aide à créer une présence plus professionnelle, plus fluide et plus impactante.
+          </p>
+
+          <div class="cta-actions">
+            <a class="btn" href="contact.html">Nous contacter</a>
+            <a class="btn-outline" href="portfolio.html">Voir le portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2026 BK ENTREPRISE</p>
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div>
+        <strong>BK ENTREPRISE</strong>
+        <p class="small">Création web • Communication visuelle • Réseaux sociaux • Événementiel • Conseil</p>
+
+        <div class="footer-social">
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:18px; flex-wrap:wrap;">
+        <a href="index.html">Accueil</a>
+        <a href="services-it.html">Services IT</a>
+        <a href="evenement.html">Événementiel</a>
+        <a href="conseil.html">Conseil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="profil.html">Profil</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="scripte.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.88;
+
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add('show');
+        }
+      });
+    };
+
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
 </body>
 </html>
