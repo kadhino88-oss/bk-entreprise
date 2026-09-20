@@ -1,825 +1,278 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Conseil - Accompagnement stratégique, cadrage et image professionnelle | BK ENTREPRISE</title>
-  <meta name="description" content="BK Entreprise accompagne les entreprises, commerces et entrepreneurs avec des prestations de conseil stratégique, de cadrage de projets, d’accompagnement digital et de renforcement d’image professionnelle." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bk-entreprise.com/conseil.html" />
-
-  <meta property="og:title" content="Conseil - Accompagnement stratégique, cadrage et image professionnelle | BK ENTREPRISE" />
-  <meta property="og:description" content="Conseil stratégique, cadrage de projets, accompagnement digital et image professionnelle avec BK ENTREPRISE." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.bk-entreprise.com/conseil.html" />
-  <meta property="og:image" content="https://www.bk-entreprise.com/images/logo.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Conseil - BK ENTREPRISE" />
-  <meta name="twitter:description" content="Conseil stratégique, cadrage de projets, accompagnement digital et image professionnelle." />
-  <meta name="twitter:image" content="https://www.bk-entreprise.com/images/logo.png" />
-
-  <link rel="icon" href="images/logo.png" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "BK Entreprise",
-    "url": "https://www.bk-entreprise.com/conseil.html",
-    "logo": "https://www.bk-entreprise.com/images/logo.png",
-    "description": "BK Entreprise accompagne les entreprises, commerces et entrepreneurs avec des prestations de conseil stratégique, de cadrage de projets, d’accompagnement digital et de renforcement d’image professionnelle.",
-    "areaServed": "France",
-    "sameAs": [
-      "https://www.tiktok.com/@bkentreprise7",
-      "https://www.instagram.com/bk_entreprise7/",
-      "https://facebook.com/profile.php?id=61576414298574"
-    ],
-    "serviceType": [
-      "Conseil stratégique",
-      "Cadrage de projet",
-      "Accompagnement digital",
-      "Positionnement de marque",
-      "Image professionnelle"
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg-dark: #071a2f;
-      --bg-mid: #0b2747;
-      --bg-light: #0f3b68;
-      --accent: #f5b041;
-      --text: #ffffff;
-      --muted: rgba(255,255,255,0.78);
-      --card: rgba(255,255,255,0.08);
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 20px 50px rgba(0,0,0,0.28);
-      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10) 1px, transparent 1.6px),
-        radial-gradient(circle at 80% 25%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
-        radial-gradient(circle at 35% 75%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
-        linear-gradient(180deg, #000000 0%, #071a2f 38%, #0b2747 70%, #0f3b68 100%);
-      background-size: 220px 220px, 300px 300px, 260px 260px, cover;
-      background-attachment: fixed;
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.35;
-      background-image:
-        radial-gradient(2px 2px at 10% 18%, rgba(255,215,0,0.95), transparent 60%),
-        radial-gradient(2px 2px at 22% 74%, rgba(255,215,0,0.80), transparent 60%),
-        radial-gradient(1.8px 1.8px at 37% 42%, rgba(255,215,0,0.85), transparent 60%),
-        radial-gradient(2px 2px at 56% 20%, rgba(255,215,0,0.72), transparent 60%),
-        radial-gradient(1.5px 1.5px at 68% 58%, rgba(255,215,0,0.72), transparent 60%),
-        radial-gradient(2px 2px at 83% 33%, rgba(255,215,0,0.84), transparent 60%),
-        radial-gradient(1.5px 1.5px at 92% 76%, rgba(255,215,0,0.68), transparent 60%);
-      animation: starsFloat 18s linear infinite alternate;
-    }
-
-    @keyframes starsFloat {
-      0% { opacity: 0.18; transform: translateY(0); }
-      100% { opacity: 0.36; transform: translateY(-10px); }
-    }
-
-    header, nav, section, footer, .container, .card, .hero, .content {
-      position: relative;
-      z-index: 1;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img, video {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-title a,
-    .card h3 a,
-    .hero h1 a {
-      color: inherit;
-      transition: 0.3s ease;
-    }
-
-    .section-title a:hover,
-    .card h3 a:hover,
-    .hero h1 a:hover {
-      color: var(--accent);
-      text-shadow: 0 0 12px rgba(245,176,65,0.35);
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 99;
-      backdrop-filter: blur(12px);
-      background: rgba(0,0,0,0.58);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .navbar {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 10px 0;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-wrap img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-    }
-
-    .logo-text {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      font-weight: 600;
-      opacity: 0.92;
-      transition: 0.25s ease;
-      padding: 8px 0;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--accent);
-    }
-
-    .header-social {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 8px;
-      padding-left: 12px;
-      border-left: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .header-social a {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .header-social a:hover {
-      color: var(--accent);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .btn,
-    .btn-outline {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: 0.3s ease;
-    }
-
-    .btn {
-      background: linear-gradient(135deg, var(--accent), #ffcf6b);
-      color: #071a2f;
-      box-shadow: 0 14px 28px rgba(245,176,65,0.28);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .page-hero {
-      min-height: 78vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-hero video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.56);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-      padding: 120px 0 80px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.07);
-      border-radius: 999px;
-      margin-bottom: 18px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .hero-content h1 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1.08;
-      margin-bottom: 18px;
-    }
-
-    .hero-text {
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 680px;
-    }
-
-    .section-heading {
-      margin-bottom: 28px;
-    }
-
-    .section-label {
-      display: inline-block;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 1.15;
-    }
-
-    .services-grid,
-    .showcase-grid,
-    .benefits-grid,
-    .social-grid {
-      display: grid;
-      gap: 24px;
-    }
-
-    .services-grid,
-    .benefits-grid,
-    .social-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .showcase-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .showcase-card.large {
-      grid-column: span 2;
-    }
-
-    .service-card,
-    .showcase-card,
-    .benefit-card,
-    .social-card,
-    .seo-box,
-    .cta-box {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 22px;
-      padding: 26px;
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-      transition: 0.35s ease;
-      overflow: hidden;
-    }
-
-    .service-card:hover,
-    .showcase-card:hover,
-    .benefit-card:hover,
-    .social-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245,176,65,0.28);
-    }
-
-    .service-tag {
-      display: inline-block;
-      margin-bottom: 12px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .service-card h3,
-    .showcase-content h3,
-    .benefit-card h3,
-    .social-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .service-card p,
-    .showcase-content p,
-    .benefit-card p,
-    .social-card p,
-    .seo-box p {
-      color: var(--muted);
-    }
-
-    .media-wrap {
-      margin-bottom: 18px;
-    }
-
-    .media-wrap img,
-    .media-wrap video {
-      width: 100%;
-      border-radius: 16px;
-      object-fit: cover;
-    }
-
-    .media-wrap img,
-    .media-wrap video {
-      min-height: 240px;
-      max-height: 320px;
-    }
-
-    .social-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(245,176,65,0.22), rgba(0,194,255,0.18));
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .social-card span {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .cta-box {
-      background: linear-gradient(135deg, rgba(245,176,65,0.16), rgba(0,194,255,0.12));
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .seo-box {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .seo-box p + p {
-      margin-top: 16px;
-    }
-
-    .footer {
-      padding: 36px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      background: rgba(0,0,0,0.12);
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .footer-social a {
-      color: var(--muted);
-    }
-
-    .footer-social a:hover {
-      color: var(--accent);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1100px) {
-      .services-grid,
-      .benefits-grid,
-      .social-grid,
-      .showcase-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .showcase-card.large {
-        grid-column: auto;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .menu-toggle {
-        display: inline-block;
-      }
-
-      .navbar {
-        flex-wrap: wrap;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 14px 0 6px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .header-social {
-        border-left: 0;
-        padding-left: 0;
-        margin-left: 0;
-      }
-
-      .services-grid,
-      .benefits-grid,
-      .social-grid,
-      .showcase-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-content {
-        padding: 110px 0 70px;
-      }
-
-      .cta-actions {
-        flex-direction: column;
-      }
-
-      .media-wrap img,
-      .media-wrap video {
-        min-height: auto;
-        max-height: none;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conseil & Stratégie — BK Entreprise</title>
+<meta name="description" content="Diagnostic, positionnement, stratégie digitale, cadrage et accompagnement : structurer une idée pour la faire avancer avec BK Entreprise.">
+<link rel="canonical" href="https://www.bk-entreprise.com/conseil.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BK Entreprise">
+<meta property="og:title" content="Conseil & Stratégie — BK Entreprise">
+<meta property="og:description" content="Diagnostic, positionnement, stratégie digitale, cadrage et accompagnement : structurer une idée pour la faire avancer avec BK Entreprise.">
+<meta property="og:url" content="https://www.bk-entreprise.com/conseil.html">
+<meta property="og:image" content="https://www.bk-entreprise.com/images/project15.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="bk.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container navbar">
-      <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo BK ENTREPRISE" />
-        <div class="logo-text">BK ENTREPRISE</div>
-      </a>
+<!-- ===== HEADER COMMUN ===== -->
+<header class="hdr hdr--light">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="index.html"><img src="images/logo.png" alt="BK Entreprise"></a>
+    <nav class="hdr__nav" aria-label="Navigation principale">
+      <a href="expertises.html">Expertises</a>
+      <a href="portfolio.html">Réalisations</a>
+      <a href="services-it.html">IT &amp; Digital</a>
+      <a href="conseil.html" aria-current="page">Conseil</a>
+      <a href="evenement.html">Événementiel</a>
+      <a href="workers.html">Workers</a>
+      <a href="integrations.html">Intégrations</a>
+      <a href="profil.html">Profil</a>
+    </nav>
+    <a class="btn btn--gold hdr__cta" href="contact.html">Parler à BK <span class="arr">↗</span></a>
+    <button class="hdr__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+</header>
 
-      <button class="menu-toggle" id="menuToggle">Menu</button>
+<nav class="mnav" id="mnav" aria-label="Menu mobile">
+  <a href="index.html">Accueil <span>01</span></a>
+  <a href="expertises.html">Expertises <span>02</span></a>
+  <a href="portfolio.html">Réalisations <span>03</span></a>
+  <a href="services-it.html">IT &amp; Digital <span>04</span></a>
+  <a href="conseil.html" aria-current="page">Conseil <span>05</span></a>
+  <a href="evenement.html">Événementiel <span>06</span></a>
+  <a href="workers.html">Workers <span>07</span></a>
+  <a href="integrations.html">Intégrations <span>08</span></a>
+  <a href="profil.html">Profil <span>09</span></a>
+  <a href="contact.html">Contact <span>10</span></a>
+  <a class="btn btn--gold mnav__cta" href="contact.html">Parler à BK ↗</a>
+</nav>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Accueil</a>
-        <a href="services-it.html">Services IT</a>
-        <a href="evenement.html">Événementiel</a>
-        <a href="conseil.html" class="active">Conseil</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="profil.html">Profil</a>
-        <a href="contact.html">Contact</a>
+<main>
 
-        <div class="header-social">
-          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </nav>
+<section class="sec sec--night" style="padding-top:clamp(140px,15vw,210px);">
+  <div class="halo halo--gold" style="width:620px;height:620px;top:-220px;right:-180px;"></div>
+  <div class="halo halo--night" style="width:520px;height:520px;bottom:-200px;left:-160px;"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Conseil &amp; Stratégie</span>
+    <h1 class="h-xl rv rv-d1" style="margin-top:24px;max-width:18ch;">Structurer une idée pour <span class="it">la faire avancer.</span></h1>
+    <p class="lead rv rv-d2" style="margin-top:26px;">BK accompagne le positionnement, la stratégie digitale, la structuration d'un projet et la mise en cohérence des différents leviers.</p>
+    <div class="rv rv-d3" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;">
+      <a class="btn btn--gold" href="contact.html">Parler de mon projet <span class="arr">↗</span></a>
+      <a class="btn btn--ghost" href="#parcours">Voir la démarche ↓</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="page-hero">
-      <video autoplay muted loop playsinline preload="metadata">
-        <source src="videos/presentation5.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
+<!-- ===== LE PARCOURS ===== -->
+<section class="sec sec--dark" id="parcours">
+  <div class="halo halo--gold" style="width:560px;height:560px;top:-180px;left:-170px;"></div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">01 — La démarche</span>
+      <h2 class="h-lg" style="margin-top:22px;">Comprendre, structurer, <span class="it">décider.</span></h2>
+      <p class="lead">Cinq étapes, dans cet ordre. Chacune sert à rendre la suivante plus simple.</p>
+    </div>
+    <div class="flow">
+      <div class="flow__step rv rv-d1">
+        <div class="flow__i">01</div>
+        <div>
+          <div class="flow__t">Comprendre</div>
+          <div class="flow__d">On part de votre activité réelle : ce que vous vendez, à qui, avec quels moyens, et ce qui bloque aujourd'hui. Pas de méthode plaquée sur un cas qui n'est pas le vôtre.</div>
+        </div>
+      </div>
+      <div class="flow__step rv rv-d2">
+        <div class="flow__i">02</div>
+        <div>
+          <div class="flow__t">Structurer</div>
+          <div class="flow__d">Le besoin devient un périmètre : ce qui est prioritaire, ce qui peut attendre, ce qui n'a pas lieu d'être. C'est souvent l'étape qui fait gagner le plus de temps.</div>
+        </div>
+      </div>
+      <div class="flow__step rv rv-d3">
+        <div class="flow__i">03</div>
+        <div>
+          <div class="flow__t">Décider</div>
+          <div class="flow__d">Des options claires, avec ce que chacune coûte et ce qu'elle apporte. Vous décidez avec les éléments en main — pas sur une intuition.</div>
+        </div>
+      </div>
+      <div class="flow__step rv rv-d4">
+        <div class="flow__i">04</div>
+        <div>
+          <div class="flow__t">Construire</div>
+          <div class="flow__d">Le plan se traduit en réalisations concrètes : site, identité, contenus, outils, automatisations. Mobilisées seules ou ensemble.</div>
+        </div>
+      </div>
+      <div class="flow__step rv rv-d5">
+        <div class="flow__i">05</div>
+        <div>
+          <div class="flow__t">Accompagner</div>
+          <div class="flow__d">Un projet vit après sa livraison. Suivi, ajustements et évolutions au rythme de votre activité.</div>
+        </div>
+      </div></div>
+  </div>
+</section>
 
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Conseil</p>
-        <h1><a href="contact.html">Vision, cadrage et accompagnement</a></h1>
-        <p class="hero-text">
-          Nous clarifions vos objectifs, structurons vos projets et renforçons votre image
-          pour vous aider à avancer avec plus de cohérence, plus de lisibilité et plus d’impact.
+<!-- ===== LES LEVIERS ===== -->
+<section class="sec sec--cream">
+  <div class="halo halo--warm" style="width:480px;height:480px;bottom:-170px;right:-150px;"></div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">02 — Les leviers</span>
+      <h2 class="h-lg" style="margin-top:22px;">Six angles pour <span class="it">y voir clair.</span></h2>
+      <p class="lead">Selon la situation, on en active un seul — ou plusieurs ensemble.</p>
+    </div>
+    <div class="cards">
+      <div class="card rv rv-d1">
+        <div class="card__i">◎</div>
+        <div class="card__t">Diagnostic</div>
+        <p class="card__d">État des lieux de votre présence : site, image, réseaux, outils, visibilité.</p>
+      </div>
+      <div class="card rv rv-d2">
+        <div class="card__i">◈</div>
+        <div class="card__t">Positionnement</div>
+        <p class="card__d">Clarifier l'offre, l'image et le message — pour qui, pourquoi, en quoi différent.</p>
+      </div>
+      <div class="card rv rv-d3">
+        <div class="card__i">◇</div>
+        <div class="card__t">Stratégie digitale</div>
+        <p class="card__d">Relier présence digitale, contenus, outils et objectifs dans un même plan.</p>
+      </div>
+      <div class="card rv rv-d1">
+        <div class="card__i">◆</div>
+        <div class="card__t">Cadrage de projet</div>
+        <p class="card__d">Périmètre, étapes, priorités et budget réaliste avant de lancer quoi que ce soit.</p>
+      </div>
+      <div class="card rv rv-d2">
+        <div class="card__i">▲</div>
+        <div class="card__t">Organisation</div>
+        <p class="card__d">Qui fait quoi, avec quels outils, et ce qui peut être automatisé.</p>
+      </div>
+      <div class="card rv rv-d3">
+        <div class="card__i">★</div>
+        <div class="card__t">Plan d'action</div>
+        <p class="card__d">Une feuille de route datée, avec des étapes que vous pouvez suivre.</p>
+      </div></div>
+  </div>
+</section>
+
+<!-- ===== CE QUE ÇA CHANGE ===== -->
+<section class="sec sec--night">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <span class="eyebrow">03 — Concrètement</span>
+        <h2 class="h-md" style="margin-top:20px;">Le conseil ne s'arrête pas <span class="it">au document.</span></h2>
+        <p class="lead" style="margin-top:20px;">
+          Une recommandation qui reste dans un fichier ne change rien. Chez BK, le conseil débouche
+          sur des réalisations : un site refondu, une identité clarifiée, des contenus produits,
+          des outils reliés entre eux.
         </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-label">Nos prestations de conseil</p>
-          <h2>Une approche plus claire, plus structurée et plus stratégique.</h2>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <span class="service-tag">Stratégie</span>
-            <h3>Conseil digital</h3>
-            <p>Optimisez votre présence en ligne et renforcez votre image professionnelle grâce à des recommandations concrètes, utiles et adaptées.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="service-tag">Projet</span>
-            <h3>Cadrage & organisation</h3>
-            <p>Priorisation, planification et structuration des actions pour faire avancer vos projets de manière plus fluide et plus cohérente.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="service-tag">Positionnement</span>
-            <h3>Image de marque</h3>
-            <p>Travail sur l’image perçue, la crédibilité et la manière de mieux présenter votre activité pour vous démarquer durablement.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="service-tag">Accompagnement</span>
-            <h3>Suivi personnalisé</h3>
-            <p>Une relation directe et proactive pour assurer plus de cohérence, de lisibilité et de justesse dans vos décisions.</p>
-          </article>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;">
+          <a class="btn btn--gold" href="contact.html">Demander un diagnostic <span class="arr">↗</span></a>
+          <a class="btn btn--ghost" href="portfolio.html">Voir des projets aboutis</a>
         </div>
       </div>
-    </section>
-
-    <section class="section showcase">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-label">Mise en avant</p>
-          <h2>Des choix plus clairs pour des résultats plus solides.</h2>
-        </div>
-
-        <div class="showcase-grid">
-          <article class="showcase-card large reveal">
-            <div class="media-wrap">
-              <video autoplay muted loop playsinline preload="metadata">
-                <source src="videos/presentation6.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="showcase-content">
-              <span class="service-tag">Accompagnement</span>
-              <h3>Une approche structurée et lisible</h3>
-              <p>Des conseils concrets, une vision globale et un meilleur cadrage pour avancer avec confiance, cohérence et efficacité.</p>
-            </div>
-          </article>
-
-          <article class="showcase-card reveal">
-            <div class="media-wrap">
-              <img src="images/project3.jpg" alt="Conseil digital BK ENTREPRISE" />
-            </div>
-            <div class="showcase-content">
-              <span class="service-tag">Conseil</span>
-              <h3>Image & stratégie</h3>
-              <p>Un cadre clair pour renforcer l’impact de votre activité et améliorer votre perception professionnelle.</p>
-            </div>
-          </article>
-
-          <article class="showcase-card reveal">
-            <div class="media-wrap">
-              <img src="images/project1.jpg" alt="Accompagnement BK ENTREPRISE" />
-            </div>
-            <div class="showcase-content">
-              <span class="service-tag">Projet</span>
-              <h3>Orientation & exécution</h3>
-              <p>Des choix mieux définis pour obtenir un résultat professionnel, cohérent et plus visible.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-label">Pourquoi nous choisir</p>
-          <h2>Un regard extérieur pour mieux structurer votre évolution.</h2>
-        </div>
-
-        <div class="benefits-grid">
-          <article class="benefit-card reveal">
-            <h3>Des objectifs clarifiés</h3>
-            <p>Nous vous aidons à mieux comprendre vos priorités et à poser une base plus claire pour prendre les bonnes décisions.</p>
-          </article>
-
-          <article class="benefit-card reveal">
-            <h3>Une image mieux maîtrisée</h3>
-            <p>Votre activité gagne en lisibilité, en cohérence et en crédibilité grâce à un meilleur positionnement.</p>
-          </article>
-
-          <article class="benefit-card reveal">
-            <h3>Des projets mieux cadrés</h3>
-            <p>Un projet bien structuré avance plus sereinement, plus vite et avec davantage d’efficacité.</p>
-          </article>
-
-          <article class="benefit-card reveal">
-            <h3>Un accompagnement utile</h3>
-            <p>Nous apportons une vision concrète, pragmatique et orientée résultats pour faire progresser votre activité.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="social-media">
-      <div class="container">
-        <div class="cta-box">
-          <h2 class="section-title"><a href="contact.html">Retrouvez aussi BK Entreprise sur les réseaux</a></h2>
-          <p class="small" style="margin: 12px 0 24px;">
-            Notre univers visuel et stratégique se prolonge sur TikTok, Instagram et Facebook pour partager nos idées,
-            nos réalisations et notre actualité.
-          </p>
-
-          <div class="social-grid">
-            <a class="social-card" href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">🎵</div>
-              <h3>TikTok</h3>
-              <p>Vidéos, ambiance, visibilité et contenus dynamiques autour de BK Entreprise.</p>
-              <span>@bkentreprise7</span>
-            </a>
-
-            <a class="social-card" href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">📸</div>
-              <h3>Instagram</h3>
-              <p>Visuels, publications et contenus haut de gamme pour mettre en valeur notre univers et nos projets.</p>
-              <span>@bk_entreprise7</span>
-            </a>
-
-            <a class="social-card" href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">📘</div>
-              <h3>Facebook</h3>
-              <p>Page professionnelle, communication, publications et présence digitale autour de nos activités.</p>
-              <span>Voir la page</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="seo-box reveal">
-          <div class="section-heading">
-            <p class="section-label">Référencement</p>
-            <h2>Conseil stratégique et accompagnement professionnel</h2>
-          </div>
-
-          <p>
-            BK Entreprise accompagne les entreprises, les commerces et les entrepreneurs dans le cadrage de leurs projets, l’amélioration de leur image et la structuration de leur présence digitale.
-          </p>
-
-          <p>
-            Nos prestations de conseil permettent de clarifier les priorités, de mieux organiser les actions et de poser une stratégie plus lisible afin d’améliorer la cohérence globale d’une activité.
-          </p>
-
-          <p>
-            Un accompagnement bien mené permet de renforcer la crédibilité, de mieux présenter ses services et d’avancer avec davantage de maîtrise, de cohérence et d’impact.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container" style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
-      <div>
-        <strong>BK ENTREPRISE</strong>
-        <p class="small">Création web • Communication visuelle • Réseaux sociaux • Événementiel • Conseil</p>
-
-        <div class="footer-social">
-          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </div>
-
-      <div style="display:flex; gap:18px; flex-wrap:wrap;">
-        <a href="index.html">Accueil</a>
-        <a href="services-it.html">Services IT</a>
-        <a href="evenement.html">Événementiel</a>
-        <a href="conseil.html">Conseil</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="profil.html">Profil</a>
-        <a href="contact.html">Contact</a>
+      <div class="rv rv--r rv-d1" data-px="0.05">
+        <div class="shot shot--4x3"><img src="images/project25.jpg" alt="Market Les Saveurs d'Afrik — version premium" loading="lazy"></div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+<section class="sec sec--sand">
+  <div class="halo halo--gold" style="width:560px;height:560px;top:-200px;left:50%;transform:translateX(-50%);"></div>
+  <div class="wrap" style="text-align:center;">
+    <span class="eyebrow rv" style="justify-content:center;">BK Entreprise</span>
+    <h2 class="h-lg rv rv-d1" style="margin-top:22px;max-width:16ch;margin-inline:auto;">Un besoin <span class="it">précis ?</span></h2>
+    <p class="lead rv rv-d2" style="margin:22px auto 0;">
+      Décrivez votre objectif, votre activité ou votre projet. BK peut intervenir sur
+      une expertise seule ou réunir plusieurs compétences.
+    </p>
+    <div class="rv rv-d3" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px;">
+      <a class="btn btn--gold" href="contact.html">Parler de mon projet <span class="arr">↗</span></a>
+      <a class="btn btn--ghost" href="portfolio.html">Voir les réalisations</a>
+    </div>
+  </div>
+</section>
+</main>
 
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
+<!-- ===== FOOTER COMMUN ===== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="images/logo.png" alt="BK Entreprise">
+        <p class="ftr__tag">Des idées aux résultats.</p>
+        <div class="ftr__soc">
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="ftr__contact">
+          <a href="tel:+41799349946">+41 79 934 99 46</a><br>
+          <a href="mailto:contact@bk-entreprise.com">contact@bk-entreprise.com</a><br>
+          Rue Joseph Pasquier 1, 1203 Genève
+        </div>
+      </div>
 
-    const revealElements = document.querySelectorAll('.reveal');
+      <div>
+        <h4>Expertises</h4>
+        <ul>
+          <li><a href="services-it.html">Web &amp; Digital</a></li>
+          <li><a href="expertises.html#design">Design &amp; Identité</a></li>
+          <li><a href="expertises.html#communication">Communication</a></li>
+          <li><a href="services-it.html#it">IT &amp; Technologie</a></li>
+          <li><a href="workers.html">IA &amp; Automatisation</a></li>
+          <li><a href="conseil.html">Conseil &amp; Stratégie</a></li>
+        </ul>
+      </div>
 
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.88;
+      <div>
+        <h4>Réalisations</h4>
+        <ul>
+          <li><a href="portfolio.html">Tous les projets</a></li>
+          <li><a href="evenement.html">Événementiel</a></li>
+          <li><a href="portfolio.html#identite">Identité visuelle</a></li>
+          <li><a href="portfolio.html#video">Contenus vidéo</a></li>
+        </ul>
+      </div>
 
-      revealElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < triggerBottom) {
-          el.classList.add('show');
-        }
-      });
-    };
+      <div>
+        <h4>Workers</h4>
+        <ul>
+          <li><a href="workers.html">Les 18 Workers</a></li>
+          <li><a href="workers.html#chloe">Chloé — Agent Maître</a></li>
+          <li><a href="workers.html#mission">Créer une mission</a></li>
+          <li><a href="integrations.html">Intégrations</a></li>
+        </ul>
+      </div>
 
-    revealOnScroll();
-    window.addEventListener('scroll', revealOnScroll);
-  </script>
-<script defer src="/_vercel/insights/script.js"></script>
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="profil.html">À propos</a></li>
+          <li><a href="conseil.html">Conseil</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ftr__bot">
+      <span>© <span data-year>2026</span> BK Entreprise — Tous droits réservés.</span>
+      <em>Des idées aux résultats.</em>
+      <a class="totop" href="#" aria-label="Revenir en haut">↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="bk.js"></script>
 </body>
 </html>

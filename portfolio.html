@@ -1,897 +1,439 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Portfolio - Réalisations web, visuelles et digitales | BK ENTREPRISE</title>
-  <meta name="description" content="Découvrez les réalisations web, visuelles, événementielles et digitales de BK ENTREPRISE à travers une sélection de projets, supports et contenus professionnels." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bk-entreprise.com/portfolio.html" />
-
-  <meta property="og:title" content="Portfolio - Réalisations web, visuelles et digitales | BK ENTREPRISE" />
-  <meta property="og:description" content="Découvrez les réalisations IT, événementielles, visuelles et digitales de BK ENTREPRISE." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.bk-entreprise.com/portfolio.html" />
-  <meta property="og:image" content="https://www.bk-entreprise.com/images/logo.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portfolio - BK ENTREPRISE" />
-  <meta name="twitter:description" content="Découvrez les réalisations web, visuelles, événementielles et digitales de BK ENTREPRISE." />
-  <meta name="twitter:image" content="https://www.bk-entreprise.com/images/logo.png" />
-
-  <link rel="icon" href="images/logo.png" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "Portfolio BK Entreprise",
-    "url": "https://www.bk-entreprise.com/portfolio.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "BK Entreprise",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.bk-entreprise.com/images/logo.png"
-      }
-    },
-    "description": "Portfolio regroupant des réalisations web, visuelles, événementielles et digitales de BK Entreprise.",
-    "about": [
-      "Création de sites internet",
-      "Communication visuelle",
-      "Événementiel",
-      "Supports promotionnels",
-      "Présence digitale"
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg-dark: #071a2f;
-      --bg-mid: #0b2747;
-      --bg-light: #0f3b68;
-      --accent: #f5b041;
-      --text: #ffffff;
-      --muted: rgba(255,255,255,0.78);
-      --card: rgba(255,255,255,0.08);
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 20px 50px rgba(0,0,0,0.28);
-      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10) 1px, transparent 1.6px),
-        radial-gradient(circle at 80% 25%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
-        radial-gradient(circle at 35% 75%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
-        linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 45%, var(--bg-light) 100%);
-      background-size: 220px 220px, 300px 300px, 260px 260px, cover;
-      background-attachment: fixed;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.35;
-      background-image:
-        radial-gradient(2px 2px at 10% 18%, rgba(255,255,255,0.90), transparent 60%),
-        radial-gradient(2px 2px at 22% 74%, rgba(255,255,255,0.75), transparent 60%),
-        radial-gradient(1.8px 1.8px at 37% 42%, rgba(255,255,255,0.85), transparent 60%),
-        radial-gradient(2px 2px at 56% 20%, rgba(255,255,255,0.70), transparent 60%),
-        radial-gradient(1.5px 1.5px at 68% 58%, rgba(255,255,255,0.70), transparent 60%),
-        radial-gradient(2px 2px at 83% 33%, rgba(255,255,255,0.82), transparent 60%),
-        radial-gradient(1.5px 1.5px at 92% 76%, rgba(255,255,255,0.65), transparent 60%);
-      animation: starsFloat 10s linear infinite alternate;
-    }
-
-    @keyframes starsFloat {
-      0% { opacity: 0.2; transform: translateY(0); }
-      100% { opacity: 0.38; transform: translateY(-8px); }
-    }
-
-    header, nav, section, footer, .container, .card, .hero, .content {
-      position: relative;
-      z-index: 1;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img, video {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 99;
-      backdrop-filter: blur(12px);
-      background: rgba(7,26,47,0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .navbar {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 10px 0;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-wrap img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-    }
-
-    .logo-text {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      font-weight: 600;
-      opacity: 0.92;
-      transition: 0.25s ease;
-      padding: 8px 0;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--accent);
-    }
-
-    .header-social {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 8px;
-      padding-left: 12px;
-      border-left: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .header-social a {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .header-social a:hover {
-      color: var(--accent);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .page-hero {
-      min-height: 55vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .portfolio-hero {
-      background:
-        linear-gradient(180deg, rgba(7,26,47,0.72), rgba(7,26,47,0.88)),
-        radial-gradient(circle at center, rgba(0,194,255,0.10), transparent 45%);
-    }
-
-    .hero-content {
-      max-width: 760px;
-      padding: 120px 0 60px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.07);
-      border-radius: 999px;
-      margin-bottom: 18px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .hero-content h1 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1.08;
-      margin-bottom: 18px;
-    }
-
-    .hero-text {
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 720px;
-    }
-
-    .section-heading {
-      margin-bottom: 28px;
-    }
-
-    .section-label {
-      display: inline-block;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 1.15;
-    }
-
-    .small {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .portfolio-item {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      transition: 0.3s ease;
-    }
-
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-      border-color: rgba(245,176,65,0.28);
-    }
-
-    .portfolio-item img,
-    .portfolio-item video {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .portfolio-caption {
-      padding: 14px 16px 18px;
-    }
-
-    .portfolio-caption h3 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-
-    .portfolio-caption p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .cta-box,
-    .social-card {
-      background: linear-gradient(135deg, rgba(245,176,65,0.16), rgba(0,194,255,0.12));
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 10px;
-    }
-
-    .social-card {
-      padding: 26px;
-      background: rgba(255,255,255,0.07);
-      transition: 0.35s ease;
-    }
-
-    .social-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245,176,65,0.32);
-    }
-
-    .social-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(245,176,65,0.22), rgba(0,194,255,0.18));
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .social-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
-
-    .social-card p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .social-card span {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      padding: 36px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      background: rgba(0,0,0,0.12);
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .footer-social a {
-      color: var(--muted);
-    }
-
-    .footer-social a:hover {
-      color: var(--accent);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1100px) {
-      .portfolio-grid,
-      .social-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 760px) {
-      .menu-toggle {
-        display: inline-block;
-      }
-
-      .navbar {
-        flex-wrap: wrap;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 14px 0 6px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .header-social {
-        border-left: 0;
-        padding-left: 0;
-        margin-left: 0;
-      }
-
-      .portfolio-grid,
-      .social-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-content {
-        padding: 110px 0 60px;
-      }
-
-      .portfolio-item img,
-      .portfolio-item video {
-        height: auto;
-        min-height: auto;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Réalisations — BK Entreprise</title>
+<meta name="description" content="Les créations de BK Entreprise : identités visuelles, affiches et flyers événementiels, menus, supports imprimés et contenus vidéo pour commerces, restaurants et associations.">
+<link rel="canonical" href="https://www.bk-entreprise.com/portfolio.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BK Entreprise">
+<meta property="og:title" content="Réalisations — BK Entreprise">
+<meta property="og:description" content="Les créations de BK Entreprise : identités visuelles, affiches et flyers événementiels, menus, supports imprimés et contenus vidéo pour commerces, restaurants et associations.">
+<meta property="og:url" content="https://www.bk-entreprise.com/portfolio.html">
+<meta property="og:image" content="https://www.bk-entreprise.com/images/project6.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="bk.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container navbar">
-      <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo BK ENTREPRISE" />
-        <div class="logo-text">BK ENTREPRISE</div>
-      </a>
+<!-- ===== HEADER COMMUN ===== -->
+<header class="hdr hdr--light">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="index.html"><img src="images/logo.png" alt="BK Entreprise"></a>
+    <nav class="hdr__nav" aria-label="Navigation principale">
+      <a href="expertises.html">Expertises</a>
+      <a href="portfolio.html" aria-current="page">Réalisations</a>
+      <a href="services-it.html">IT &amp; Digital</a>
+      <a href="conseil.html">Conseil</a>
+      <a href="evenement.html">Événementiel</a>
+      <a href="workers.html">Workers</a>
+      <a href="integrations.html">Intégrations</a>
+      <a href="profil.html">Profil</a>
+    </nav>
+    <a class="btn btn--gold hdr__cta" href="contact.html">Parler à BK <span class="arr">↗</span></a>
+    <button class="hdr__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+</header>
 
-      <button class="menu-toggle" id="menuToggle">Menu</button>
+<nav class="mnav" id="mnav" aria-label="Menu mobile">
+  <a href="index.html">Accueil <span>01</span></a>
+  <a href="expertises.html">Expertises <span>02</span></a>
+  <a href="portfolio.html" aria-current="page">Réalisations <span>03</span></a>
+  <a href="services-it.html">IT &amp; Digital <span>04</span></a>
+  <a href="conseil.html">Conseil <span>05</span></a>
+  <a href="evenement.html">Événementiel <span>06</span></a>
+  <a href="workers.html">Workers <span>07</span></a>
+  <a href="integrations.html">Intégrations <span>08</span></a>
+  <a href="profil.html">Profil <span>09</span></a>
+  <a href="contact.html">Contact <span>10</span></a>
+  <a class="btn btn--gold mnav__cta" href="contact.html">Parler à BK ↗</a>
+</nav>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Accueil</a>
-        <a href="services-it.html">Services IT</a>
-        <a href="evenement.html">Événementiel</a>
-        <a href="conseil.html">Conseil</a>
-        <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="profil.html">Profil</a>
-        <a href="contact.html">Contact</a>
+<main>
 
-        <div class="header-social">
-          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </nav>
+<section class="sec sec--night" style="padding-top:clamp(140px,15vw,210px);">
+  <div class="halo halo--gold" style="width:620px;height:620px;top:-220px;right:-180px;"></div>
+  <div class="halo halo--night" style="width:520px;height:520px;bottom:-200px;left:-160px;"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Réalisations</span>
+    <h1 class="h-xl rv rv-d1" style="margin-top:24px;max-width:18ch;">Des créations qui parlent <span class="it">d'elles-mêmes.</span></h1>
+    <p class="lead rv rv-d2" style="margin-top:26px;">Identités visuelles, affiches et flyers, menus, supports imprimés et contenus vidéo — réalisés pour des commerces, des restaurants, des associations et des événements.</p>
+    <div class="rv rv-d3" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;">
+      <a class="btn btn--gold" href="contact.html">Démarrer un projet <span class="arr">↗</span></a>
+      <a class="btn btn--ghost" href="#creations">Voir les créations ↓</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="page-hero portfolio-hero">
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Portfolio</p>
-        <h1>Nos réalisations</h1>
-        <p class="hero-text">
-          Sites internet, visuels, communication, contenus vidéo de présentation et réalisations
-          conçus pour renforcer l’image, la visibilité et la crédibilité de chaque projet.
-        </p>
+<!-- ===== GRILLE DES 23 CRÉATIONS ===== -->
+<section class="sec" id="creations">
+  <div class="wrap">
+    <div class="sec-head rv" style="max-width:none;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;">
+      <div style="max-width:620px;">
+        <span class="eyebrow">01 — Créations</span>
+        <h2 class="h-lg" style="margin-top:22px;">Chaque projet porte <span class="it">son vrai nom.</span></h2>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-label">Réalisations</p>
-          <h2>Des créations concrètes pour illustrer notre savoir-faire.</h2>
-          <p class="small" style="margin-top: 12px;">
-            Retrouvez ici une sélection de supports visuels, de vidéos, de projets digitaux et de réalisations déjà conçus par BK Entreprise.
-          </p>
+    <div class="rv rv-d1" style="margin-bottom:36px;--tx-inv:var(--tx);--line-dark:var(--line);">
+      <span id="creations-liste"></span><span id="identite" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="communication" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="evenementiel" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="associatif" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="restauration" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="beaute" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="sport" style="display:block;height:0;scroll-margin-top:120px;"></span><span id="edition" style="display:block;height:0;scroll-margin-top:120px;"></span><div class="chips" data-filter-bar><button class="chip is-on" data-f="*" data-slug="tout">Tout <span style="opacity:.6">23</span></button><button class="chip" data-f="Identité" data-slug="identite">Identité <span style="opacity:.6">8</span></button><button class="chip" data-f="Communication" data-slug="communication">Communication <span style="opacity:.6">3</span></button><button class="chip" data-f="Événementiel" data-slug="evenementiel">Événementiel <span style="opacity:.6">3</span></button><button class="chip" data-f="Associatif" data-slug="associatif">Associatif <span style="opacity:.6">2</span></button><button class="chip" data-f="Restauration" data-slug="restauration">Restauration <span style="opacity:.6">3</span></button><button class="chip" data-f="Beauté" data-slug="beaute">Beauté <span style="opacity:.6">1</span></button><button class="chip" data-f="Sport" data-slug="sport">Sport <span style="opacity:.6">1</span></button><button class="chip" data-f="Édition" data-slug="edition">Édition <span style="opacity:.6">2</span></button></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;">
+      <figure class="car__item rv rv-d1" data-cat="Communication" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project6.jpg" alt="BK Entreprise — Solutions créatives — réalisation BK Entreprise" loading="lazy">
         </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Communication</div>
+          <div class="car__t">BK Entreprise — Solutions créatives</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Événementiel" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project7.jpg" alt="Zouglou Live — Garba Party — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Événementiel</div>
+          <div class="car__t">Zouglou Live — Garba Party</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project8.jpg" alt="DK Tendance — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">DK Tendance</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Associatif" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project9.png" alt="Association des Ivoiriens de Haute-Savoie — Un don, une goutte d’espoir — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Associatif</div>
+          <div class="car__t">Association des Ivoiriens de Haute-Savoie — Un don, une goutte d’espoir</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Communication" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project10.jpg" alt="Oli by dreadlocks — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Communication</div>
+          <div class="car__t">Oli by dreadlocks</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Beauté" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project11.jpg" alt="Trésor by Ninel — Coffret Beauté Précieuse — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Beauté</div>
+          <div class="car__t">Trésor by Ninel — Coffret Beauté Précieuse</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project12.jpg" alt="Abiba Hair — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">Abiba Hair</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Restauration" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project13.png" alt="Restaurant Chez Édouard Le 225 — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Restauration</div>
+          <div class="car__t">Restaurant Chez Édouard Le 225</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Événementiel" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project14.png" alt="Ô Saveurs d’Afrique — Noël solidaire — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Événementiel</div>
+          <div class="car__t">Ô Saveurs d’Afrique — Noël solidaire</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project15.jpg" alt="Market Les Saveurs d’Afrik — Logo — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">Market Les Saveurs d’Afrik — Logo</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project16.jpg" alt="AIHS — Association des Ivoiriens de Haute-Savoie — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">AIHS — Association des Ivoiriens de Haute-Savoie</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Événementiel" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project17.jpg" alt="Association Cœur d’Or Dalet — Dîner Gala de Charité — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Événementiel</div>
+          <div class="car__t">Association Cœur d’Or Dalet — Dîner Gala de Charité</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Associatif" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project18.jpg" alt="Association Akouani — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Associatif</div>
+          <div class="car__t">Association Akouani</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project19.jpg" alt="Restaurant Le Baron — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">Restaurant Le Baron</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Sport" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project20.jpg" alt="Savyard Cup — Soccer — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Sport</div>
+          <div class="car__t">Savyard Cup — Soccer</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Communication" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project21.png" alt="Trésors by Ninel — Visuel publicitaire — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Communication</div>
+          <div class="car__t">Trésors by Ninel — Visuel publicitaire</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project22.png" alt="Chez Édouard — Le 225 — Logo — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">Chez Édouard — Le 225 — Logo</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Restauration" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project23.jpg" alt="Le Baron — Bar Menu — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Restauration</div>
+          <div class="car__t">Le Baron — Bar Menu</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Restauration" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project24.png" alt="Le Baron — Menu Restaurant — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Restauration</div>
+          <div class="car__t">Le Baron — Menu Restaurant</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project25.jpg" alt="Market Les Saveurs d’Afrik — Version premium — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">Market Les Saveurs d’Afrik — Version premium</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d3" data-cat="Identité" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project26.png" alt="AIHS — Logo officiel — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Identité</div>
+          <div class="car__t">AIHS — Logo officiel</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d1" data-cat="Édition" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project27.jpg" alt="In Memoriam — N’Chot Geneviève — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Édition</div>
+          <div class="car__t">In Memoriam — N’Chot Geneviève</div>
+        </figcaption>
+      </figure>
+      <figure class="car__item rv rv-d2" data-cat="Édition" style="flex:none;width:auto;">
+        <div class="car__media" style="aspect-ratio:4/5;">
+          <img src="images/project28.jpg" alt="Programme des obsèques — N’Chot Geneviève — réalisation BK Entreprise" loading="lazy">
+        </div>
+        <figcaption class="car__cap">
+          <div class="car__cat">Édition</div>
+          <div class="car__t">Programme des obsèques — N’Chot Geneviève</div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-        <div class="portfolio-grid">
-          <article class="portfolio-item reveal">
-            <img src="images/project6.jpg" alt="Flyer de présentation BK Entreprise — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Flyer de présentation BK Entreprise</h3>
-              <p>Flyer généraliste présentant l'ensemble des services proposés par BK Entreprise.</p>
-            </div>
-          </article>
+<!-- ===== CONTENUS VIDÉO ===== -->
+<section class="sec sec--night" id="video">
+  <div class="halo halo--warm" style="width:520px;height:520px;top:-160px;right:-160px;"></div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">02 — Contenus vidéo</span>
+      <h2 class="h-lg" style="margin-top:22px;">L'image <span class="it">en mouvement.</span></h2>
+      <p class="lead">Montages, présentations et formats courts produits pour les réseaux et les campagnes.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;">
+        <figure class="shot shot--16x9 rv rv-d1" style="margin:0;">
+          <video src="videos/hero-video.mp4" poster="images/hero-poster.jpg" controls preload="metadata" playsinline
+                 aria-label="Vidéo d’accueil — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d2" style="margin:0;">
+          <video src="videos/presentation.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d3" style="margin:0;">
+          <video src="videos/presentation1.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 1 — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d1" style="margin:0;">
+          <video src="videos/presentation2.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 2 — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d2" style="margin:0;">
+          <video src="videos/presentation3.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 3 — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d3" style="margin:0;">
+          <video src="videos/presentation4.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 4 — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d1" style="margin:0;">
+          <video src="videos/presentation5.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 5 — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d2" style="margin:0;">
+          <video src="videos/presentation6.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 6 — BK Entreprise"></video>
+        </figure>
+        <figure class="shot shot--16x9 rv rv-d3" style="margin:0;">
+          <video src="videos/presentation7.mp4" controls preload="metadata" playsinline
+                 aria-label="Présentation 7 — BK Entreprise"></video>
+        </figure>
+    </div>
+  </div>
+</section>
 
-          <article class="portfolio-item reveal">
-            <img src="images/project7.jpg" alt="Affiche événementielle — Petit-Lancy — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Affiche événementielle — Petit-Lancy</h3>
-              <p>Affiche publicitaire réalisée pour un événement à Petit-Lancy, Genève.</p>
-            </div>
-          </article>
+<section class="sec sec--sand">
+  <div class="halo halo--gold" style="width:560px;height:560px;top:-200px;left:50%;transform:translateX(-50%);"></div>
+  <div class="wrap" style="text-align:center;">
+    <span class="eyebrow rv" style="justify-content:center;">BK Entreprise</span>
+    <h2 class="h-lg rv rv-d1" style="margin-top:22px;max-width:16ch;margin-inline:auto;">Un besoin <span class="it">précis ?</span></h2>
+    <p class="lead rv rv-d2" style="margin:22px auto 0;">
+      Décrivez votre objectif, votre activité ou votre projet. BK peut intervenir sur
+      une expertise seule ou réunir plusieurs compétences.
+    </p>
+    <div class="rv rv-d3" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px;">
+      <a class="btn btn--gold" href="contact.html">Parler de mon projet <span class="arr">↗</span></a>
+      <a class="btn btn--ghost" href="portfolio.html">Voir les réalisations</a>
+    </div>
+  </div>
+</section>
+</main>
 
-          <article class="portfolio-item reveal">
-            <img src="images/project8.jpg" alt="Logo — DK Tendance — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — DK Tendance</h3>
-              <p>Création du logo de la boutique de vêtements DK Tendance, à Annemasse.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project10.jpg" alt="Flyer — salon de coiffure (Bonne) — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Flyer — salon de coiffure (Bonne)</h3>
-              <p>Flyer conçu pour un salon de coiffure situé à Bonne.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project11.jpg" alt="Visuel — Trésor by Ninel — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Visuel — Trésor by Ninel</h3>
-              <p>Visuel réalisé pour la boutique e-commerce Trésor by Ninel.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project12.jpg" alt="Logo — Abiba Hair — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — Abiba Hair</h3>
-              <p>Création du logo du salon de coiffure Abiba Hair.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project13.png" alt="Carte de visite — Chez Édouard — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Carte de visite — Chez Édouard</h3>
-              <p>Carte de visite conçue pour le restaurant Chez Édouard, à Annemasse.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project14.png" alt="Flyer — repas de Noël, O'Saveurs d'Afrique — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Flyer — repas de Noël, O'Saveurs d'Afrique</h3>
-              <p>Flyer conçu pour le repas de Noël du restaurant O'Saveurs d'Afrique.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project15.jpg" alt="Logo — Market Les Saveurs d'Afrik — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — Market Les Saveurs d'Afrik</h3>
-              <p>Conception du logo de l'épicerie Market Les Saveurs d'Afrik, à Annemasse.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project16.jpg" alt="Logo — Association des Ivoiriens de Haute-Savoie — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — Association des Ivoiriens de Haute-Savoie</h3>
-              <p>Conception du logo officiel de l'Association des Ivoiriens de Haute-Savoie.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project17.jpg" alt="Flyer — dîner de gala, Cœur d'Allet — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Flyer — dîner de gala, Cœur d'Allet</h3>
-              <p>Flyer conçu pour le dîner de gala organisé par l'association Cœur d'Allet.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project18.jpg" alt="Affiche — association Akouani — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Affiche — association Akouani</h3>
-              <p>Affiche officielle réalisée pour l'association Akouani.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project19.jpg" alt="Logo — restaurant Le Baron — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — restaurant Le Baron</h3>
-              <p>Création du logo officiel du restaurant Le Baron.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project20.jpg" alt="Logo — US Annemasse Ambilly Gaillard — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — US Annemasse Ambilly Gaillard</h3>
-              <p>Logo officiel conçu pour une compétition organisée par le club US Annemasse Ambilly Gaillard.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project21.png" alt="Photo publicitaire — Trésor by Ninel — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Photo publicitaire — Trésor by Ninel</h3>
-              <p>Photo publicitaire réalisée pour le compte de notre client Trésor by Ninel.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project22.png" alt="Logo — restaurant Chez Édouard — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo — restaurant Chez Édouard</h3>
-              <p>Conception du logo officiel du restaurant Chez Édouard.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project23.jpg" alt="Menu boissons — Le Baron — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Menu boissons — Le Baron</h3>
-              <p>Conception du menu boissons pour notre partenaire le restaurant Le Baron.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project24.png" alt="Menu repas — Le Baron — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Menu repas — Le Baron</h3>
-              <p>Conception du menu repas pour le compte de notre client le restaurant Le Baron.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project26.png" alt="Logo (v2) — Association des Ivoiriens de Haute-Savoie — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Logo (v2) — Association des Ivoiriens de Haute-Savoie</h3>
-              <p>Second logo officiel conçu pour l'Association des Ivoiriens de Haute-Savoie.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project27.jpg" alt="Faire-part de décès — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Faire-part de décès</h3>
-              <p>Conception d'un faire-part pour un décès.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project28.jpg" alt="Faire-part — détails des obsèques — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Faire-part — détails des obsèques</h3>
-              <p>Intérieur du faire-part avec les détails des obsèques.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project1.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Montage vidéo — visuel de présentation</h3>
-              <p>Extrait d'un montage vidéo réalisé pour la mise en avant d'une activité.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project2.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Montage vidéo — identité visuelle</h3>
-              <p>Extrait d'un montage vidéo pensé pour renforcer l'image d'une marque.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation vidéo</h3>
-              <p>Contenu vidéo de valorisation pour donner plus d’impact à une présentation.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/hero-video.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Vidéo d’accueil</h3>
-              <p>Vidéo immersive conçue pour renforcer l’ambiance et l’image de marque.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation1.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 1</h3>
-              <p>Vidéo de présentation destinée à mettre en avant un univers ou une activité.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation2.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 2</h3>
-              <p>Contenu dynamique pensé pour rendre la communication plus forte et plus visible.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation3.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 3</h3>
-              <p>Vidéo orientée valorisation visuelle et amélioration de la présence de marque.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation4.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 4</h3>
-              <p>Support vidéo destiné à accompagner un projet, une marque ou un événement.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation5.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 5</h3>
-              <p>Contenu visuel travaillé pour soutenir une image plus sérieuse et plus moderne.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation6.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 6</h3>
-              <p>Vidéo pensée pour apporter de la fluidité et une meilleure mise en avant.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="videos/presentation7.mp4" type="video/mp4" />
-            </video>
-            <div class="portfolio-caption">
-              <h3>Présentation 7</h3>
-              <p>Dernier support vidéo de la série destiné à renforcer l’univers de présentation.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project3.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Montage vidéo — mise en avant produit</h3>
-              <p>Extrait d'un montage vidéo destiné à mettre en valeur un produit ou un service.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item reveal">
-            <img src="images/project4.jpg" alt="Visuel extrait d'un montage vidéo — BK Entreprise" />
-            <div class="portfolio-caption">
-              <h3>Montage vidéo — communication de marque</h3>
-              <p>Extrait d'un montage vidéo réalisé dans le cadre d'une communication de marque.</p>
-            </div>
-          </article>
+<!-- ===== FOOTER COMMUN ===== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="images/logo.png" alt="BK Entreprise">
+        <p class="ftr__tag">Des idées aux résultats.</p>
+        <div class="ftr__soc">
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="ftr__contact">
+          <a href="tel:+41799349946">+41 79 934 99 46</a><br>
+          <a href="mailto:contact@bk-entreprise.com">contact@bk-entreprise.com</a><br>
+          Rue Joseph Pasquier 1, 1203 Genève
         </div>
       </div>
-    </section>
 
-    <section class="section reveal" id="social-media">
-      <div class="container">
-        <div class="cta-box">
-          <h2 style="margin-bottom: 12px;">Retrouvez aussi BK Entreprise sur les réseaux</h2>
-          <p class="small" style="margin-bottom: 24px;">
-            Notre univers visuel, digital et créatif se prolonge sur TikTok, Instagram et Facebook.
-          </p>
-
-          <div class="social-grid">
-            <a class="social-card" href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">🎵</div>
-              <h3>TikTok</h3>
-              <p>Vidéos, ambiance, visibilité et contenus dynamiques autour de BK Entreprise.</p>
-              <span>@bkentreprise7</span>
-            </a>
-
-            <a class="social-card" href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">📸</div>
-              <h3>Instagram</h3>
-              <p>Visuels, publications et contenus haut de gamme pour mettre en valeur notre univers et nos projets.</p>
-              <span>@bk_entreprise7</span>
-            </a>
-
-            <a class="social-card" href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">📘</div>
-              <h3>Facebook</h3>
-              <p>Page professionnelle, communication, publications et présence digitale autour de nos activités.</p>
-              <span>Voir la page</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container" style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
       <div>
-        <strong>BK ENTREPRISE</strong>
-        <p class="small">Création web • Communication visuelle • Réseaux sociaux • Événementiel • Conseil</p>
-
-        <div class="footer-social">
-          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
+        <h4>Expertises</h4>
+        <ul>
+          <li><a href="services-it.html">Web &amp; Digital</a></li>
+          <li><a href="expertises.html#design">Design &amp; Identité</a></li>
+          <li><a href="expertises.html#communication">Communication</a></li>
+          <li><a href="services-it.html#it">IT &amp; Technologie</a></li>
+          <li><a href="workers.html">IA &amp; Automatisation</a></li>
+          <li><a href="conseil.html">Conseil &amp; Stratégie</a></li>
+        </ul>
       </div>
 
-      <div style="display:flex; gap:18px; flex-wrap:wrap;">
-        <a href="index.html">Accueil</a>
-        <a href="services-it.html">Services IT</a>
-        <a href="evenement.html">Événementiel</a>
-        <a href="conseil.html">Conseil</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="profil.html">Profil</a>
-        <a href="contact.html">Contact</a>
+      <div>
+        <h4>Réalisations</h4>
+        <ul>
+          <li><a href="portfolio.html">Tous les projets</a></li>
+          <li><a href="evenement.html">Événementiel</a></li>
+          <li><a href="portfolio.html#identite">Identité visuelle</a></li>
+          <li><a href="portfolio.html#video">Contenus vidéo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Workers</h4>
+        <ul>
+          <li><a href="workers.html">Les 18 Workers</a></li>
+          <li><a href="workers.html#chloe">Chloé — Agent Maître</a></li>
+          <li><a href="workers.html#mission">Créer une mission</a></li>
+          <li><a href="integrations.html">Intégrations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="profil.html">À propos</a></li>
+          <li><a href="conseil.html">Conseil</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+    <div class="ftr__bot">
+      <span>© <span data-year>2026</span> BK Entreprise — Tous droits réservés.</span>
+      <em>Des idées aux résultats.</em>
+      <a class="totop" href="#" aria-label="Revenir en haut">↑</a>
+    </div>
+  </div>
+</footer>
 
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
-
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.88;
-
-      revealElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < triggerBottom) {
-          el.classList.add('show');
-        }
-      });
-    };
-
-    revealOnScroll();
-    window.addEventListener('scroll', revealOnScroll);
-  </script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script src="bk.js"></script>
 </body>
 </html>

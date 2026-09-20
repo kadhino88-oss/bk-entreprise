@@ -1,49 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merci — votre demande est bien partie | BK Entreprise</title>
+<meta name="description" content="Votre demande a bien été transmise à BK Entreprise. Réponse sous 24 à 48 heures ouvrées.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.bk-entreprise.com/merci.html">
 
-  <title>Merci pour votre message | BK Entreprise</title>
-  <meta name="description" content="Votre message a bien été envoyé. BK Entreprise vous recontactera rapidement pour discuter de votre projet." />
-  <meta name="robots" content="noindex, follow" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BK Entreprise">
+<meta property="og:title" content="Merci — votre demande est bien partie | BK Entreprise">
+<meta property="og:description" content="Votre demande a bien été transmise à BK Entreprise. Réponse sous 24 à 48 heures ouvrées.">
+<meta property="og:url" content="https://www.bk-entreprise.com/merci.html">
+<meta property="og:image" content="https://www.bk-entreprise.com/images/project5.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/logo.png">
+<link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="bk.css">
 </head>
 <body>
-
-<canvas id="stars"></canvas>
-
-<main class="thanks-page">
-  <div class="thanks-card reveal show">
-
-    <img src="images/logo.png" alt="BK Entreprise création site internet et services digitaux" class="thanks-logo">
-
-    <p class="section-label">Message envoyé</p>
-
-    <h1>Merci pour votre message</h1>
-
-    <p>
-      Votre demande a bien été prise en compte.  
-      BK Entreprise vous répondra dans les plus brefs délais afin d’échanger sur votre projet et vos besoins.
-    </p>
-
-    <p style="margin-top:15px; color:#ccc;">
-      En attendant, vous pouvez consulter nos services ou découvrir nos réalisations.
-    </p>
-
-    <div style="margin-top:25px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-      <a href="index.html" class="btn btn-dark">Accueil</a>
-      <a href="services-it.html" class="btn">Nos services</a>
-      <a href="portfolio.html" class="btn-outline">Portfolio</a>
-    </div>
-
+<!-- ===== HEADER COMMUN ===== -->
+<header class="hdr hdr--light">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="index.html"><img src="images/logo.png" alt="BK Entreprise"></a>
+    <nav class="hdr__nav" aria-label="Navigation principale">
+      <a href="expertises.html">Expertises</a>
+      <a href="portfolio.html">Réalisations</a>
+      <a href="services-it.html">IT &amp; Digital</a>
+      <a href="conseil.html">Conseil</a>
+      <a href="evenement.html">Événementiel</a>
+      <a href="workers.html">Workers</a>
+      <a href="integrations.html">Intégrations</a>
+      <a href="profil.html">Profil</a>
+    </nav>
+    <a class="btn btn--gold hdr__cta" href="contact.html">Parler à BK <span class="arr">↗</span></a>
+    <button class="hdr__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
   </div>
+</header>
+
+<nav class="mnav" id="mnav" aria-label="Menu mobile">
+  <a href="index.html">Accueil <span>01</span></a>
+  <a href="expertises.html">Expertises <span>02</span></a>
+  <a href="portfolio.html">Réalisations <span>03</span></a>
+  <a href="services-it.html">IT &amp; Digital <span>04</span></a>
+  <a href="conseil.html">Conseil <span>05</span></a>
+  <a href="evenement.html">Événementiel <span>06</span></a>
+  <a href="workers.html">Workers <span>07</span></a>
+  <a href="integrations.html">Intégrations <span>08</span></a>
+  <a href="profil.html">Profil <span>09</span></a>
+  <a href="contact.html">Contact <span>10</span></a>
+  <a class="btn btn--gold mnav__cta" href="contact.html">Parler à BK ↗</a>
+</nav>
+
+<main>
+
+<section class="sec sec--night" style="min-height:82svh;display:flex;align-items:center;padding-top:clamp(140px,15vw,200px);">
+  <div class="halo halo--gold" style="width:620px;height:620px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  <div class="wrap" style="text-align:center;">
+    <div class="rv" style="width:78px;height:78px;border-radius:50%;margin:0 auto 30px;display:grid;place-items:center;
+         background:linear-gradient(135deg,var(--gold-strong),var(--gold));color:#1B1405;font-size:34px;">✓</div>
+    <span class="eyebrow rv rv-d1" style="justify-content:center;">Demande envoyée</span>
+    <h1 class="h-xl rv rv-d2" style="margin-top:22px;max-width:16ch;margin-inline:auto;">
+      Merci, c'est <span class="it">bien parti.</span>
+    </h1>
+    <p class="lead rv rv-d3" style="margin:26px auto 0;">
+      Votre message a été transmis. Vous recevrez une réponse sous 24 à 48 heures ouvrées,
+      à l'adresse que vous avez indiquée.
+    </p>
+    <div class="rv rv-d4" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:40px;">
+      <a class="btn btn--gold" href="index.html">Retour à l'accueil <span class="arr">↗</span></a>
+      <a class="btn btn--ghost" href="portfolio.html">Voir les réalisations</a>
+    </div>
+    <p class="lead rv rv-d5" style="margin:40px auto 0;font-size:14.5px;">
+      Une urgence ? <a href="tel:+41799349946" style="color:var(--gold-strong);font-weight:600;">+41 79 934 99 46</a>
+    </p>
+  </div>
+</section>
+
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center;margin-inline:auto;">
+      <span class="eyebrow" style="justify-content:center;">En attendant</span>
+      <h2 class="h-md" style="margin-top:20px;">Il y a de quoi <span class="it">regarder.</span></h2>
+    </div>
+    <div class="cards">
+      <a class="card rv" href="portfolio.html"><div class="card__i">◈</div><div class="card__t">Les réalisations</div>
+        <p class="card__d">23 créations : identités, affiches, menus et contenus vidéo.</p>
+        <span class="link-arrow" style="margin-top:16px;">Voir ↗</span></a>
+      <a class="card rv rv-d1" href="workers.html"><div class="card__i">◆</div><div class="card__t">Les Workers</div>
+        <p class="card__d">18 profils IA orchestrés par Chloé pour exécuter vos missions.</p>
+        <span class="link-arrow" style="margin-top:16px;">Découvrir ↗</span></a>
+      <a class="card rv rv-d2" href="profil.html"><div class="card__i">★</div><div class="card__t">Le profil</div>
+        <p class="card__d">Qui est derrière BK Entreprise, et comment le projet s'est construit.</p>
+        <span class="link-arrow" style="margin-top:16px;">Lire ↗</span></a>
+    </div>
+  </div>
+</section>
 </main>
 
-<script src="scripte.js"></script>
+<!-- ===== FOOTER COMMUN ===== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="images/logo.png" alt="BK Entreprise">
+        <p class="ftr__tag">Des idées aux résultats.</p>
+        <div class="ftr__soc">
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="ftr__contact">
+          <a href="tel:+41799349946">+41 79 934 99 46</a><br>
+          <a href="mailto:contact@bk-entreprise.com">contact@bk-entreprise.com</a><br>
+          Rue Joseph Pasquier 1, 1203 Genève
+        </div>
+      </div>
 
-<script defer src="/_vercel/insights/script.js"></script>
+      <div>
+        <h4>Expertises</h4>
+        <ul>
+          <li><a href="services-it.html">Web &amp; Digital</a></li>
+          <li><a href="expertises.html#design">Design &amp; Identité</a></li>
+          <li><a href="expertises.html#communication">Communication</a></li>
+          <li><a href="services-it.html#it">IT &amp; Technologie</a></li>
+          <li><a href="workers.html">IA &amp; Automatisation</a></li>
+          <li><a href="conseil.html">Conseil &amp; Stratégie</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Réalisations</h4>
+        <ul>
+          <li><a href="portfolio.html">Tous les projets</a></li>
+          <li><a href="evenement.html">Événementiel</a></li>
+          <li><a href="portfolio.html#identite">Identité visuelle</a></li>
+          <li><a href="portfolio.html#video">Contenus vidéo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Workers</h4>
+        <ul>
+          <li><a href="workers.html">Les 18 Workers</a></li>
+          <li><a href="workers.html#chloe">Chloé — Agent Maître</a></li>
+          <li><a href="workers.html#mission">Créer une mission</a></li>
+          <li><a href="integrations.html">Intégrations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="profil.html">À propos</a></li>
+          <li><a href="conseil.html">Conseil</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ftr__bot">
+      <span>© <span data-year>2026</span> BK Entreprise — Tous droits réservés.</span>
+      <em>Des idées aux résultats.</em>
+      <a class="totop" href="#" aria-label="Revenir en haut">↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="bk.js"></script>
 </body>
 </html>

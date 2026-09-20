@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_prive-ne-pas-publier/
+Disallow: /_ancien/
+Disallow: /outils/
+
+Sitemap: https://www.bk-entreprise.com/sitemap.xml

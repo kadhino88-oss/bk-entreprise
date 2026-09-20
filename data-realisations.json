@@ -1,0 +1,46 @@
+{
+  "_note": "Mapping vérifié visuellement image par image le 2026-09-20. Noms conformes au brief de Kader. Ne pas renommer sans validation.",
+  "realisations": [
+    { "img": "images/project6.jpg",  "titre": "BK Entreprise — Solutions créatives", "cat": "Communication", "verifie": "Le visuel porte la mention SOLUTIONS CRÉATIVES" },
+    { "img": "images/project7.jpg",  "titre": "Zouglou Live — Garba Party", "cat": "Événementiel", "verifie": "Affiche événementielle Petit-Lancy" },
+    { "img": "images/project8.jpg",  "titre": "DK Tendance", "cat": "Identité", "verifie": "Logo DK Tendance" },
+    { "img": "images/project9.png",  "titre": "Association des Ivoiriens de Haute-Savoie — Un don, une goutte d’espoir", "cat": "Associatif", "verifie": "Texte exact présent sur l'affiche" },
+    { "img": "images/project10.jpg", "titre": "Oli by dreadlocks", "cat": "Communication", "verifie": "ATTENTION : le visuel indique 'Oli by dreadlocks', le brief indique 'Ti by Dreadlocks' — à confirmer par Kader" },
+    { "img": "images/project11.jpg", "titre": "Trésor by Ninel — Coffret Beauté Précieuse", "cat": "Beauté", "verifie": "Visuel Trésor by Ninel" },
+    { "img": "images/project12.jpg", "titre": "Abiba Hair", "cat": "Identité", "verifie": "Logo Abiba Hair" },
+    { "img": "images/project13.png", "titre": "Restaurant Chez Édouard Le 225", "cat": "Restauration", "verifie": "Carte de visite Chez Édouard" },
+    { "img": "images/project14.png", "titre": "Ô Saveurs d’Afrique — Noël solidaire", "cat": "Événementiel", "verifie": "Flyer repas de Noël" },
+    { "img": "images/project15.jpg", "titre": "Market Les Saveurs d’Afrik — Logo", "cat": "Identité", "verifie": "Logo Market Les Saveurs d'Afrik" },
+    { "img": "images/project16.jpg", "titre": "AIHS — Association des Ivoiriens de Haute-Savoie", "cat": "Identité", "verifie": "Logo AIHS" },
+    { "img": "images/project17.jpg", "titre": "Association Cœur d’Or Dalet — Dîner Gala de Charité", "cat": "Événementiel", "verifie": "Flyer dîner de gala" },
+    { "img": "images/project18.jpg", "titre": "Association Akouani", "cat": "Associatif", "verifie": "Visuel femme et bébé — conforme à la correction du brief" },
+    { "img": "images/project19.jpg", "titre": "Restaurant Le Baron", "cat": "Identité", "verifie": "Logo noir et doré Le Baron — conforme à la correction du brief" },
+    { "img": "images/project20.jpg", "titre": "Savyard Cup — Soccer", "cat": "Sport", "verifie": "Écusson football Union Sportive Annemasse-Ambilly-Gaillard — le visuel écrit 'Savoyard Cup', le brief écrit 'Savyard Cup' — à confirmer" },
+    { "img": "images/project21.png", "titre": "Trésors by Ninel — Visuel publicitaire", "cat": "Communication", "verifie": "Photo publicitaire Trésor by Ninel" },
+    { "img": "images/project22.png", "titre": "Chez Édouard — Le 225 — Logo", "cat": "Identité", "verifie": "Logo restaurant Chez Édouard" },
+    { "img": "images/project23.jpg", "titre": "Le Baron — Bar Menu", "cat": "Restauration", "verifie": "Menu boissons Le Baron" },
+    { "img": "images/project24.png", "titre": "Le Baron — Menu Restaurant", "cat": "Restauration", "verifie": "Menu repas Le Baron" },
+    { "img": "images/project25.jpg", "titre": "Market Les Saveurs d’Afrik — Version premium", "cat": "Identité", "verifie": "Version premium du logo Market" },
+    { "img": "images/project26.png", "titre": "AIHS — Logo officiel", "cat": "Identité", "verifie": "Logo AIHS version 2" },
+    { "img": "images/project27.jpg", "titre": "In Memoriam — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part de décès" },
+    { "img": "images/project28.jpg", "titre": "Programme des obsèques — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part détails des obsèques" }
+  ],
+  "videos": [
+    { "src": "videos/hero-video.mp4", "titre": "Vidéo d’accueil" },
+    { "src": "videos/presentation.mp4", "titre": "Présentation" },
+    { "src": "videos/presentation1.mp4", "titre": "Présentation 1" },
+    { "src": "videos/presentation2.mp4", "titre": "Présentation 2" },
+    { "src": "videos/presentation3.mp4", "titre": "Présentation 3" },
+    { "src": "videos/presentation4.mp4", "titre": "Présentation 4" },
+    { "src": "videos/presentation5.mp4", "titre": "Présentation 5" },
+    { "src": "videos/presentation6.mp4", "titre": "Présentation 6" },
+    { "src": "videos/presentation7.mp4", "titre": "Présentation 7" }
+  ],
+  "visuels_marque": [
+    { "img": "images/project1.jpg", "titre": "Montage vidéo — visuel de présentation" },
+    { "img": "images/project2.jpg", "titre": "Montage vidéo — identité visuelle" },
+    { "img": "images/project3.jpg", "titre": "Montage vidéo — mise en avant produit" },
+    { "img": "images/project4.jpg", "titre": "Montage vidéo — communication de marque" },
+    { "img": "images/project5.jpg", "titre": "BK Entreprise — Donnez vie à vos idées" }
+  ]
+}
