@@ -22,14 +22,14 @@ MAP = [
  ("c191356b-image.png", "03-emma",   "Emma"),
  ("3d4517d5-image.png", "05-lucas",  "Lucas"),
  ("8d2021ea-image.png", "06-maya",   "Maya"),
- ("848119f2-image.png", "04-lea",    "Léa"),          # variante beige
+ ("6b7f5f5e-image.png", "04-lea",    "Léa"),          # tailleur crème — choix de Kader
  ("0d20bf84-image.png", "07-noah",   "Noah"),
  ("8cf6cb73-image.png", "08-sam",    "Sam"),
  ("62a973c7-image.png", "09-rayan",  "Rayan"),
  ("e3b8b517-image.png", "08-thomas", "Thomas"),
  ("6bd85c2d-image.png", "07-amina",  "Amina"),
  ("d5bdb385-image.png", "01-nora",   "Nora"),
- ("6b7f5f5e-image.png", "04-lea-variante-creme", "Léa (variante crème)"),
+ ("848119f2-image.png", "04-lea-variante-beige", "Léa (variante beige)"),
 ]
 
 # Cadrages validés à l'œil quand la détection automatique se trompait
@@ -38,7 +38,7 @@ MAP = [
 MANUEL = {
  "01-chloe": (0.452, 0.086, 0.114),
  "01-nora":  (0.469, 0.092, 0.134),
- "04-lea":   (0.399, 0.068, 0.146),
+ "04-lea-variante-beige": (0.399, 0.068, 0.146),
  "06-clara": (0.409, 0.074, 0.131),
  "06-maya":  (0.440, 0.125, 0.125),
  "08-sam":   (0.420, 0.075, 0.135),

@@ -18,7 +18,7 @@ EVENTS = [
   "de l'événement associatif."),
  ("images/project18.jpg", "Association Akouani", "Associatif",
   "Un visuel construit autour de l'humain et du lien, pour porter une vision associative."),
- ("images/project20.jpg", "Savyard Cup — Soccer", "Sport",
+ ("images/project20.jpg", "Savoyard Cup — Soccer", "Sport",
   "Un écusson dans les codes du football : or, relief et lisibilité même en petit format."),
  ("images/project9.png",  "Association des Ivoiriens de Haute-Savoie — Un don, une goutte d’espoir", "Solidarité",
   "Une affiche de collecte qui explique la cause, montre son impact et donne les moyens d'agir."),

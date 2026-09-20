@@ -194,7 +194,7 @@ def body():
         <div class="orbit__sat"><a href="workers.html#maya"   title="Maya — Marketing et growth"><span class="pf pf--sm pf--ring"><img src="images/agents-clean/06-maya.jpg"   alt="Maya — marketing et growth" loading="lazy"></span></a></div>
         <div class="orbit__sat"><a href="workers.html#noah"   title="Noah — Administration et organisation"><span class="pf pf--sm pf--ring"><img src="images/agents-clean/07-noah.jpg"   alt="Noah — administration et organisation" loading="lazy"></span></a></div>
         <div class="orbit__sat"><a href="workers.html#sam"    title="Sam — IT et cybersécurité"><span class="pf pf--sm pf--ring"><img src="images/agents-clean/08-sam.jpg"    alt="Sam — IT et cybersécurité" loading="lazy"></span></a></div>
-        <div class="orbit__sat"><a href="workers.html#seoya"  title="Séoya — SEO et recherche"><span class="pf pf--sm pf--ring"><img src="images/agents-clean/09-seoya.jpg"  alt="Séoya — SEO et recherche" loading="lazy"></span></a></div>
+        <div class="orbit__sat"><a href="workers.html#seoya"  title="Séoya — SEO et rédaction web"><span class="pf pf--sm pf--ring"><img src="images/agents-clean/09-seoya.jpg"  alt="Séoya — SEO et rédaction web" loading="lazy"></span></a></div>
         <div class="orbit__sat"><a href="workers.html#thomas" title="Thomas — E-commerce et marketplace"><span class="pf pf--sm pf--ring"><img src="images/agents-clean/08-thomas.jpg" alt="Thomas — e-commerce et marketplace" loading="lazy"></span></a></div>
       </div>
 
@@ -205,7 +205,7 @@ def body():
         <div class="orbit__sat"><a href="workers.html#ines"   title="Inès — Data et analytics"><span class="pf pf--xs pf--ring"><img src="images/agents-clean/04-ines.jpg"   alt="Inès — data et analytics" loading="lazy"></span></a></div>
         <div class="orbit__sat"><a href="workers.html#yanis"  title="Yanis — Gestion de projet"><span class="pf pf--xs pf--ring"><img src="images/agents-clean/05-yanis.jpg"  alt="Yanis — gestion de projet" loading="lazy"></span></a></div>
         <div class="orbit__sat"><a href="workers.html#clara"  title="Clara — Juridique et contrats"><span class="pf pf--xs pf--ring"><img src="images/agents-clean/06-clara.jpg"  alt="Clara — juridique et contrats" loading="lazy"></span></a></div>
-        <div class="orbit__sat"><a href="workers.html#amina"  title="Amina — Recherche et intelligence"><span class="pf pf--xs pf--ring"><img src="images/agents-clean/07-amina.jpg"  alt="Amina — recherche et intelligence" loading="lazy"></span></a></div>
+        <div class="orbit__sat"><a href="workers.html#amina"  title="Amina — Veille stratégique"><span class="pf pf--xs pf--ring"><img src="images/agents-clean/07-amina.jpg"  alt="Amina — veille stratégique" loading="lazy"></span></a></div>
         <div class="orbit__sat"><a href="workers.html#rayan"  title="Rayan — Automatisation et intégrations"><span class="pf pf--xs pf--ring"><img src="images/agents-clean/09-rayan.jpg"  alt="Rayan — automatisation et intégrations" loading="lazy"></span></a></div>
       </div>
 

@@ -18,7 +18,7 @@ CHLOE = ("chloe", "Chloé", "Agent Maître",
 
 # (id, nom, rôle court, rôle long, image, compétences, missions, outils)
 WORKERS = [
- ("alex", "Alex", "Ventes", "Sales · Prospection commerciale", "images/agents-clean/02-alex.jpg",
+ ("alex", "Alex", "Prospection", "Ventes · Prospection commerciale", "images/agents-clean/02-alex.jpg",
   ["Ciblage", "Prospection", "Relances", "Qualification"],
   ["Constituer des listes de prospects pertinents", "Rédiger et personnaliser les prises de contact",
    "Relancer au bon moment", "Qualifier les demandes entrantes"],
@@ -36,7 +36,7 @@ WORKERS = [
    "Maintenir la cohérence graphique", "Produire des maquettes à valider"],
   ["Figma", "Adobe Photoshop", "Adobe Illustrator"]),
 
- ("lucas", "Lucas", "Web", "Web · Développement digital", "images/agents-clean/05-lucas.jpg",
+ ("lucas", "Lucas", "Web &amp; dév.", "Web · Développement digital", "images/agents-clean/05-lucas.jpg",
   ["Intégration", "Front-end", "Performance", "Mise en ligne"],
   ["Construire et mettre à jour les pages", "Corriger les anomalies d'affichage",
    "Améliorer la vitesse de chargement", "Préparer les mises en ligne"],
@@ -60,10 +60,10 @@ WORKERS = [
    "Surveiller les incidents", "Documenter l'infrastructure"],
   ["Microsoft 365", "GitHub"]),
 
- ("seoya", "Séoya", "SEO", "SEO · Recherche", "images/agents-clean/09-seoya.jpg",
-  ["Mots-clés", "Structure", "Contenu optimisé", "Suivi de position"],
-  ["Identifier les requêtes qui comptent", "Structurer titres et balises",
-   "Optimiser les contenus existants", "Suivre l'évolution des positions"],
+ ("seoya", "Séoya", "SEO &amp; rédaction", "SEO · Rédaction web", "images/agents-clean/09-seoya.jpg",
+  ["Mots-clés", "Rédaction optimisée", "Balises &amp; structure", "Suivi de position"],
+  ["Identifier les requêtes qui comptent pour votre activité", "Rédiger des pages pensées pour le référencement",
+   "Structurer titres, balises et liens internes", "Suivre l'évolution des positions sur Google"],
   ["Google Workspace"]),
 
  ("nora", "Nora", "Support", "Support · Relation client", "images/agents-clean/01-nora.jpg",
@@ -102,13 +102,13 @@ WORKERS = [
    "Vérifier la conformité des documents", "Maintenir une bibliothèque de modèles"],
   ["Microsoft 365", "Dropbox"]),
 
- ("amina", "Amina", "Recherche", "Recherche · Intelligence", "images/agents-clean/07-amina.jpg",
-  ["Veille", "Analyse concurrentielle", "Synthèses", "Sourcing"],
+ ("amina", "Amina", "Veille", "Veille stratégique &amp; intelligence", "images/agents-clean/07-amina.jpg",
+  ["Veille de marché", "Analyse concurrentielle", "Synthèses", "Sourcing"],
   ["Surveiller un marché ou un secteur", "Analyser ce que font les concurrents",
    "Produire des synthèses exploitables", "Trouver les sources fiables"],
   ["Google Workspace"]),
 
- ("thomas", "Thomas", "E-commerce", "E-commerce · Marketplace", "images/agents-clean/08-thomas.jpg",
+ ("thomas", "Thomas", "E-commerce", "E-commerce · Catalogue &amp; marketplace", "images/agents-clean/08-thomas.jpg",
   ["Catalogue", "Fiches produits", "Stocks", "Commandes"],
   ["Créer et enrichir les fiches produits", "Tenir le catalogue à jour",
    "Surveiller les stocks", "Suivre les commandes et les retours"],
