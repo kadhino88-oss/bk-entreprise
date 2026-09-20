@@ -11,6 +11,7 @@ OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
 
 # fichier source -> (slug de sortie, prénom)
 MAP = [
+ ("e489a698-image.png", "01-chloe",  "Chloé"),
  ("da8d08a3-image.png", "02-sophie", "Sophie"),
  ("cae93269-image.png", "09-seoya",  "Séoya"),
  ("4b92d9d2-image.png", "05-yanis",  "Yanis"),
@@ -35,6 +36,7 @@ MAP = [
 # (elle accrochait un logo BK ou un visage d'arrière-plan).
 # Fractions de la largeur/hauteur de l'affiche : (x, y, largeur du visage)
 MANUEL = {
+ "01-chloe": (0.452, 0.086, 0.114),
  "01-nora":  (0.469, 0.092, 0.134),
  "04-lea":   (0.399, 0.068, 0.146),
  "06-clara": (0.409, 0.074, 0.131),
