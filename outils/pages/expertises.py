@@ -3,7 +3,7 @@
 from bk_build import page_hero, CTA_FINAL, shot_class
 
 PAGE  = "expertises.html"
-TITLE = "Expertises — BK Entreprise"
+TITLE = "Expertises — Web, Design & IA à Genève | BK Entreprise"
 DESC  = ("Web & digital, design, communication, IT, IA & automatisation, conseil et événementiel : "
          "les sept expertises de BK Entreprise, mobilisables seules ou combinées.")
 OG    = "images/project8.jpg"

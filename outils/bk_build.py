@@ -31,9 +31,40 @@ NAV_TOP = [n for n in NAV if n[0] not in ("index.html", "contact.html")]
 
 NOINDEX = {"merci.html"}   # pages de confirmation : utiles au visiteur, pas à Google
 
+# Données réelles de l'entreprise (identiques au footer) — utilisées pour le
+# balisage Schema.org / LocalBusiness, un signal de référencement local pour Google.
+JSONLD = """<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "BK Entreprise",
+  "image": "https://www.bk-entreprise.com/images/logo.png",
+  "logo": "https://www.bk-entreprise.com/images/logo.png",
+  "url": "https://www.bk-entreprise.com/",
+  "telephone": "+41799349946",
+  "email": "contact@bk-entreprise.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue Joseph Pasquier 1",
+    "postalCode": "1203",
+    "addressLocality": "Genève",
+    "addressCountry": "CH"
+  },
+  "areaServed": ["Genève", "Suisse romande", "Haute-Savoie"],
+  "sameAs": [
+    "https://www.instagram.com/bk_entreprise7/",
+    "https://www.tiktok.com/@bkentreprise7",
+    "https://www.facebook.com/profile.php?id=61576414298574"
+  ],
+  "description": "Agence digitale et créative à Genève : sites web, identités visuelles, communication, IT et agents IA pour commerces, restaurants, marques et associations."
+}
+</script>"""
+
 
 def head(page, title, desc, og_image="images/project5.jpg"):
     robots = '\n<meta name="robots" content="noindex, follow">' if page in NOINDEX else ""
+    jsonld = "" if page in NOINDEX else f"\n{JSONLD}"
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -42,6 +73,8 @@ def head(page, title, desc, og_image="images/project5.jpg"):
 <title>{title}</title>
 <meta name="description" content="{desc}">{robots}
 <link rel="canonical" href="https://www.bk-entreprise.com/{page}">
+<meta name="geo.region" content="CH-GE">
+<meta name="geo.placename" content="Genève">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BK Entreprise">
@@ -55,7 +88,7 @@ def head(page, title, desc, og_image="images/project5.jpg"):
 <link rel="icon" href="images/logo.png">
 <link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="bk.css">
+<link rel="stylesheet" href="bk.css">{jsonld}
 </head>
 <body>
 """
