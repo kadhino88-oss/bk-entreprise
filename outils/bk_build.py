@@ -215,8 +215,8 @@ def realisations():
         return json.load(f)
 
 
-# Réalisations dont le visuel est un logo, un écusson ou une carte avec du texte :
-# object-fit:contain (via .car__media--contain) pour ne JAMAIS rien couper.
+# Réalisations dont le visuel est un logo, un écusson, une affiche ou tout visuel avec du
+# texte/contenu jusqu'aux bords : object-fit:contain (via --contain) pour ne JAMAIS rien couper.
 LOGO_TITLES = {
     "DK Tendance",
     "Abiba Hair",
@@ -231,12 +231,18 @@ LOGO_TITLES = {
     "Restaurant Le Baron",
     "Chez Édouard — Le 225 — Logo",
     "Savoyard Cup — Soccer",
+    # Affiches/visuels portrait (posters) écrasés dans des cadres 4:3 ou 4:5 — texte coupé sinon.
+    "BK Entreprise — Solutions créatives",
+    "Trésors by Ninel",
+    "Trésor by Ninel",
+    "Zouglou Live — Garba Party",
 }
 
 
 def _norm(s):
-    """Normalise les apostrophes (’ vs ') pour que la comparaison de titres ne rate rien."""
-    return s.replace("’", "'")
+    """Normalise apostrophes et casse pour que la comparaison de titres ne rate rien
+    (les libellés diffèrent légèrement d'une page à l'autre : majuscule/minuscule, etc.)."""
+    return s.replace("’", "'").lower()
 
 
 def _is_logo(texte):
