@@ -3,9 +3,9 @@
 from bk_build import page_hero
 
 PAGE  = "contact.html"
-TITLE = "Contact — BK Entreprise, Genève"
-DESC  = ("Contactez BK Entreprise à Genève : site web, design, communication, IT, conseil, "
-         "événementiel ou automatisation. +41 79 934 99 46 — contact@bk-entreprise.com")
+TITLE = "Contact — Agence digitale à Genève | BK Entreprise"
+DESC  = ("Contactez BK Entreprise, agence digitale à Genève : création de site web, identité visuelle, "
+         "communication, IT, conseil, événementiel ou agents IA. +41 79 934 99 46 — contact@bk-entreprise.com")
 OG    = "images/project5.jpg"
 
 SUJETS = ["Site web", "Design", "Communication", "IT",

@@ -3,9 +3,9 @@
 from bk_build import page_hero, CTA_FINAL, media_class
 
 PAGE  = "evenement.html"
-TITLE = "Événementiel à Genève — BK Entreprise"
-DESC  = ("Affiches, flyers, univers visuels et communication pour vos événements : "
-         "soirées, galas de charité, tournois et initiatives associatives.")
+TITLE = "Communication événementielle à Genève — BK Entreprise"
+DESC  = ("Affiches, flyers, univers visuels et communication événementielle pour Genève, la Suisse romande "
+         "et la Haute-Savoie : soirées, galas de charité, tournois et initiatives associatives.")
 OG    = "images/project7.jpg"
 
 # Réalisations événementielles réelles — noms exacts

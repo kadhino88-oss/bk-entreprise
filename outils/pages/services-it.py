@@ -3,9 +3,9 @@
 from bk_build import page_hero, CTA_FINAL
 
 PAGE  = "services-it.html"
-TITLE = "IT & Digital à Genève — BK Entreprise"
-DESC  = ("Création de sites, développement, maintenance, infrastructure, sécurité, IA et "
-         "automatisation : la partie technique de vos projets, prise en charge par BK Entreprise.")
+TITLE = "Création site web Genève — IT & Digital | BK Entreprise"
+DESC  = ("Création de site web à Genève, développement, maintenance, infrastructure, sécurité, "
+         "agents IA pour PME et automatisation : la partie technique de vos projets, prise en charge par BK Entreprise.")
 OG    = "images/project6.jpg"
 
 CREATION = [

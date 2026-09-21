@@ -3,9 +3,9 @@
 from bk_build import page_hero, CTA_FINAL, realisations, media_class
 
 PAGE  = "portfolio.html"
-TITLE = "Réalisations — BK Entreprise, Genève"
-DESC  = ("Les créations de BK Entreprise : identités visuelles, affiches et flyers événementiels, "
-         "menus, supports imprimés et contenus vidéo pour commerces, restaurants et associations.")
+TITLE = "Réalisations — Création de sites & identités visuelles à Genève | BK Entreprise"
+DESC  = ("Les créations de BK Entreprise, agence digitale à Genève : identités visuelles, affiches et "
+         "flyers événementiels, menus, supports imprimés et contenus vidéo pour commerces, restaurants et associations.")
 OG    = "images/project6.jpg"
 
 # Ordre d'affichage des filtres
