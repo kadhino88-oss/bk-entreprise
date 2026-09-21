@@ -2,7 +2,7 @@
 """Page Profil — Vision → Parcours → Compétences → Projets → Écosystème → Aujourd'hui.
 Informations issues des documents professionnels de Kader présents dans le projet.
 Aucune donnée inventée, et rien qui relève de la recherche d'emploi."""
-from bk_build import page_hero, CTA_FINAL, media_class
+from bk_build import page_hero, CTA_FINAL, media_class, realisations
 
 PAGE  = "profil.html"
 TITLE = "Profil — Qui est derrière BK Entreprise"
@@ -17,16 +17,6 @@ COMPETENCES = [
  ("Communication",         ["Community management", "Contenus réseaux", "Visuels de campagne"]),
  ("IA générative",         ["Conception d'agents", "Automatisation", "Intégration d'outils"]),
  ("Gestion de projet",     ["Analyse du besoin", "Cahier des charges", "Suivi et livraison"]),
-]
-
-PROJETS = [
- ("Market Les Saveurs d’Afrik", "Boutique Shopify sur mesure", "images/project25.jpg",
-  "Identité visuelle complète et boutique en ligne pour une épicerie africaine, de la version "
-  "première du logo à sa déclinaison premium."),
- ("Trésor by Ninel", "Identité et visuels produit", "images/project11.jpg",
-  "Coffret beauté, visuels publicitaires et déclinaisons réseaux pour une marque de soins."),
- ("Restaurant Le Baron", "Identité et supports", "images/project19.jpg",
-  "Logo, menu bar et menu restaurant pour un établissement de cuisine africaine."),
 ]
 
 PARCOURS = [
@@ -51,10 +41,10 @@ def body():
       </div>""" for i, (t, xs) in enumerate(COMPETENCES))
 
     projets = "".join(f"""
-        <a class="car__item" href="portfolio.html">
-          <div class="car__media{media_class(t)}"><img src="{img}" alt="{t}" loading="lazy"></div>
-          <div class="car__cap"><div class="car__cat">{st}</div><div class="car__t">{t}</div></div>
-        </a>""" for t, st, img, _ in PROJETS)
+        <a class="car__item" href="portfolio.html#creations">
+          <div class="car__media{media_class(it['titre'])}"><img src="{it['img']}" alt="{it['titre']}" loading="lazy"></div>
+          <div class="car__cap"><div class="car__cat">{it['cat']}</div><div class="car__t">{it['titre']}</div></div>
+        </a>""" for it in realisations()["realisations"])
 
     parcours = "".join(f"""
       <div class="flow__step rv rv-d{i}">

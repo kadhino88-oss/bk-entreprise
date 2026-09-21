@@ -89,9 +89,12 @@
   function carousels() {
     $$('.car').forEach(function (car) {
       var track = $('.car__track', car);
-      var prev  = $('[data-car="prev"]', car);
-      var next  = $('[data-car="next"]', car);
       if (!track) return;
+      // Les boutons ← → sont dans un bandeau AU-DESSUS du carousel (frère, pas enfant,
+      // du .car) : on cherche donc dans la section entière, pas seulement dans .car.
+      var scope = car.closest('.sec') || car.parentElement || car;
+      var prev  = $('[data-car="prev"]', scope);
+      var next  = $('[data-car="next"]', scope);
 
       var step = function () {
         var item = $('.car__item', track);
