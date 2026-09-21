@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Page Expertises — les 7 domaines, chacun avec une vraie section visuelle."""
-from bk_build import page_hero, CTA_FINAL
+from bk_build import page_hero, CTA_FINAL, shot_class
 
 PAGE  = "expertises.html"
 TITLE = "Expertises — BK Entreprise"
@@ -87,7 +87,7 @@ def body():
         <a class="link-arrow rv rv-d4" style="margin-top:24px;" href="{lien}">{libelle} <span class="arr">↗</span></a>
       </div>
       <div class="rv rv--r rv-d2" style="direction:ltr;" data-px="0.05">
-        <div class="shot shot--4x3"><img src="{img}" alt="{alt}" loading="lazy"></div>
+        <div class="shot shot--4x3{shot_class(alt)}"><img src="{img}" alt="{alt}" loading="lazy"></div>
       </div>
     </div>
   </div>

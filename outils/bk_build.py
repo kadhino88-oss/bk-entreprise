@@ -220,8 +220,12 @@ def realisations():
 LOGO_TITLES = {
     "DK Tendance",
     "Abiba Hair",
+    # Nom de marque seul (sans suffixe "— Logo" / "— identité" / "— version premium"...)
+    # pour matcher toutes les reformulations d'une page à l'autre.
+    "Market Les Saveurs d’Afrik",
     "Market Les Saveurs d’Afrik — Logo",
     "Market Les Saveurs d’Afrik — Version premium",
+    "AIHS",
     "AIHS — Association des Ivoiriens de Haute-Savoie",
     "AIHS — Logo officiel",
     "Restaurant Le Baron",
@@ -230,10 +234,26 @@ LOGO_TITLES = {
 }
 
 
+def _norm(s):
+    """Normalise les apostrophes (’ vs ') pour que la comparaison de titres ne rate rien."""
+    return s.replace("’", "'")
+
+
+def _is_logo(texte):
+    t = _norm(texte)
+    return any(_norm(lt) in t or t in _norm(lt) for lt in LOGO_TITLES)
+
+
 def media_class(titre):
     """Classe additionnelle à ajouter à .car__media pour ce titre, si c'est un logo/écusson.
-    Comparaison souple (sous-chaîne) pour couvrir les titres raccourcis d'une page à l'autre."""
-    return " car__media--contain" if any(t in titre or titre in t for t in LOGO_TITLES) else ""
+    Comparaison souple (sous-chaîne, apostrophes normalisées) pour couvrir les titres
+    raccourcis ou réécrits d'une page à l'autre."""
+    return " car__media--contain" if _is_logo(titre) else ""
+
+
+def shot_class(texte):
+    """Équivalent de media_class() pour les visuels affichés via .shot (pas .car__media)."""
+    return " shot--contain" if _is_logo(texte) else ""
 
 
 def build(page, title, desc, body, og="images/project5.jpg", light=True):
