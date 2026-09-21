@@ -4,7 +4,7 @@ Volontairement sobre en images : ce n'est pas une galerie, le portfolio est là 
 from bk_build import CTA_FINAL, realisations, media_class
 
 PAGE  = "index.html"
-TITLE = "BK Entreprise — Des idées aux résultats"
+TITLE = "BK Entreprise — Agence digitale & créative à Genève"
 DESC  = ("BK Entreprise conçoit sites, identités visuelles et communication pour commerces, "
          "restaurants et associations — et développe des agents IA pour les PME. Genève.")
 OG    = "images/project5.jpg"

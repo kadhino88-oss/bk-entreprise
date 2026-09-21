@@ -3,7 +3,7 @@
 from bk_build import page_hero, CTA_FINAL
 
 PAGE  = "services-it.html"
-TITLE = "IT & Digital — BK Entreprise"
+TITLE = "IT & Digital à Genève — BK Entreprise"
 DESC  = ("Création de sites, développement, maintenance, infrastructure, sécurité, IA et "
          "automatisation : la partie technique de vos projets, prise en charge par BK Entreprise.")
 OG    = "images/project6.jpg"

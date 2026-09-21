@@ -5,7 +5,7 @@ Aucune donnée inventée, et rien qui relève de la recherche d'emploi."""
 from bk_build import page_hero, CTA_FINAL, media_class, realisations
 
 PAGE  = "profil.html"
-TITLE = "Profil — Qui est derrière BK Entreprise"
+TITLE = "Profil — Qui est derrière BK Entreprise, Genève"
 DESC  = ("Christ Kader Berté, fondateur de BK Entreprise : concepteur digital et développeur web, "
          "basé à Genève. Sites, identités visuelles, e-commerce et agents IA.")
 OG    = "images/project5.jpg"
