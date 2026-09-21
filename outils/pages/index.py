@@ -5,8 +5,8 @@ from bk_build import CTA_FINAL, realisations, media_class
 
 PAGE  = "index.html"
 TITLE = "BK Entreprise — Agence digitale & créative à Genève"
-DESC  = ("BK Entreprise conçoit sites, identités visuelles et communication pour commerces, "
-         "restaurants et associations — et développe des agents IA pour les PME. Genève.")
+DESC  = ("Agence digitale à Genève : création de site web, identité visuelle et communication pour "
+         "commerces, restaurants et associations — et agents IA pour PME. Genève, Suisse romande, Haute-Savoie.")
 OG    = "images/project5.jpg"
 LIGHT_HEADER = False   # le hero vidéo est sombre : navigation en blanc
 

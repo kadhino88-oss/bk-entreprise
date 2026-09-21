@@ -3,9 +3,9 @@
 from bk_build import page_hero, CTA_FINAL, shot_class
 
 PAGE  = "conseil.html"
-TITLE = "Conseil & Stratégie à Genève — BK Entreprise"
-DESC  = ("Diagnostic, positionnement, stratégie digitale, cadrage et accompagnement : "
-         "structurer une idée pour la faire avancer avec BK Entreprise.")
+TITLE = "Conseil & stratégie digitale à Genève — BK Entreprise"
+DESC  = ("Diagnostic, positionnement, stratégie digitale, cadrage et accompagnement pour commerces, "
+         "associations et PME à Genève, en Suisse romande et en Haute-Savoie : structurer une idée pour la faire avancer.")
 OG    = "images/project15.jpg"
 
 PARCOURS = [
