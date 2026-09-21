@@ -74,9 +74,10 @@ def body():
     </div>
 
     <div class="hero__stats rv rv-d4">
-      <div class="stat"><div class="stat__n">2024</div><div class="stat__l">Année de création</div></div>
+      <div class="stat"><div class="stat__n">500+</div><div class="stat__l">Créations livrées</div></div>
+      <div class="stat"><div class="stat__n">99%</div><div class="stat__l">Clients satisfaits</div></div>
       <div class="stat"><div class="stat__n">7</div><div class="stat__l">Expertises</div></div>
-      <div class="stat"><div class="stat__n">Genève</div><div class="stat__l">Suisse &amp; Haute-Savoie</div></div>
+      <div class="stat"><div class="stat__n">2024</div><div class="stat__l">Année de création</div></div>
     </div>
   </div>
 

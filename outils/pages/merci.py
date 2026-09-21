@@ -41,7 +41,7 @@ def body():
     </div>
     <div class="cards">
       <a class="card rv"><div class="card__i">◈</div><div class="card__t">Les réalisations</div>
-        <p class="card__d">23 créations : identités, affiches, menus et contenus vidéo.</p>
+        <p class="card__d">Plus de 500 créations : identités, affiches, menus et contenus vidéo.</p>
         <span class="link-arrow" style="margin-top:16px;">Voir ↗</span></a>
       <a class="card rv rv-d1" href="workers.html"><div class="card__i">◆</div><div class="card__t">Les Workers</div>
         <p class="card__d">18 profils IA orchestrés par Chloé pour exécuter vos missions.</p>
