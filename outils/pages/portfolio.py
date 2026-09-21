@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Page Réalisations — les 23 créations avec leurs noms exacts + les 8 vidéos."""
-from bk_build import page_hero, CTA_FINAL, realisations
+from bk_build import page_hero, CTA_FINAL, realisations, media_class
 
 PAGE  = "portfolio.html"
 TITLE = "Réalisations — BK Entreprise"
@@ -41,7 +41,7 @@ def body():
         delay = " rv-d%d" % ((k % 3) + 1)
         cards.append(f"""
       <figure class="car__item rv{delay}" data-cat="{it['cat']}" style="flex:none;width:auto;">
-        <div class="car__media" style="aspect-ratio:4/5;">
+        <div class="car__media{media_class(it['titre'])}" style="aspect-ratio:4/5;">
           <img src="{it['img']}" alt="{it['titre']} — réalisation BK Entreprise" loading="lazy">
         </div>
         <figcaption class="car__cap">

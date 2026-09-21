@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Page Événementiel — les réalisations événementielles réelles, en carousel."""
-from bk_build import page_hero, CTA_FINAL
+from bk_build import page_hero, CTA_FINAL, media_class
 
 PAGE  = "evenement.html"
 TITLE = "Événementiel — BK Entreprise"
@@ -39,7 +39,7 @@ PRESTATIONS = [
 def body():
     cards = "".join(f"""
         <a class="car__item" href="portfolio.html">
-          <div class="car__media"><img src="{img}" alt="{t}" loading="lazy"></div>
+          <div class="car__media{media_class(t)}"><img src="{img}" alt="{t}" loading="lazy"></div>
           <div class="car__cap"><div class="car__cat">{cat}</div><div class="car__t">{t}</div></div>
         </a>""" for img, t, cat, _ in EVENTS)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Accueil — centrée sur CE QU'ON FAIT, NOTRE EXPÉRIENCE et NOTRE FUTUR.
 Volontairement sobre en images : ce n'est pas une galerie, le portfolio est là pour ça."""
-from bk_build import CTA_FINAL
+from bk_build import CTA_FINAL, realisations, media_class
 
 PAGE  = "index.html"
 TITLE = "BK Entreprise — Des idées aux résultats"
@@ -20,21 +20,8 @@ EXPERTISES = [
  ("07", "Événementiel", "Affiches, univers visuel et communication pour donner à votre événement une image qui rassemble.", "evenement.html"),
 ]
 
-# Preuves de travail — courtes, contextualisées, pas une galerie
-PREUVES = [
- ("images/project15.jpg", "Market Les Saveurs d’Afrik", "Épicerie",
-  "Identité complète puis boutique en ligne, du premier logo à sa version premium."),
- ("images/project19.jpg", "Restaurant Le Baron", "Restauration",
-  "Logo, menu bar et menu restaurant — une image tenue sur tous les supports."),
- ("images/project11.jpg", "Trésor by Ninel", "Beauté",
-  "Visuels produit et publicités déclinés pour les réseaux."),
- ("images/project7.jpg", "Zouglou Live — Garba Party", "Événement",
-  "Affiche et promotion digitale pour une soirée à forte affluence."),
- ("images/project9.png", "AIHS — Un don, une goutte d’espoir", "Association",
-  "Campagne de collecte : message, impact et moyens d'agir sur une seule affiche."),
- ("images/project12.jpg", "Abiba Hair", "Salon",
-  "Création d'identité pour un salon de coiffure."),
-]
+# Preuves de travail — toutes les réalisations, pour qu'on puisse défiler dans l'ensemble.
+# (Le détail de chaque projet reste sur la page Réalisations.)
 
 SECTEURS = [
  ("Commerces &amp; épiceries", "Identité, boutique en ligne, catalogue produits."),
@@ -53,10 +40,10 @@ def body():
       </a>""" for i, (n, t, d, lien) in enumerate(EXPERTISES))
 
     preuves = "".join(f"""
-        <a class="car__item" href="portfolio.html">
-          <div class="car__media"><img src="{img}" alt="{t} — réalisation BK Entreprise" loading="lazy"></div>
-          <div class="car__cap"><div class="car__cat">{cat}</div><div class="car__t">{t}</div></div>
-        </a>""" for img, t, cat, _ in PREUVES)
+        <a class="car__item" href="portfolio.html#creations">
+          <div class="car__media{media_class(it['titre'])}"><img src="{it['img']}" alt="{it['titre']} — réalisation BK Entreprise" loading="lazy"></div>
+          <div class="car__cap"><div class="car__cat">{it['cat']}</div><div class="car__t">{it['titre']}</div></div>
+        </a>""" for it in realisations()["realisations"])
 
     detail = "".join(f"""
       <div class="flow__step rv rv-d{i}" style="border-color:var(--line);background:#fff;">
@@ -88,8 +75,8 @@ def body():
 
     <div class="hero__stats rv rv-d4">
       <div class="stat"><div class="stat__n">2024</div><div class="stat__l">Année de création</div></div>
-      <div class="stat"><div class="stat__n">23</div><div class="stat__l">Créations livrées</div></div>
       <div class="stat"><div class="stat__n">7</div><div class="stat__l">Expertises</div></div>
+      <div class="stat"><div class="stat__n">Genève</div><div class="stat__l">Suisse &amp; Haute-Savoie</div></div>
     </div>
   </div>
 
@@ -158,7 +145,7 @@ def body():
     </div>
 
     <div class="rv rv-d2" style="margin-top:26px;">
-      <a class="link-arrow" href="portfolio.html">Voir les 23 réalisations <span class="arr">↗</span></a>
+      <a class="link-arrow" href="portfolio.html">Voir toutes les réalisations <span class="arr">↗</span></a>
     </div>
   </div>
 </section>
@@ -177,8 +164,8 @@ def body():
         exécutent ces missions dans vos outils existants.
       </p>
       <p class="lead" style="margin-top:16px;">
-        Nous construisons cette offre en l'utilisant d'abord sur nos propres projets. Ce qui est
-        proposé aux clients est ce qui a déjà fait ses preuves en interne.
+        L'offre est disponible dès aujourd'hui et travaille déjà pour plusieurs PME — sur des
+        missions concrètes, dans leurs outils existants.
       </p>
     </div>
 

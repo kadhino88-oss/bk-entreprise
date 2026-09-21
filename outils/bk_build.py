@@ -215,6 +215,27 @@ def realisations():
         return json.load(f)
 
 
+# Réalisations dont le visuel est un logo, un écusson ou une carte avec du texte :
+# object-fit:contain (via .car__media--contain) pour ne JAMAIS rien couper.
+LOGO_TITLES = {
+    "DK Tendance",
+    "Abiba Hair",
+    "Market Les Saveurs d’Afrik — Logo",
+    "Market Les Saveurs d’Afrik — Version premium",
+    "AIHS — Association des Ivoiriens de Haute-Savoie",
+    "AIHS — Logo officiel",
+    "Restaurant Le Baron",
+    "Chez Édouard — Le 225 — Logo",
+    "Savoyard Cup — Soccer",
+}
+
+
+def media_class(titre):
+    """Classe additionnelle à ajouter à .car__media pour ce titre, si c'est un logo/écusson.
+    Comparaison souple (sous-chaîne) pour couvrir les titres raccourcis d'une page à l'autre."""
+    return " car__media--contain" if any(t in titre or titre in t for t in LOGO_TITLES) else ""
+
+
 def build(page, title, desc, body, og="images/project5.jpg", light=True):
     html = head(page, title, desc, og) + header(page, light) + body + FOOTER
     path = os.path.join(ROOT, page)

@@ -319,6 +319,10 @@ body.no-scroll{ overflow:hidden; }
   transition:transform .9s var(--ease);
 }
 .car__item:hover .car__media img{ transform:scale(1.06); }
+/* Logos, écussons et visuels avec texte : jamais coupés — on les fait tenir entièrement. */
+.car__media--contain{ background:var(--ivory); }
+.car__media--contain img{ object-fit:contain; padding:30px; transition:transform .6s var(--ease); }
+.car__media--contain:hover img{ transform:scale(1.04); }
 .car__media::after{
   content:""; position:absolute; inset:0;
   background:linear-gradient(180deg,
@@ -387,18 +391,20 @@ body.no-scroll{ overflow:hidden; }
 .orbit__name{ margin-top:14px; font-size:1.05rem; font-weight:700; }
 .orbit__role{ font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-strong); margin-top:4px; }
 
-/* Grille des Workers */
-.wgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(168px,1fr)); gap:14px; }
+/* Grille des Workers — portrait au-dessus, nom puis rôle EN DESSOUS (jamais côte à côte) */
+.wgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(148px,1fr)); gap:14px; }
 .wcard{
-  display:flex; align-items:center; gap:13px;
-  padding:13px 15px; border-radius:var(--r);
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  gap:12px;
+  padding:22px 14px 20px; border-radius:var(--r);
   border:1px solid var(--line); background:#fff;
   transition:.4s var(--ease);
 }
 .sec--dark .wcard,.sec--night .wcard{ background:rgba(255,255,255,.04); border-color:var(--line-dark); }
 .wcard:hover{ transform:translateY(-4px); border-color:var(--gold); box-shadow:var(--shadow); }
-.wcard__n{ font-size:15px; font-weight:650; line-height:1.2; }
-.wcard__r{ font-size:12.5px; color:var(--tx-muted); margin-top:3px; line-height:1.3; }
+.wcard__txt{ display:flex; flex-direction:column; align-items:center; min-width:0; width:100%; }
+.wcard__n{ font-size:15px; font-weight:650; line-height:1.25; }
+.wcard__r{ display:block; font-size:12.5px; color:var(--tx-muted); margin-top:5px; line-height:1.35; white-space:normal; }
 .sec--dark .wcard__r,.sec--night .wcard__r{ color:var(--tx-inv-muted); }
 
 /* ---------- 11. PROCESSUS / WORKFLOW ---------- */

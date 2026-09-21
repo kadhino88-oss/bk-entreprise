@@ -166,7 +166,7 @@ def body():
     grille = "".join(f"""
       <a class="wcard rv rv-d{(i % 6) + 1}" href="#{wid}">
         <span class="pf pf--sm pf--ring"><img src="{img}" alt="{nom} — {long}" loading="lazy"></span>
-        <span><span class="wcard__n">{nom}</span><span class="wcard__r">{court}</span></span>
+        <span class="wcard__txt"><span class="wcard__n">{nom}</span><span class="wcard__r">{court}</span></span>
       </a>""" for i, (wid, nom, court, long, img, _, _, _) in enumerate(WORKERS))
 
     # --- workflow ---
@@ -217,7 +217,7 @@ def body():
         </div>
 
         <a class="btn btn--gold" style="margin-top:26px;width:100%;justify-content:center;"
-           href="contact.html">Recruter {nom} <span class="arr">↗</span></a>
+           href="#mission">Recruter {nom} <span class="arr">↗</span></a>
       </article>"""
 
     fiches = "".join(fiche(*w) for w in WORKERS)
