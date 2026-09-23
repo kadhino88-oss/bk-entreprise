@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """Page Workers — une vraie expérience produit : concept, workflow, composition d'équipe
-interactive et 18 profils détaillés. Portraits TOUJOURS petits et circulaires."""
+interactive et 17 Workers détaillés + Chloé. Portraits TOUJOURS petits et circulaires."""
 from bk_build import page_hero, CTA_FINAL
 
 PAGE  = "workers.html"
 TITLE = "Agent IA pour PME à Genève — BK-AI-WORKERS | BK Entreprise"
-DESC  = ("Agents IA pour PME à Genève : 18 profils spécialisés orchestrés par Chloé. Vous donnez l'objectif, "
+DESC  = ("Agents IA pour PME à Genève : 17 Workers spécialisés orchestrés par Chloé. Vous donnez l'objectif, "
          "Chloé compose l'équipe, les Workers exécutent. Une offre de l'écosystème BK Entreprise.")
 OG    = "images/agents-clean/01-chloe.jpg"
 
@@ -226,11 +226,11 @@ def body():
     return page_hero(
         eyebrow="BK-AI-WORKERS",
         title_html='Votre objectif. <span class="it">Une équipe IA.</span>',
-        lead=("18 profils spécialisés, orchestrés par Chloé. Vous donnez l'objectif, elle compose "
+        lead=("17 Workers spécialisés, orchestrés par Chloé. Vous donnez l'objectif, elle compose "
               "l'équipe, les Workers exécutent — et vous obtenez un résultat exploitable. "
               "BK-AI-WORKERS est une offre de l'écosystème BK Entreprise."),
         cta1=("#mission", "Créer ma première mission"),
-        cta2=("#equipe", "Voir les 18 profils ↓"),
+        cta2=("#equipe", "Voir les 17 Workers ↓"),
     ) + f"""{pool}
 
 <!-- ===== LE CONCEPT ===== -->

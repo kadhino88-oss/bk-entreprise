@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Page Réalisations — les créations avec leurs noms exacts + les vidéos (compte réel = len(data-realisations.json), jamais codé en dur)."""
-from bk_build import page_hero, CTA_FINAL, realisations, media_class
+from bk_build import page_hero, CTA_FINAL, realisations, media_class, grands_projets, grand_projet_card
 
 PAGE  = "portfolio.html"
 TITLE = "Réalisations — Création de sites & identités visuelles à Genève | BK Entreprise"
@@ -9,7 +9,7 @@ DESC  = ("Les créations de BK Entreprise, agence digitale à Genève : identit�
 OG    = "images/project6.jpg"
 
 # Ordre d'affichage des filtres
-CATS = ["Web & Applications", "Identité", "Communication", "Événementiel", "Associatif",
+CATS = ["Identité", "Communication", "Événementiel", "Associatif",
         "Restauration", "Beauté", "Sport", "Édition"]
 
 
@@ -61,21 +61,36 @@ def body():
                  aria-label="{v['titre']} — BK Entreprise"></video>
         </figure>""")
     videos_html = "".join(vids)
+    gp_cards = "".join(grand_projet_card(gp, i) for i, gp in enumerate(grands_projets()))
 
     return page_hero(
         eyebrow="Réalisations",
         title_html='Des créations qui parlent <span class="it">d\'elles-mêmes.</span>',
-        lead=("Identités visuelles, affiches et flyers, menus, supports imprimés et contenus vidéo — "
-              "réalisés pour des commerces, des restaurants, des associations et des événements."),
+        lead=("Sites, applications et plateforme IA développés de bout en bout — et identités "
+              "visuelles, affiches, menus et contenus vidéo réalisés pour des commerces, des "
+              "restaurants, des associations et des événements."),
         cta1=("contact.html", "Démarrer un projet"),
         cta2=("#creations", "Voir les créations ↓"),
     ) + f"""
+<!-- ===== GRANDS PROJETS ===== -->
+<section class="sec sec--night" id="grands-projets">
+  <div class="halo halo--warm" style="width:520px;height:520px;top:-160px;right:-160px;"></div>
+  <div class="wrap">
+    <div class="sec-head rv" style="max-width:820px;">
+      <span class="eyebrow">01 — Grands projets</span>
+      <h2 class="h-lg" style="margin-top:22px;">Sites, applications et <span class="it">plateforme IA.</span></h2>
+      <p class="lead">Développement complet — de la conception à l'exploitation.</p>
+    </div>
+    <div class="gp__grid rv rv-d1">{gp_cards}</div>
+  </div>
+</section>
+
 <!-- ===== GRILLE DES CRÉATIONS ===== -->
 <section class="sec" id="creations">
   <div class="wrap">
     <div class="sec-head rv" style="max-width:none;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;">
       <div style="max-width:620px;">
-        <span class="eyebrow">01 — Créations</span>
+        <span class="eyebrow">02 — Créations graphiques</span>
         <h2 class="h-lg" style="margin-top:22px;">Chaque projet porte <span class="it">son vrai nom.</span></h2>
       </div>
     </div>
@@ -94,7 +109,7 @@ def body():
   <div class="halo halo--warm" style="width:520px;height:520px;top:-160px;right:-160px;"></div>
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">02 — Contenus vidéo</span>
+      <span class="eyebrow">03 — Contenus vidéo</span>
       <h2 class="h-lg" style="margin-top:22px;">L'image <span class="it">en mouvement.</span></h2>
       <p class="lead">Montages, présentations et formats courts produits pour les réseaux et les campagnes.</p>
     </div>

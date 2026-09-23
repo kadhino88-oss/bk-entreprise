@@ -29,7 +29,7 @@ IT = [
 IA = [
  ("Automatiser une tâche répétitive", "Relances, publications, mises à jour de fichiers, rapports récurrents."),
  ("Relier vos outils entre eux", "Vos applications se parlent au lieu de vous faire ressaisir les mêmes informations."),
- ("Mobiliser les Workers", "18 profils spécialisés, orchestrés par Chloé, pour exécuter des missions précises."),
+ ("Mobiliser les Workers", "17 Workers spécialisés, orchestrés par Chloé, pour exécuter des missions précises."),
 ]
 
 

@@ -23,9 +23,25 @@
     { "img": "images/project25.jpg", "titre": "Market Les Saveurs d’Afrik — Version premium", "cat": "Identité", "verifie": "Version premium du logo Market" },
     { "img": "images/project26.png", "titre": "AIHS — Logo officiel", "cat": "Identité", "verifie": "Logo AIHS version 2" },
     { "img": "images/project27.jpg", "titre": "In Memoriam — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part de décès" },
-    { "img": "images/project28.jpg", "titre": "Programme des obsèques — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part détails des obsèques" },
-    { "img": "images/project-afroeat.png", "titre": "Afro Eat — Application mobile", "cat": "Web & Applications", "verifie": "Icône réelle de l'app (Expo/React Native), développée par Kader — ajouté le 2026-09-23" },
-    { "img": "images/logo.png", "titre": "BK-AI-WORKERS — Plateforme IA", "cat": "Web & Applications", "verifie": "Plateforme SaaS bk-ai-workers.com, 17 Workers IA + Chloé, en exploitation — ajouté le 2026-09-23" }
+    { "img": "images/project28.jpg", "titre": "Programme des obsèques — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part détails des obsèques" }
+  ],
+  "grands_projets": [
+    {
+      "titre": "BK-AI-WORKERS",
+      "role": "Conception et développement complet",
+      "description": "Plateforme SaaS de travail IA : 17 Workers spécialisés orchestrés par Chloé, missions confiées en langage naturel et exécutées via de vrais connecteurs (Slack, Trello, Gmail, HubSpot...). Comptes clients isolés, facturation Stripe réelle, abonnements en self-service. En exploitation active.",
+      "tags": ["Python", "PowerShell", "IA (Claude)", "Stripe", "Multi-tenant"],
+      "lien": "https://bk-ai-workers.com",
+      "img": "images/logo.png"
+    },
+    {
+      "titre": "Afro Eat",
+      "role": "Développement application mobile",
+      "description": "Application mobile autour de la cuisine africaine, développée en React Native (Expo/TypeScript) : navigation native, interface complète. Projet en cours de finalisation.",
+      "tags": ["React Native", "Expo", "TypeScript"],
+      "lien": null,
+      "img": "images/project-afroeat.png"
+    }
   ],
   "videos": [
     { "src": "videos/hero-video.mp4", "titre": "Vidéo d’accueil" },

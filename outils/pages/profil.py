@@ -11,23 +11,26 @@ DESC  = ("Christ Kader Berté, fondateur de BK Entreprise, agence digitale à Ge
 OG    = "images/project5.jpg"
 
 COMPETENCES = [
- ("Développement web",     ["HTML5", "CSS3", "JavaScript", "WordPress", "Webflow"]),
- ("E-commerce",            ["Shopify", "Boutiques sur mesure", "Catalogue et paiement"]),
- ("Design &amp; identité", ["Adobe Photoshop", "Adobe Illustrator", "Logos et chartes", "Supports imprimés"]),
- ("Communication",         ["Community management", "Contenus réseaux", "Visuels de campagne"]),
- ("IA générative",         ["Conception d'agents", "Automatisation", "Intégration d'outils"]),
- ("Gestion de projet",     ["Analyse du besoin", "Cahier des charges", "Suivi et livraison"]),
+ ("Développement full-stack", ["MEAN (MongoDB, Express, Angular, Node.js)", "React / React Native", "Next.js", "Python", "APIs REST"]),
+ ("IA &amp; Automatisation",  ["Conception d'agents IA spécialisés", "Automatisation de tâches", "Intégration d'agents en PME/TPE et grandes structures", "Orchestration multi-agents"]),
+ ("Sites &amp; e-commerce",   ["Sites premium sur-mesure et interactifs", "Shopify", "WordPress", "Webflow", "Stripe"]),
+ ("Design &amp; identité",    ["Adobe Photoshop", "Adobe Illustrator", "Logos et chartes", "Supports imprimés"]),
+ ("Communication",            ["Community management", "Contenus réseaux", "Visuels de campagne"]),
+ ("Formation &amp; gestion de projet", ["Formation IA et informatique", "Analyse du besoin", "Cahier des charges", "Suivi et livraison"]),
 ]
 
 PARCOURS = [
  ("Vision", "Réunir au même endroit ce qu'une petite structure doit habituellement aller chercher "
   "chez trois prestataires différents : le site, l'image et la communication. Une seule "
   "interlocution, une seule cohérence."),
- ("Parcours", "Créateur de sites internet et d'applications mobiles, avec des bases solides en "
-  "informatique et une pratique quotidienne des outils d'IA générative pour concevoir, "
-  "documenter et produire plus vite."),
+ ("Parcours", "Développeur full-stack MEAN, créateur de sites premium sur-mesure, d'applications "
+  "mobiles et d'agents IA spécialisés. Je maîtrise l'intégration d'agents IA dans des PME, des "
+  "TPE et de grandes structures, tous secteurs confondus, et je forme aussi des apprenants à "
+  "l'IA et à l'informatique."),
  ("Aujourd'hui", "BK Entreprise est installée à Genève et travaille avec des commerces, des "
-  "restaurants, des marques et des associations en Suisse romande et en Haute-Savoie."),
+  "restaurants, des marques et des associations en Suisse romande et en Haute-Savoie. En plein "
+  "développement personnel, je continue à me perfectionner sur tous les domaines informatiques "
+  "— un nouveau projet en sécurité informatique est déjà en préparation."),
 ]
 
 
@@ -73,14 +76,22 @@ def body():
           Fondateur &amp; concepteur digital · Genève
         </p>
         <p class="lead" style="margin-top:20px;">
-          Concepteur digital et développeur web, je conçois des sites internet et des applications
-          mobiles pour des indépendants, des commerces et des PME. J'utilise l'IA générative au
-          quotidien pour concevoir, documenter et produire plus vite — sans jamais remplacer
-          le travail de compréhension du besoin.
+          Concepteur digital et développeur web, je crée des sites premium sur-mesure et
+          interactifs, des applications mobiles et des agents IA spécialisés — chacun conçu
+          pour la tâche exacte qu'on lui confie. C'est ce qui fait de moi aujourd'hui un
+          développeur full-stack MEAN et un spécialiste de l'IA générative et de l'automatisation :
+          je maîtrise aussi bien la maîtrise des outils IA que l'intégration d'agents dans des
+          PME, des TPE et de grandes structures, tous secteurs confondus.
         </p>
         <p class="lead" style="margin-top:16px;">
           Je prends le projet de bout en bout : analyse du besoin, cahier des charges, création,
-          développement, mise en ligne et suivi.
+          développement, mise en ligne et suivi. Je forme aussi des apprenants à l'IA et à
+          l'informatique — transmettre fait partie de la façon dont je consolide ce que j'apprends.
+        </p>
+        <p class="lead" style="margin-top:16px;">
+          Je reste en plein développement personnel : j'apprends et je me perfectionne en continu
+          sur l'ensemble des domaines informatiques. Un nouveau projet est déjà en préparation :
+          la sécurité informatique.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;">
           <a class="btn btn--ink" href="contact.html">Parler de votre projet <span class="arr">↗</span></a>
@@ -89,6 +100,7 @@ def body():
       </div>
       <div class="rv rv--r rv-d1" data-px="0.05">
         <div class="shot shot--4x3"><img src="images/project5.jpg" alt="BK Entreprise — donnez vie à vos idées" loading="lazy"></div>
+        <!-- TODO Kader : remplacer par images/kader-portrait.jpg des que le fichier existe (voir demande photo) -->
       </div>
     </div>
   </div>
@@ -162,7 +174,7 @@ def body():
         <p class="card__d">Affiches, univers visuel et communication pour vos événements.</p>
         <a class="link-arrow" style="margin-top:16px;" href="evenement.html">Voir l'événementiel ↗</a></div>
       <div class="card rv rv-d3"><div class="card__i">◇</div><div class="card__t">BK-AI-WORKERS</div>
-        <p class="card__d">18 agents IA orchestrés par Chloé, déjà à l'œuvre pour plusieurs PME.</p>
+        <p class="card__d">17 Workers IA orchestrés par Chloé, déjà à l'œuvre pour plusieurs PME.</p>
         <a class="link-arrow" style="margin-top:16px;" href="workers.html">Voir les Workers ↗</a></div>
     </div>
   </div>
@@ -245,6 +257,20 @@ def body():
       </div>
 
       <div class="flow__step rv rv-d5" style="display:block;padding:clamp(26px,3vw,38px);margin-top:16px;">
+        <div class="eyebrow" style="font-size:11px;">Toujours en apprentissage</div>
+        <p class="lead" style="margin-top:14px;color:var(--tx-inv-muted);">
+          Je forme aussi des apprenants à l'IA et à l'informatique — expliquer un outil est souvent
+          la meilleure façon de vraiment le maîtriser. Et je reste moi-même en plein développement
+          personnel : je continue à apprendre et à me perfectionner sur l'ensemble des domaines
+          informatiques, du full-stack à l'IA en passant par l'automatisation.
+        </p>
+        <p class="lead" style="margin-top:14px;color:var(--tx-inv-muted);">
+          Un nouveau chantier est déjà en préparation : <strong>la sécurité informatique</strong> —
+          la suite logique d'une offre qui ne s'arrête jamais à ce qui est déjà construit.
+        </p>
+      </div>
+
+      <div class="flow__step rv rv-d6" style="display:block;padding:clamp(26px,3vw,38px);margin-top:16px;">
         <div class="eyebrow" style="font-size:11px;">Aujourd'hui</div>
         <p class="lead" style="margin-top:14px;color:var(--tx-inv-muted);">
           BK Entreprise est installée à Genève et travaille des deux côtés de la frontière,

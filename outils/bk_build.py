@@ -172,7 +172,7 @@ FOOTER = """</main>
       <div>
         <h4>Workers</h4>
         <ul>
-          <li><a href="workers.html">Les 18 Workers</a></li>
+          <li><a href="workers.html">Les 17 Workers</a></li>
           <li><a href="workers.html#chloe">Chloé — Agent Maître</a></li>
           <li><a href="workers.html#mission">Créer une mission</a></li>
           <li><a href="integrations.html">Intégrations</a></li>
@@ -248,6 +248,34 @@ def realisations():
         return json.load(f)
 
 
+def grands_projets():
+    """Projets logiciels réels (sites, apps, plateformes) — traités à part des
+    créations graphiques : description écrite, tags techniques, lien réel si
+    en ligne. Jamais de chiffre inventé ici : uniquement ce qui est vérifiable
+    dans le code/le dépôt du projet lui-même."""
+    return realisations().get("grands_projets", [])
+
+
+def grand_projet_card(gp, i):
+    """Carte détaillée pour un grand projet (voir grands_projets()) — plus
+    grande et plus écrite qu'une carte de réalisation graphique, pensée pour
+    convaincre un recruteur/client sérieux, pas juste illustrer."""
+    tags = "".join(f'<span class="tag">{t}</span>' for t in gp.get("tags", []))
+    lien = (f'<a class="btn btn--ghost" href="{gp["lien"]}" target="_blank" rel="noopener">Voir le site <span class="arr">↗</span></a>'
+            if gp.get("lien") else '<span class="tag" style="opacity:.6;">En cours de finalisation</span>')
+    return f"""
+      <div class="gp__card rv rv-d{(i % 3) + 1}">
+        <div class="gp__media"><img src="{gp['img']}" alt="{gp['titre']} — {gp['role']}" loading="lazy"></div>
+        <div class="gp__body">
+          <div class="gp__role">{gp['role']}</div>
+          <h3 class="gp__t">{gp['titre']}</h3>
+          <p class="gp__d">{gp['description']}</p>
+          <div class="gp__tags">{tags}</div>
+          <div class="gp__cta">{lien}</div>
+        </div>
+      </div>"""
+
+
 # Réalisations dont le visuel est un logo, un écusson, une affiche ou tout visuel avec du
 # texte/contenu jusqu'aux bords : object-fit:contain (via --contain) pour ne JAMAIS rien couper.
 LOGO_TITLES = {
@@ -269,10 +297,6 @@ LOGO_TITLES = {
     "Trésors by Ninel",
     "Trésor by Ninel",
     "Zouglou Live — Garba Party",
-    # Icônes / logos d'applications et plateformes (carrés, texte/mascotte
-    # centrés) — même traitement que les logos ci-dessus, jamais recadrés.
-    "Afro Eat — Application mobile",
-    "BK-AI-WORKERS — Plateforme IA",
 }
 
 

@@ -39,9 +39,9 @@ XP = [
   "images/project6.jpg", "BK Entreprise — solutions créatives", "services-it.html#it", "Découvrir l'IT"),
 
  ("ia", "05", "IA &amp; Automatisation", "Une équipe IA qui <span class=\"it\">exécute.</span>",
-  "BK-AI-WORKERS est une offre de l'écosystème BK : 18 profils spécialisés, orchestrés par Chloé, "
+  "BK-AI-WORKERS est une offre de l'écosystème BK : 17 Workers spécialisés, orchestrés par Chloé, "
   "qui transforment un objectif en missions réellement exécutées — sans remplacer le reste de BK.",
-  ["Les 18 Workers spécialisés", "Composition d'équipe par objectif", "Automatisation de tâches répétitives",
+  ["Chloé & les 17 Workers", "Composition d'équipe par objectif", "Automatisation de tâches répétitives",
    "Connexion à vos outils existants", "Suivi et contrôle des missions"],
   "images/agents-clean/01-chloe.jpg", "Chloé — Agent Maître de BK-AI-WORKERS", "workers.html", "Découvrir les Workers"),
 

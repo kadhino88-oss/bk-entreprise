@@ -84,7 +84,7 @@ def body():
       <div class="eco__ring" style="inset:26%;"></div>
       <div class="eco__core">
         <b>BK-AI-<br>WORKERS</b>
-        <small>18 profils</small>
+        <small>17 Workers</small>
       </div>
       {ext_html}
     </div>
