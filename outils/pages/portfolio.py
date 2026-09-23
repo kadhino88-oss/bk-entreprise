@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Page Réalisations — les 23 créations avec leurs noms exacts + les 8 vidéos."""
+"""Page Réalisations — les créations avec leurs noms exacts + les vidéos (compte réel = len(data-realisations.json), jamais codé en dur)."""
 from bk_build import page_hero, CTA_FINAL, realisations, media_class
 
 PAGE  = "portfolio.html"
@@ -9,7 +9,7 @@ DESC  = ("Les créations de BK Entreprise, agence digitale à Genève : identit�
 OG    = "images/project6.jpg"
 
 # Ordre d'affichage des filtres
-CATS = ["Identité", "Communication", "Événementiel", "Associatif",
+CATS = ["Web & Applications", "Identité", "Communication", "Événementiel", "Associatif",
         "Restauration", "Beauté", "Sport", "Édition"]
 
 
@@ -70,7 +70,7 @@ def body():
         cta1=("contact.html", "Démarrer un projet"),
         cta2=("#creations", "Voir les créations ↓"),
     ) + f"""
-<!-- ===== GRILLE DES 23 CRÉATIONS ===== -->
+<!-- ===== GRILLE DES CRÉATIONS ===== -->
 <section class="sec" id="creations">
   <div class="wrap">
     <div class="sec-head rv" style="max-width:none;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;">

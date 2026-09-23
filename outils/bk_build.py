@@ -269,6 +269,10 @@ LOGO_TITLES = {
     "Trésors by Ninel",
     "Trésor by Ninel",
     "Zouglou Live — Garba Party",
+    # Icônes / logos d'applications et plateformes (carrés, texte/mascotte
+    # centrés) — même traitement que les logos ci-dessus, jamais recadrés.
+    "Afro Eat — Application mobile",
+    "BK-AI-WORKERS — Plateforme IA",
 }
 
 
