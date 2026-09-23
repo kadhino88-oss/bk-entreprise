@@ -297,6 +297,7 @@ LOGO_TITLES = {
     "Trésors by Ninel",
     "Trésor by Ninel",
     "Zouglou Live — Garba Party",
+    "Galerie du Style — Logo",
 }
 
 
