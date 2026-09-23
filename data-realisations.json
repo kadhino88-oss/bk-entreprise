@@ -42,9 +42,18 @@
       "tags": ["React Native", "Expo", "TypeScript"],
       "lien": null,
       "img": "images/project-afroeat.png"
+    },
+    {
+      "titre": "Galerie Photo de Mariage — Kader &amp; Mariame",
+      "role": "Conception et développement complet",
+      "description": "Site événementiel interactif où les invités déposent leurs photos et consultent une galerie partagée en temps réel. Développé en Next.js, déployé sur Vercel. Le même principe peut être décliné pour tout type d'événement (anniversaire, baptême, entreprise).",
+      "tags": ["Next.js", "Vercel", "Galerie photo partagée"],
+      "lien": "https://galerie-mariage-kader-mariame-v2.vercel.app/",
+      "img": "images/project-galerie-mariage.png"
     }
   ],
   "videos": [
+    { "src": "videos/sweltr.mp4", "titre": "Sweltr — Vidéo de présentation" },
     { "src": "videos/hero-video.mp4", "titre": "Vidéo d’accueil" },
     { "src": "videos/presentation.mp4", "titre": "Présentation" },
     { "src": "videos/presentation1.mp4", "titre": "Présentation 1" },

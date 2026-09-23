@@ -510,6 +510,7 @@ body.no-scroll{ overflow:hidden; }
 .shot--4x3{ aspect-ratio:4/3; }
 .shot--1x1{ aspect-ratio:1; }
 .shot--16x9{ aspect-ratio:16/9; }
+.shot--3x4{ aspect-ratio:3/4; }
 .split{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); align-items:center; }
 .split--wide{ grid-template-columns:1.08fr .92fr; }
 
