@@ -41,6 +41,7 @@
       "description": "Application mobile autour de la cuisine africaine, développée en React Native (Expo/TypeScript) : navigation native, interface complète. Projet en cours de finalisation.",
       "tags": ["React Native", "Expo", "TypeScript"],
       "lien": null,
+      "lien_label": "En cours de finalisation",
       "img": "images/project-afroeat.png"
     },
     {
@@ -58,6 +59,22 @@
       "tags": ["Next.js", "Vercel", "Galerie photo partagée"],
       "lien": "https://galerie-mariage-kader-mariame-v2.vercel.app/",
       "img": "images/project-galerie-mariage.png"
+    },
+    {
+      "titre": "Market Les Saveurs d’Afrik",
+      "role": "Identité de marque",
+      "description": "Création de l'identité visuelle complète pour Market Les Saveurs d'Afrik, épicerie spécialisée dans les produits africains : logo, déclinaisons et univers graphique.",
+      "tags": ["Logo", "Identité de marque", "Adobe Illustrator"],
+      "lien": null,
+      "img": "images/project25.jpg"
+    },
+    {
+      "titre": "Restaurant Le Baron",
+      "role": "Identité de marque & supports imprimés",
+      "description": "Conception de l'identité visuelle du Restaurant Le Baron — logo noir et or — ainsi que ses supports imprimés : carte des boissons et carte des repas.",
+      "tags": ["Logo", "Identité de marque", "Supports imprimés"],
+      "lien": null,
+      "img": "images/project19.jpg"
     }
   ],
   "videos": [

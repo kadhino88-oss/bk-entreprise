@@ -110,8 +110,8 @@ def body():
       <span class="eyebrow">02 — Grands projets</span>
       <h2 class="h-lg">Ce que nous avons <span class="it">réellement construit.</span></h2>
       <p class="lead">
-        Au-delà des identités visuelles et des supports imprimés : des sites, des applications
-        et une plateforme IA conçus, développés et mis en exploitation de bout en bout.
+        Des sites, des applications et une plateforme IA conçus, développés et mis en exploitation
+        de bout en bout — et quelques identités de marque fondatrices, réalisées avec la même exigence.
       </p>
     </div>
 

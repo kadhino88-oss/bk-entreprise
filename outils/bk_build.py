@@ -261,8 +261,12 @@ def grand_projet_card(gp, i):
     grande et plus écrite qu'une carte de réalisation graphique, pensée pour
     convaincre un recruteur/client sérieux, pas juste illustrer."""
     tags = "".join(f'<span class="tag">{t}</span>' for t in gp.get("tags", []))
-    lien = (f'<a class="btn btn--ghost" href="{gp["lien"]}" target="_blank" rel="noopener">Voir le site <span class="arr">↗</span></a>'
-            if gp.get("lien") else '<span class="tag" style="opacity:.6;">En cours de finalisation</span>')
+    if gp.get("lien"):
+        cta = f'<div class="gp__cta"><a class="btn btn--ghost" href="{gp["lien"]}" target="_blank" rel="noopener">Voir le site <span class="arr">↗</span></a></div>'
+    elif gp.get("lien_label"):
+        cta = f'<div class="gp__cta"><span class="tag" style="opacity:.6;">{gp["lien_label"]}</span></div>'
+    else:
+        cta = ""
     return f"""
       <div class="gp__card rv rv-d{(i % 3) + 1}">
         <div class="gp__media"><img src="{gp['img']}" alt="{gp['titre']} — {gp['role']}" loading="lazy"></div>
@@ -271,7 +275,7 @@ def grand_projet_card(gp, i):
           <h3 class="gp__t">{gp['titre']}</h3>
           <p class="gp__d">{gp['description']}</p>
           <div class="gp__tags">{tags}</div>
-          <div class="gp__cta">{lien}</div>
+          {cta}
         </div>
       </div>"""
 

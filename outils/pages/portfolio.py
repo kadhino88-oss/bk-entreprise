@@ -78,8 +78,8 @@ def body():
   <div class="wrap">
     <div class="sec-head rv" style="max-width:820px;">
       <span class="eyebrow">01 — Grands projets</span>
-      <h2 class="h-lg" style="margin-top:22px;">Sites, applications et <span class="it">plateforme IA.</span></h2>
-      <p class="lead">Développement complet — de la conception à l'exploitation.</p>
+      <h2 class="h-lg" style="margin-top:22px;">Sites, applications et <span class="it">identités fondatrices.</span></h2>
+      <p class="lead">Développement complet, et quelques identités de marque réalisées avec la même exigence.</p>
     </div>
     <div class="gp__grid rv rv-d1">{gp_cards}</div>
   </div>
