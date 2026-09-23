@@ -302,6 +302,8 @@ LOGO_TITLES = {
     "Trésor by Ninel",
     "Zouglou Live — Garba Party",
     "Galerie du Style — Logo",
+    "Marido Services",
+    "Invitation Mariage — Kader &amp; Mariame",
 }
 
 

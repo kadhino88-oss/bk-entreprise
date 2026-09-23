@@ -1,6 +1,9 @@
 {
   "_note": "Mapping vérifié visuellement image par image le 2026-09-20. Noms conformes au brief de Kader. Ne pas renommer sans validation.",
   "realisations": [
+    { "img": "images/project-marido-services.jpg", "titre": "Marido Services", "cat": "Communication", "verifie": "Flyer de services (ménage, entretien, formation housekeeping) — coordonnées 07 87 24 20 68 / 07 87 16 21 02" },
+    { "img": "images/project-mariage-kader-mariame.jpg", "titre": "Invitation Mariage — Kader &amp; Mariame", "cat": "Édition", "verifie": "Faire-part de mariage, cérémonie du 29 août 2026 à Cranves-Sales" },
+    { "img": "images/project-galerie-du-style.jpg", "titre": "Galerie du Style — Logo", "cat": "Identité", "verifie": "Logo Galerie du Style, boutique mode basée en Côte d'Ivoire — page facebook.com/profile.php?id=61589903691433" },
     { "img": "images/project6.jpg",  "titre": "BK Entreprise — Solutions créatives", "cat": "Communication", "verifie": "Le visuel porte la mention SOLUTIONS CRÉATIVES" },
     { "img": "images/project7.jpg",  "titre": "Zouglou Live — Garba Party", "cat": "Événementiel", "verifie": "Affiche événementielle Petit-Lancy" },
     { "img": "images/project8.jpg",  "titre": "DK Tendance", "cat": "Identité", "verifie": "Logo DK Tendance" },
@@ -23,8 +26,7 @@
     { "img": "images/project25.jpg", "titre": "Market Les Saveurs d’Afrik — Version premium", "cat": "Identité", "verifie": "Version premium du logo Market" },
     { "img": "images/project26.png", "titre": "AIHS — Logo officiel", "cat": "Identité", "verifie": "Logo AIHS version 2" },
     { "img": "images/project27.jpg", "titre": "In Memoriam — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part de décès" },
-    { "img": "images/project28.jpg", "titre": "Programme des obsèques — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part détails des obsèques" },
-    { "img": "images/project-galerie-du-style.jpg", "titre": "Galerie du Style — Logo", "cat": "Identité", "verifie": "Logo Galerie du Style, boutique mode basée en Côte d'Ivoire — page facebook.com/profile.php?id=61589903691433" }
+    { "img": "images/project28.jpg", "titre": "Programme des obsèques — N’Chot Geneviève", "cat": "Édition", "verifie": "Faire-part détails des obsèques" }
   ],
   "grands_projets": [
     {
