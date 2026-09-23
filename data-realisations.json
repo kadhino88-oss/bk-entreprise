@@ -44,6 +44,14 @@
       "img": "images/project-afroeat.png"
     },
     {
+      "titre": "Trésors By Ninel",
+      "role": "Conception et développement e-commerce",
+      "description": "Boutique en ligne de cosmétiques marocains naturels (rituels hammam, argan, savon noir...) : catalogue produit, panier et paiement, livraison internationale. Boutique active, ventes réelles en cours.",
+      "tags": ["Shopify", "E-commerce", "Identité de marque"],
+      "lien": "https://tresorsbyninel.com",
+      "img": "images/project-tresorsbyninel.jpg"
+    },
+    {
       "titre": "Galerie Photo de Mariage — Kader &amp; Mariame",
       "role": "Conception et développement complet",
       "description": "Site événementiel interactif où les invités déposent leurs photos et consultent une galerie partagée en temps réel. Développé en Next.js, déployé sur Vercel. Le même principe peut être décliné pour tout type d'événement (anniversaire, baptême, entreprise).",
