@@ -217,7 +217,7 @@ def body():
         </div>
 
         <a class="btn btn--gold" style="margin-top:26px;width:100%;justify-content:center;"
-           href="#mission">Recruter {nom} <span class="arr">↗</span></a>
+           href="https://bk-ai-workers.com" target="_blank" rel="noopener">Recruter {nom} <span class="arr">↗</span></a>
       </article>"""
 
     fiches = "".join(fiche(*w) for w in WORKERS)
@@ -269,7 +269,7 @@ def body():
       </div>
       <div class="wgrid" data-mission-team style="max-width:880px;margin:0 auto;"></div>
       <div style="text-align:center;margin-top:34px;">
-        <a class="btn btn--gold" href="contact.html">Lancer cette mission <span class="arr">↗</span></a>
+        <a class="btn btn--gold" href="https://bk-ai-workers.com" target="_blank" rel="noopener">Lancer cette mission <span class="arr">↗</span></a>
       </div>
     </div>
   </div>

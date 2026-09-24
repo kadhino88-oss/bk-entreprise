@@ -33,6 +33,14 @@ PRESTATIONS = [
  ("▲", "Univers visuel", "Une direction cohérente déclinée sur tous les supports."),
  ("★", "Promotion digitale", "Déclinaisons pour Instagram, Facebook et TikTok."),
  ("◇", "Contenus sur place", "Photo et vidéo pour faire vivre l'événement après sa fin."),
+ ("♪", "BK Sono &amp; BK DJ", "Location de matériel son et animation DJ pour anniversaires, baptêmes, mariages, "
+  "conférences, concerts et festivals."),
+]
+
+# Contenus vidéo réels tournés/produits pour l'activité événementielle (BK Sono / BK DJ).
+VIDEOS = [
+ ("videos/presentation3.mp4", "BK Sono &amp; BK DJ — équipements pour tous vos événements"),
+ ("videos/presentation4.mp4", "Matériel son en configuration réelle"),
 ]
 
 
@@ -57,6 +65,12 @@ def body():
         <span class="xp__d">{d}</span></span>
         <span></span>
       </div>""" for i, (_, t, _, d) in enumerate(EVENTS))
+
+    videos_html = "".join(f"""
+        <figure class="shot shot--16x9 rv rv-d{(i % 3) + 1}" style="margin:0;">
+          <video src="{src}" controls preload="metadata" playsinline aria-label="{titre}"></video>
+          <figcaption class="car__cat" style="padding:10px 2px 0;">{titre}</figcaption>
+        </figure>""" for i, (src, titre) in enumerate(VIDEOS))
 
     return page_hero(
         eyebrow="Événementiel",
@@ -100,11 +114,24 @@ def body():
   </div>
 </section>
 
+<!-- ===== CONTENUS VIDÉO ===== -->
+<section class="sec sec--dark">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">03 — En conditions réelles</span>
+      <h2 class="h-lg" style="margin-top:22px;">Le matériel <span class="it">sur le terrain.</span></h2>
+      <p class="lead">BK Sono &amp; BK DJ : équipement et animation pour tous vos événements.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;">{videos_html}
+    </div>
+  </div>
+</section>
+
 <!-- ===== DÉTAIL DE CHAQUE PROJET ===== -->
 <section class="sec sec--cream">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">03 — Le détail</span>
+      <span class="eyebrow">04 — Le détail</span>
       <h2 class="h-lg" style="margin-top:22px;">Chaque événement a <span class="it">sa contrainte.</span></h2>
     </div>
     <div class="xp">{focus}</div>

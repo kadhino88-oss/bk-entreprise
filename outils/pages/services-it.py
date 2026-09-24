@@ -10,7 +10,7 @@ OG    = "images/project6.jpg"
 
 CREATION = [
  ("◈", "Sites vitrines", "Présenter votre activité avec clarté : structure lisible, image soignée, chargement rapide."),
- ("◆", "Boutiques en ligne", "Catalogue, paiement, livraison et suivi des commandes — pensés pour être tenus au quotidien."),
+ ("◆", "Sites marchands &amp; boutiques en ligne", "Catalogue, paiement, livraison et suivi des commandes — pensés pour être tenus au quotidien."),
  ("▲", "Applications mobiles", "Prototypes et applications pour porter un service au-delà du site."),
  ("◎", "Refonte", "Repartir d'un site existant sans perdre son contenu ni son référencement."),
  ("★", "Optimisation", "Vitesse, affichage mobile et accessibilité — ce qui décide si un visiteur reste."),
@@ -52,7 +52,7 @@ def body():
     return page_hero(
         eyebrow="IT &amp; Digital",
         title_html='La technique qui rend votre projet <span class="it">solide et utile.</span>',
-        lead=("Création de sites, développement, maintenance, infrastructure, sécurité, IA et "
+        lead=("Création de sites, sites marchands, développement, maintenance, infrastructure, sécurité, IA et "
               "automatisation : tout ce qui fait qu'un projet digital fonctionne — et continue de fonctionner."),
         cta1=("contact.html", "Parler de mon projet"),
         cta2=("#creation", "Voir les prestations ↓"),

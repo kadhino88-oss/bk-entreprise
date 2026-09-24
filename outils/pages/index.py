@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Accueil — centrée sur CE QU'ON FAIT, NOTRE EXPÉRIENCE et NOTRE FUTUR.
 Volontairement sobre en images : ce n'est pas une galerie, le portfolio est là pour ça."""
-from bk_build import CTA_FINAL, realisations, media_class, grands_projets, grand_projet_card
+from bk_build import CTA_FINAL, realisations_diversifiees, media_class, grands_projets, grand_projet_card
 
 PAGE  = "index.html"
 TITLE = "BK Entreprise — Agence digitale & créative à Genève"
@@ -36,7 +36,7 @@ def body():
         <a class="car__item" href="portfolio.html#creations">
           <div class="car__media{media_class(it['titre'])}"><img src="{it['img']}" alt="{it['titre']} — réalisation BK Entreprise" loading="lazy"></div>
           <div class="car__cap"><div class="car__cat">{it['cat']}</div><div class="car__t">{it['titre']}</div></div>
-        </a>""" for it in realisations()["realisations"])
+        </a>""" for it in realisations_diversifiees()[0::2])
 
     gp_cards = "".join(grand_projet_card(gp, i) for i, gp in enumerate(grands_projets()))
 

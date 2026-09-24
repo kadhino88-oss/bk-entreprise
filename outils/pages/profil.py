@@ -2,7 +2,7 @@
 """Page Profil — Vision → Parcours → Compétences → Projets → Écosystème → Aujourd'hui.
 Informations issues des documents professionnels de Kader présents dans le projet.
 Aucune donnée inventée, et rien qui relève de la recherche d'emploi."""
-from bk_build import page_hero, CTA_FINAL, media_class, realisations
+from bk_build import page_hero, CTA_FINAL, media_class, realisations_diversifiees
 
 PAGE  = "profil.html"
 TITLE = "Profil — Qui est derrière BK Entreprise, agence digitale à Genève"
@@ -47,7 +47,7 @@ def body():
         <a class="car__item" href="portfolio.html#creations">
           <div class="car__media{media_class(it['titre'])}"><img src="{it['img']}" alt="{it['titre']}" loading="lazy"></div>
           <div class="car__cap"><div class="car__cat">{it['cat']}</div><div class="car__t">{it['titre']}</div></div>
-        </a>""" for it in realisations()["realisations"])
+        </a>""" for it in realisations_diversifiees()[1::2])
 
     parcours = "".join(f"""
       <div class="flow__step rv rv-d{i}">

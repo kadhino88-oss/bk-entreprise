@@ -248,6 +248,22 @@ def realisations():
         return json.load(f)
 
 
+# Images déjà mises en avant sur une page dédiée (voir evenement.py) : exclues des
+# carrousels "toutes réalisations" de l'accueil et du profil pour qu'on ne voie pas
+# les mêmes visuels se répéter d'une page à l'autre — seul le portfolio montre tout.
+EVENT_IMAGES = {
+    "images/project7.jpg", "images/project17.jpg", "images/project18.jpg",
+    "images/project20.jpg", "images/project9.png", "images/project14.png",
+}
+
+
+def realisations_diversifiees():
+    """Réalisations pour un carrousel qui n'est PAS le portfolio : exclut celles
+    déjà à l'honneur sur la page Événementiel, pour varier les visuels d'une page
+    à l'autre."""
+    return [r for r in realisations()["realisations"] if r["img"] not in EVENT_IMAGES]
+
+
 def grands_projets():
     """Projets logiciels réels (sites, apps, plateformes) — traités à part des
     créations graphiques : description écrite, tags techniques, lien réel si

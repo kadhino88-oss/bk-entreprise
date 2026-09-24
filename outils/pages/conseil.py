@@ -10,24 +10,62 @@ OG    = "images/project15.jpg"
 
 PARCOURS = [
  ("01", "Comprendre", "On part de votre activité réelle : ce que vous vendez, à qui, avec quels moyens, "
-  "et ce qui bloque aujourd'hui. Pas de méthode plaquée sur un cas qui n'est pas le vôtre."),
+  "et ce qui bloque aujourd'hui. Pas de méthode plaquée sur un cas qui n'est pas le vôtre.",
+  "Concrètement, un échange direct (appel ou visite) suffit souvent à cette étape : vos chiffres "
+  "s'ils existent, vos retours clients, le temps que vous passez sur les tâches qui ne rapportent pas, "
+  "l'image que vous donnez aujourd'hui face à celle que vous voulez donner. Aucun questionnaire "
+  "générique — les questions changent selon que vous êtes un commerce, une association ou une TPE en "
+  "création."),
  ("02", "Structurer", "Le besoin devient un périmètre : ce qui est prioritaire, ce qui peut attendre, "
-  "ce qui n'a pas lieu d'être. C'est souvent l'étape qui fait gagner le plus de temps."),
+  "ce qui n'a pas lieu d'être. C'est souvent l'étape qui fait gagner le plus de temps.",
+  "Le résultat est écrit noir sur blanc : un périmètre daté, avec ce qui entre dans le projet et ce qui "
+  "en sort explicitement — pour éviter qu'un projet grossisse en cours de route sans que personne ne "
+  "l'ait décidé. Les risques connus (délai serré, budget contraint, dépendance à un tiers) sont "
+  "nommés avant de commencer, pas découverts en chemin."),
  ("03", "Décider", "Des options claires, avec ce que chacune coûte et ce qu'elle apporte. "
-  "Vous décidez avec les éléments en main — pas sur une intuition."),
+  "Vous décidez avec les éléments en main — pas sur une intuition.",
+  "En pratique, deux ou trois options sont posées côte à côte : ce que chacune implique en budget, "
+  "en délai et en résultat attendu. Pas de recommandation unique imposée d'en haut — l'idée est que "
+  "vous compreniez le compromis derrière chaque choix, pour trancher en connaissance de cause plutôt "
+  "que de faire confiance à l'aveugle."),
  ("04", "Construire", "Le plan se traduit en réalisations concrètes : site, identité, contenus, "
-  "outils, automatisations. Mobilisées seules ou ensemble."),
+  "outils, automatisations. Mobilisées seules ou ensemble.",
+  "Chaque chantier a un responsable identifié (BK ou vous), un jalon et un point de validation avant "
+  "de passer au suivant. Vous voyez l'avancement au fur et à mesure — pas seulement un livrable final "
+  "après plusieurs semaines de silence."),
  ("05", "Accompagner", "Un projet vit après sa livraison. Suivi, ajustements et évolutions "
-  "au rythme de votre activité."),
+  "au rythme de votre activité.",
+  "Une fois en ligne ou en place, un projet continue de rencontrer la réalité : des retours clients, "
+  "une saison qui change la donne, un concurrent qui bouge. Le suivi consiste à ajuster ce qui doit "
+  "l'être, au rythme réel de votre activité — pas selon un calendrier de maintenance figé à l'avance."),
 ]
 
 LEVIERS = [
- ("◎", "Diagnostic", "État des lieux de votre présence : site, image, réseaux, outils, visibilité."),
- ("◈", "Positionnement", "Clarifier l'offre, l'image et le message — pour qui, pourquoi, en quoi différent."),
- ("◇", "Stratégie digitale", "Relier présence digitale, contenus, outils et objectifs dans un même plan."),
- ("◆", "Cadrage de projet", "Périmètre, étapes, priorités et budget réaliste avant de lancer quoi que ce soit."),
- ("▲", "Organisation", "Qui fait quoi, avec quels outils, et ce qui peut être automatisé."),
- ("★", "Plan d'action", "Une feuille de route datée, avec des étapes que vous pouvez suivre."),
+ ("◎", "Diagnostic", "État des lieux de votre présence : site, image, réseaux, outils, visibilité.",
+  "Le diagnostic passe en revue ce qui existe déjà — votre site s'il y en a un, votre fiche Google, "
+  "vos réseaux, vos outils du quotidien — et ce qui manque. Le rendu est un constat lisible, pas un "
+  "audit de 40 pages que personne ne lit : ce qui fonctionne, ce qui freine, et par quoi commencer."),
+ ("◈", "Positionnement", "Clarifier l'offre, l'image et le message — pour qui, pourquoi, en quoi différent.",
+  "Trois questions structurent ce travail : à qui vous adressez-vous précisément, qu'est-ce qui vous "
+  "distingue de la structure équivalente à côté, et ce message est-il le même partout où l'on vous "
+  "trouve (site, réseaux, devanture, bouche-à-oreille) ? La plupart des flous viennent d'un "
+  "positionnement jamais formulé clairement."),
+ ("◇", "Stratégie digitale", "Relier présence digitale, contenus, outils et objectifs dans un même plan.",
+  "Plutôt que d'être présent partout sans priorité, la stratégie choisit les canaux qui comptent "
+  "réellement pour votre activité et votre budget, et fixe ce que chacun doit produire comme résultat "
+  "— visibilité, contact, vente — pour que chaque action se juge sur un objectif clair."),
+ ("◆", "Cadrage de projet", "Périmètre, étapes, priorités et budget réaliste avant de lancer quoi que ce soit.",
+  "Le livrable est un cahier des charges concret : ce qui est inclus, un calendrier par étapes et une "
+  "enveloppe budgétaire réaliste — pour que le prestataire (BK ou un autre) sache exactement ce qu'il "
+  "doit produire, et que vous puissiez comparer des devis sur la même base."),
+ ("▲", "Organisation", "Qui fait quoi, avec quels outils, et ce qui peut être automatisé.",
+  "On regarde les tâches répétitives qui prennent du temps sans valeur ajoutée — relances, rappels, "
+  "mises à jour de fichiers, publications — et ce qui peut être repris par un outil ou un Worker IA, "
+  "pour que votre temps aille vers ce qui compte réellement."),
+ ("★", "Plan d'action", "Une feuille de route datée, avec des étapes que vous pouvez suivre.",
+  "Le format reste simple à utiliser au quotidien : des étapes datées, un responsable par étape, et "
+  "des points de passage pour vérifier que le projet avance comme prévu — sans jargon de gestion de "
+  "projet inutile pour une petite structure."),
 ]
 
 
@@ -40,15 +78,23 @@ def body():
         <div>
           <div class="flow__t">{t}</div>
           <div class="flow__d">{d}</div>
+          <details class="detail-toggle">
+            <summary>En savoir plus <span class="arr">↗</span></summary>
+            <p class="detail-more">{plus}</p>
+          </details>
         </div>
-      </div>""" for i, (n, t, d) in enumerate(PARCOURS, 1))
+      </div>""" for i, (n, t, d, plus) in enumerate(PARCOURS, 1))
 
     leviers = "".join(f"""
       <div class="card rv rv-d{(i % 3) + 1}">
         <div class="card__i">{ico}</div>
         <div class="card__t">{t}</div>
         <p class="card__d">{d}</p>
-      </div>""" for i, (ico, t, d) in enumerate(LEVIERS))
+        <details class="detail-toggle">
+          <summary>En savoir plus <span class="arr">↗</span></summary>
+          <p class="detail-more">{plus}</p>
+        </details>
+      </div>""" for i, (ico, t, d, plus) in enumerate(LEVIERS))
 
     return page_hero(
         eyebrow="Conseil &amp; Stratégie",

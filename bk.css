@@ -450,7 +450,9 @@ body.no-scroll{ overflow:hidden; }
   background:linear-gradient(140deg,var(--ink-soft),var(--ink));
   border:1px solid rgba(214,168,79,.45);
   box-shadow:0 0 0 12px rgba(214,168,79,.07), 0 26px 60px rgba(0,0,0,.5);
+  text-decoration:none; color:var(--tx-inv); cursor:pointer; transition:.4s var(--ease);
 }
+.eco__core:hover{ border-color:var(--gold); box-shadow:0 0 0 14px rgba(214,168,79,.14), 0 26px 60px rgba(0,0,0,.5); transform:scale(1.03); }
 .eco__core b{ display:block; font-size:clamp(.92rem,1.5vw,1.12rem); letter-spacing:-.02em; line-height:1.15; }
 .eco__core small{ display:block; margin-top:6px; font-size:10.5px; letter-spacing:.17em; text-transform:uppercase; color:var(--gold-strong); }
 .eco__ring{ position:absolute; border:1px dashed rgba(255,255,255,.11); border-radius:50%; }
@@ -497,6 +499,22 @@ body.no-scroll{ overflow:hidden; }
 .card__t{ font-size:1.16rem; font-weight:650; }
 .card__d{ margin-top:10px; font-size:15px; color:var(--tx-muted); }
 .sec--dark .card__d,.sec--night .card__d{ color:var(--tx-inv-muted); }
+
+/* Bloc dépliable — un paragraphe court qui ouvre un développement plus
+   precis au clic, sans JS (details/summary natifs). */
+.detail-toggle{ margin-top:14px; }
+.detail-toggle > summary{
+  cursor:pointer; list-style:none; display:flex; align-items:center; gap:7px;
+  font-size:13px; font-weight:700; letter-spacing:.2px; color:var(--gold-strong);
+}
+.detail-toggle > summary::-webkit-details-marker{ display:none; }
+.detail-toggle > summary .arr{ transition:transform .3s var(--ease); }
+.detail-toggle[open] > summary .arr{ transform:rotate(90deg); }
+.detail-more{
+  margin-top:12px; padding-top:12px; border-top:1px dashed var(--line);
+  font-size:14.5px; line-height:1.65;
+}
+.sec--dark .detail-more,.sec--night .detail-more{ border-top-color:var(--line-dark); }
 
 /* Média encadré — tailles maîtrisées, jamais plein écran */
 .shot{
