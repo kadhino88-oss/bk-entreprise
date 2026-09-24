@@ -33,11 +33,13 @@ PRESTATIONS = [
  ("▲", "Univers visuel", "Une direction cohérente déclinée sur tous les supports."),
  ("★", "Promotion digitale", "Déclinaisons pour Instagram, Facebook et TikTok."),
  ("◇", "Contenus sur place", "Photo et vidéo pour faire vivre l'événement après sa fin."),
- ("♪", "BK Sono &amp; BK DJ", "Location de matériel son et animation DJ pour anniversaires, baptêmes, mariages, "
-  "conférences, concerts et festivals."),
 ]
 
-# Contenus vidéo réels tournés/produits pour l'activité événementielle (BK Sono / BK DJ).
+# BK Sono & BK DJ — marque événementielle à part entière de l'écosystème BK (BK Entreprise
+# est la structure mère ; BK Sono, comme BK-AI-WORKERS, est l'une de ses créations).
+SONO_SERVICES = ["Anniversaire", "Baptême", "Mariage", "Obsèques", "Conférences", "Concerts", "Festival"]
+
+# Contenus vidéo réels tournés/produits pour BK Sono &amp; BK DJ.
 VIDEOS = [
  ("videos/presentation3.mp4", "BK Sono &amp; BK DJ — équipements pour tous vos événements"),
  ("videos/presentation4.mp4", "Matériel son en configuration réelle"),
@@ -71,6 +73,8 @@ def body():
           <video src="{src}" controls preload="metadata" playsinline aria-label="{titre}"></video>
           <figcaption class="car__cat" style="padding:10px 2px 0;">{titre}</figcaption>
         </figure>""" for i, (src, titre) in enumerate(VIDEOS))
+
+    sono_chips = "".join(f'<span class="tag">{s}</span>' for s in SONO_SERVICES)
 
     return page_hero(
         eyebrow="Événementiel",
@@ -114,15 +118,24 @@ def body():
   </div>
 </section>
 
-<!-- ===== CONTENUS VIDÉO ===== -->
-<section class="sec sec--dark">
+<!-- ===== BK SONO & BK DJ ===== -->
+<section class="sec sec--dark" id="bk-sono">
+  <div class="halo halo--gold" style="width:520px;height:520px;top:-180px;left:-160px;"></div>
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">03 — En conditions réelles</span>
-      <h2 class="h-lg" style="margin-top:22px;">Le matériel <span class="it">sur le terrain.</span></h2>
-      <p class="lead">BK Sono &amp; BK DJ : équipement et animation pour tous vos événements.</p>
+    <div class="sec-head rv" style="max-width:820px;">
+      <span class="eyebrow">03 — Une marque de l'écosystème BK</span>
+      <h2 class="h-lg" style="margin-top:22px;">BK Sono <span class="it">&amp; BK DJ.</span></h2>
+      <p class="lead">
+        BK Entreprise est la structure mère ; BK Sono &amp; BK DJ en est l'une des créations, au
+        même titre que BK-AI-WORKERS. Location de matériel son dernière génération et animation DJ,
+        pour tous types d'événements.
+      </p>
+      <div class="chips rv rv-d1" style="margin-top:22px;">{sono_chips}</div>
+      <div style="margin-top:28px;">
+        <a class="btn btn--gold" href="contact.html">Réserver du matériel <span class="arr">↗</span></a>
+      </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;">{videos_html}
+    <div class="rv rv-d2" style="margin-top:clamp(36px,4vw,54px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;">{videos_html}
     </div>
   </div>
 </section>
