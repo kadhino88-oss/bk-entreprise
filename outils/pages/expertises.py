@@ -22,7 +22,7 @@ XP = [
   "lisible et mémorable — du premier croquis au fichier prêt à imprimer.",
   ["Logos et chartes graphiques", "Affiches, flyers et menus", "Supports imprimés et cartes de visite",
    "Déclinaisons réseaux sociaux", "Direction artistique"],
-  "images/project19.jpg", "Restaurant Le Baron — logo créé par BK Entreprise", "portfolio.html#identite", "Voir les créations"),
+  "images/project12.jpg", "Abiba Hair — logo créé par BK Entreprise", "portfolio.html#identite", "Voir les créations"),
 
  ("communication", "03", "Communication &amp; Contenu", "Faire circuler votre image et <span class=\"it\">vos messages.</span>",
   "Réseaux sociaux, contenus, campagnes et présence digitale : une communication construite autour "
@@ -36,7 +36,7 @@ XP = [
   "celle qui décide s'il tient dans la durée.",
   ["Maintenance et mises à jour", "Hébergement et noms de domaine", "Sécurité et sauvegardes",
    "Messagerie professionnelle", "Assistance et dépannage"],
-  "images/project6.jpg", "BK Entreprise — solutions créatives", "services-it.html#it", "Découvrir l'IT"),
+  "images/project16.jpg", "AIHS — Logo créé par BK Entreprise", "services-it.html#it", "Découvrir l'IT"),
 
  ("ia", "05", "IA &amp; Automatisation", "Une équipe IA qui <span class=\"it\">exécute.</span>",
   "BK-AI-WORKERS est une offre de l'écosystème BK : 17 Workers spécialisés, orchestrés par Chloé, "
@@ -50,14 +50,14 @@ XP = [
   "et relier présence digitale, contenus, outils et objectifs.",
   ["Diagnostic et état des lieux", "Positionnement et message", "Stratégie digitale",
    "Cadrage de projet", "Accompagnement dans la durée"],
-  "images/project15.jpg", "Market Les Saveurs d'Afrik — identité", "conseil.html", "Découvrir le conseil"),
+  "images/project10.jpg", "Oli by dreadlocks — identité créée par BK Entreprise", "conseil.html", "Découvrir le conseil"),
 
  ("evenement", "07", "Événementiel", "Une image <span class=\"it\">qui rassemble.</span>",
   "Organisation, coordination, supports et communication : donner à votre événement un univers "
   "visuel identifiable, avant, pendant et après.",
   ["Affiches et flyers d'événement", "Univers visuel complet", "Promotion sur les réseaux",
    "Supports sur place", "Contenus après l'événement"],
-  "images/project7.jpg", "Zouglou Live — Garba Party", "evenement.html", "Découvrir l'événementiel"),
+  "images/project-galerie-mariage.png", "Galerie photo de mariage — Kader &amp; Mariame", "evenement.html", "Découvrir l'événementiel"),
 ]
 
 

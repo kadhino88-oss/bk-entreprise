@@ -248,20 +248,30 @@ def realisations():
         return json.load(f)
 
 
-# Images déjà mises en avant sur une page dédiée (voir evenement.py) : exclues des
-# carrousels "toutes réalisations" de l'accueil et du profil pour qu'on ne voie pas
-# les mêmes visuels se répéter d'une page à l'autre — seul le portfolio montre tout.
+# Images déjà mises en avant en grand format sur une page dédiée (Événementiel,
+# Conseil, IT & Digital, Expertises) : exclues des carrousels "toutes réalisations"
+# de l'accueil et du profil pour qu'on ne voie pas les mêmes visuels se répéter
+# d'une page à l'autre — seul le portfolio montre tout.
 EVENT_IMAGES = {
     "images/project7.jpg", "images/project17.jpg", "images/project18.jpg",
     "images/project20.jpg", "images/project9.png", "images/project14.png",
+}
+DEDICATED_IMAGES = EVENT_IMAGES | {
+    "images/project6.jpg",   # services-it.html — Création web
+    "images/project22.png",  # conseil.html — Ce que ça change
+    "images/project16.jpg",  # expertises.html — IT & Technologie
+    "images/project12.jpg",  # expertises.html — Design & Identité
+    "images/project10.jpg",  # expertises.html — Conseil & Stratégie
+    "images/project19.jpg",  # index.html — Grand projet Restaurant Le Baron
+    "images/project25.jpg",  # index.html — Grand projet Market Les Saveurs d'Afrik
 }
 
 
 def realisations_diversifiees():
     """Réalisations pour un carrousel qui n'est PAS le portfolio : exclut celles
-    déjà à l'honneur sur la page Événementiel, pour varier les visuels d'une page
-    à l'autre."""
-    return [r for r in realisations()["realisations"] if r["img"] not in EVENT_IMAGES]
+    déjà à l'honneur en grand format sur une page dédiée, pour varier les visuels
+    d'une page à l'autre."""
+    return [r for r in realisations()["realisations"] if r["img"] not in DEDICATED_IMAGES]
 
 
 def grands_projets():

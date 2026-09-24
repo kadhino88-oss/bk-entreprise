@@ -70,8 +70,8 @@ LEVIERS = [
 
 
 def body():
-    project25_alt = "Market Les Saveurs d’Afrik — version premium"
-    project25_class = shot_class(project25_alt)
+    conseil_img_alt = "Chez Édouard — Le 225 — Logo créé par BK Entreprise"
+    conseil_img_class = shot_class(conseil_img_alt)
     etapes = "".join(f"""
       <div class="flow__step rv rv-d{min(i,6)}">
         <div class="flow__i">{n}</div>
@@ -148,7 +148,7 @@ def body():
         </div>
       </div>
       <div class="rv rv--r rv-d1" data-px="0.05">
-        <div class="shot shot--4x3{project25_class}"><img src="images/project25.jpg" alt="{project25_alt}" loading="lazy"></div>
+        <div class="shot shot--4x3{conseil_img_class}"><img src="images/project22.png" alt="{conseil_img_alt}" loading="lazy"></div>
       </div>
     </div>
   </div>
