@@ -304,6 +304,15 @@
     });
   }
 
+  /* ---------- 10b. PRÉ-SÉLECTION DE L'OFFRE DEPUIS LES CTA ---------- */
+  function bkPrefillSubject() {
+    var selected = new URLSearchParams(window.location.search).get('prestation');
+    if (!selected) return;
+    $('[data-subject-chips] .chip').forEach(function (chip) {
+      if (chip.textContent.trim() === selected) chip.click();
+    });
+  }
+
   /* ---------- 11. VIDÉO : lecture uniquement quand visible ---------- */
   function smartVideo() {
     var vids = $$('video[data-auto]');
@@ -341,7 +350,7 @@
   function init() {
     header(); mobileNav(); reveal(); parallax(); carousels();
     filters(); orbit(); missionBuilder(); openWorkerFromUrl();
-    contactChips(); smartVideo(); anchors(); year();
+    contactChips(); bkPrefillSubject(); smartVideo(); anchors(); year();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
