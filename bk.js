@@ -434,9 +434,18 @@
   function bkPrefillSubject() {
     var selected = new URLSearchParams(window.location.search).get('prestation');
     if (!selected) return;
-    $('[data-subject-chips] .chip').forEach(function(chip) {
+    // Le formulaire actuel utilise des boutons radio, les anciennes versions des chips.
+    $$('input[type="radio"][name="sujet"]').forEach(function(el) {
+      if (el.value === selected) {
+        el.checked = true;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+    $$('[data-subject-chips] .chip').forEach(function(chip) {
       if (chip.textContent.trim() === selected) chip.click();
     });
+    var chosen = $('#pack-demande');
+    if (chosen) chosen.value = selected;
   }
 
   /* ---------- INIT ---------- */
