@@ -8,7 +8,7 @@ DESC  = ("Contactez BK Entreprise, agence digitale à Genève : création de sit
          "communication, IT, conseil, événementiel ou agents IA. +41 79 934 99 46 — contact@bk-entreprise.com")
 OG    = "images/project5.jpg"
 
-SUJETS = ["Site web", "Design", "Communication", "IT",
+SUJETS = ["BK CLIENTS+", "Diagnostic gratuit", "Site web", "Design", "Communication", "IT",
           "Conseil", "Événementiel", "IA / Automatisation", "Autre"]
 
 
@@ -95,7 +95,7 @@ def body():
           <div class="card__i">◎</div>
           <div class="card__t">Adresse</div>
           <p class="card__d" style="margin-top:12px;">
-            Rue Joseph Pasquier 1<br>1203 Genève, Suisse
+            Genève et Haute-Savoie · prestations à distance ou sur rendez-vous
           </p>
         </div>
 
@@ -113,7 +113,7 @@ def body():
           <div class="card__i">◎</div>
           <div class="card__t">Avant d'écrire</div>
           <p class="card__d" style="margin-top:12px;">
-            Plus de 1000 créations graphiques et 100+ sites réalisés — voir des exemples concrets.
+            Des exemples concrets de design et des projets web à découvrir — voir des exemples concrets.
           </p>
           <span class="link-arrow" style="margin-top:14px;">Voir le portfolio ↗</span>
         </a>
