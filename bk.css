@@ -662,3 +662,16 @@ body.no-scroll{ overflow:hidden; }
   .rv{ opacity:1; transform:none; }
 }
 @media print{ .hdr,.mnav,.scrollcue{ display:none; } }
+
+
+/* BK CLIENTS+ — offre premium et parcours de conversion */
+.bk-plus-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(265px,.85fr);gap:clamp(24px,5vw,72px);align-items:center}
+.bk-plus-price{padding:clamp(24px,3vw,42px);background:var(--night);color:#fff;border:1px solid #d6a84f;border-radius:24px;box-shadow:0 24px 54px rgba(0,0,0,.21)}
+.bk-plus-price p{margin:16px 0;line-height:1.6}.bk-plus-price hr{border:0;border-top:1px solid rgba(255,255,255,.2);margin:20px 0}
+.bk-plus-amount{color:#f3c86a;font-weight:800;font-size:clamp(54px,5vw,78px);line-height:1.1;letter-spacing:-.06em}
+.bk-plus-amount small{font-size:20px;letter-spacing:0}.bk-plus-price .btn{margin-top:20px;display:flex;justify-content:center;width:100%}
+.bk-plus-list{list-style:none;padding:0;margin:28px 0;display:grid;gap:12px}.bk-plus-list li{position:relative;padding-left:29px;line-height:1.6}.bk-plus-list li:before{content:'✓';color:#b1832d;position:absolute;left:0;top:0;font-weight:800}
+.bk-plus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:32px}
+:focus-visible{outline:3px solid #f3c86a;outline-offset:4px}
+@media(max-width:860px){.bk-plus-layout,.bk-plus-grid{grid-template-columns:1fr}.bk-plus-price{max-width:600px}}
+@media(max-width:600px){.bk-plus-price{padding:26px 22px}.bk-plus-price .btn{width:100%}}
