@@ -15,6 +15,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 NAV = [
     ("index.html",       "Accueil"),
+    ("bk-clients-plus.html", "BK CLIENTS+"),
     ("expertises.html",  "Expertises"),
     ("portfolio.html",   "Réalisations"),
     ("services-it.html", "IT &amp; Digital"),
@@ -26,7 +27,7 @@ NAV = [
     ("contact.html",     "Contact"),
 ]
 # Navigation visible en haut (Accueil = logo, Contact = bouton)
-NAV_TOP = [n for n in NAV if n[0] not in ("index.html", "contact.html")]
+NAV_TOP = [n for n in NAV if n[0] not in ("index.html", "contact.html", "profil.html")]
 
 
 NOINDEX = {"merci.html"}   # pages de confirmation : utiles au visiteur, pas à Google
@@ -44,14 +45,7 @@ JSONLD = """<script type="application/ld+json">
   "telephone": "+41799349946",
   "email": "contact@bk-entreprise.com",
   "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rue Joseph Pasquier 1",
-    "postalCode": "1203",
-    "addressLocality": "Genève",
-    "addressCountry": "CH"
-  },
-  "areaServed": ["Genève", "Suisse romande", "Haute-Savoie"],
+"areaServed": ["Genève", "Suisse romande", "Haute-Savoie"],
   "sameAs": [
     "https://www.instagram.com/bk_entreprise7/",
     "https://www.tiktok.com/@bkentreprise7",
@@ -113,13 +107,13 @@ def header(page, light=True):
     <a class="hdr__logo" href="index.html"><img src="images/logo.png" alt="BK Entreprise"></a>
     <nav class="hdr__nav" aria-label="Navigation principale">{links}
     </nav>
-    <a class="btn btn--gold hdr__cta" href="contact.html">Parler à BK <span class="arr">↗</span></a>
+    <a class="btn btn--gold hdr__cta" href="bk-clients-plus.html">BK CLIENTS+ <span class="arr">↗</span></a>
     <button class="hdr__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
   </div>
 </header>
 
 <nav class="mnav" id="mnav" aria-label="Menu mobile">{mob}
-  <a class="btn btn--gold mnav__cta" href="contact.html">Parler à BK ↗</a>
+  <a class="btn btn--gold mnav__cta" href="contact.html?prestation=Diagnostic%20gratuit#formulaire">Diagnostic gratuit ↗</a>
 </nav>
 
 <main>
@@ -143,13 +137,14 @@ FOOTER = """</main>
         <div class="ftr__contact">
           <a href="tel:+41799349946">+41 79 934 99 46</a><br>
           <a href="mailto:contact@bk-entreprise.com">contact@bk-entreprise.com</a><br>
-          Rue Joseph Pasquier 1, 1203 Genève
+          Genève · Prestations sur rendez-vous
         </div>
       </div>
 
       <div>
         <h4>Expertises</h4>
         <ul>
+          <li><a href="bk-clients-plus.html">BK CLIENTS+ · 1 290 CHF</a></li>
           <li><a href="services-it.html">Web &amp; Digital</a></li>
           <li><a href="expertises.html#design">Design &amp; Identité</a></li>
           <li><a href="expertises.html#communication">Communication</a></li>

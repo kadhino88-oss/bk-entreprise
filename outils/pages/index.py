@@ -4,9 +4,8 @@ Volontairement sobre en images : ce n'est pas une galerie, le portfolio est là 
 from bk_build import CTA_FINAL, realisations_diversifiees, media_class, grands_projets, grand_projet_card
 
 PAGE  = "index.html"
-TITLE = "BK Entreprise — Agence digitale & créative à Genève"
-DESC  = ("Agence digitale à Genève : création de site web, identité visuelle et communication pour "
-         "commerces, restaurants et associations — et agents IA pour PME. Genève, Suisse romande, Haute-Savoie.")
+TITLE = "BK Entreprise | Site web & visibilité locale à Genève"
+DESC = "BK CLIENTS+ : site professionnel et visibilité locale à Genève. Offre de lancement à 1 290 CHF et diagnostic gratuit de 15 minutes."
 OG    = "images/project5.jpg"
 LIGHT_HEADER = False   # le hero vidéo est sombre : navigation en blanc
 
@@ -50,27 +49,22 @@ def body():
 
   <div class="wrap">
     <span class="eyebrow rv">BK Entreprise · Genève</span>
-    <h1 class="h-xl hero__title rv rv-d1">Votre partenaire <span class="it">digital, créatif</span> et stratégique.</h1>
+    <h1 class="h-xl hero__title rv rv-d1">Soyez visible. Inspirez confiance. <span class="it">Transformez vos visiteurs en clients.</span></h1>
     <p class="hero__sub rv rv-d2">
-      Nous concevons des sites, des identités visuelles et de la communication pour les commerces,
-      les restaurants, les marques et les associations — et nous développons des agents IA
-      pour alléger le travail des petites structures.
+      Un site web professionnel et une présence locale cohérente pour les commerces, indépendants et PME de Genève et de France voisine. Un parcours clair qui facilite les appels et les demandes de devis.
     </p>
     <div class="hero__cta rv rv-d3">
-      <a class="btn btn--gold" href="contact.html">Démarrer un projet <span class="arr">↗</span></a>
+      <a class="btn btn--gold" href="contact.html?prestation=Diagnostic%20gratuit#formulaire">Demander mon diagnostic gratuit <span class="arr">↗</span></a>
       <a class="btn btn--ghost" href="#faire">Ce que nous faisons ↓</a>
     </div>
 
-    <div class="hero__stats rv rv-d4">
-      <div class="stat"><div class="stat__n">1000+</div><div class="stat__l">Créations graphiques</div></div>
-      <div class="stat"><div class="stat__n">100+</div><div class="stat__l">Sites web réalisés</div></div>
-      <div class="stat"><div class="stat__n">7</div><div class="stat__l">Expertises</div></div>
-      <div class="stat"><div class="stat__n">2024</div><div class="stat__l">Année de création</div></div>
-    </div>
+    <div class="hero__stats rv rv-d4"><div class="stat"><div class="stat__n">5 pages</div><div class="stat__l">Site vitrine</div></div><div class="stat"><div class="stat__n">SEO</div><div class="stat__l">Visibilité locale</div></div><div class="stat"><div class="stat__n">CHF</div><div class="stat__l">Tarif transparent</div></div></div>
   </div>
-
   <div class="scrollcue"><span>Scroll</span><i></i></div>
 </section>
+
+<!-- OFFRE COMMERCIALE BK CLIENTS+ -->
+<section class="sec sec--cream" id="bk-clients-plus"><div class="wrap bk-plus-layout"><div><span class="eyebrow">Offre phare · BK CLIENTS+</span><h2 class="h-lg">Une présence digitale qui donne envie <span class="it">de vous contacter.</span></h2><p class="lead" style="margin-top:20px">Site vitrine jusqu'à 5 pages, textes commerciaux, SEO de départ et boutons de contact. Pour restaurants, salons, commerces et indépendants.</p><ul class="bk-plus-list"><li>Site professionnel adapté au mobile</li><li>Référencement local de départ</li><li>Appels, WhatsApp ou formulaire de devis</li><li>30 jours d'accompagnement sur le périmètre livré</li></ul><a class="btn btn--ink" href="bk-clients-plus.html">Découvrir le pack ↗</a></div><aside class="bk-plus-price"><span class="eyebrow">Pack de lancement</span><p class="bk-plus-amount">1 290 <small>CHF</small></p><p>650 CHF à la commande + 640 CHF à la livraison.</p><p>Sans abonnement obligatoire. Hébergement et domaine éventuels en supplément.</p><a class="btn btn--gold" href="contact.html?prestation=BK%20CLIENTS%2B#formulaire">Demander ce pack ↗</a></aside></div></section>
 
 <!-- ========== CE QUE NOUS FAISONS ========== -->
 <section class="sec sec--cream" id="faire">
