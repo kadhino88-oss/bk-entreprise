@@ -6,10 +6,6 @@
   </url>
 
   <url>
-    <loc>https://www.bk-entreprise.com/index.html</loc>
-  </url>
-
-  <url>
     <loc>https://www.bk-entreprise.com/services-it.html</loc>
   </url>
 
@@ -31,6 +27,10 @@
 
   <url>
     <loc>https://www.bk-entreprise.com/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.bk-entreprise.com/video-evenementiel.html</loc>
   </url>
 
 </urlset>
