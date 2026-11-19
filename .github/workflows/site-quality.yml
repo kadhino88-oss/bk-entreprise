@@ -1,0 +1,19 @@
+name: BK Entreprise - Qualité du site
+on:
+  pull_request:
+  push:
+    branches: [refonte-2026-09, sync-production-et-offres-2026-11-19]
+jobs:
+  static-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérification SEO, liens, médias et sitemap
+        run: python outils/ci_quality.py
+      - name: Syntaxe JavaScript
+        run: node --check bk.js
+      - name: Syntaxe Python des sources
+        run: python -m compileall -q outils
