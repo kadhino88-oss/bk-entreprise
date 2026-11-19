@@ -1,0 +1,475 @@
+{
+  "_note": "PROPOSITION À VALIDER (grille revue à la baisse le 17/11/2026 : l'IA rend la création moins coûteuse), sauf le groupe 'formules' (prix fixés par la propriétaire le 17/11/2026). Prix de base en CHF. 'devises' : prix explicites par devise ; sinon conversion indicative par bk.js (RATES). 'mensuel' : abonnement ajouté au prix initial. Après modification : python outils/bk_build.py",
+  "groupes": [
+    {
+      "id": "formules",
+      "titre": "Formules pour commerces et restaurants",
+      "intro": "Des formules clés en main pour être visible rapidement, avec un prix fixé à l’avance.",
+      "items": [
+        {
+          "id": "formule-essentiel",
+          "nom": "Formule Essentiel",
+          "prix": 149,
+          "devises": {
+            "EUR": 159
+          },
+          "unite": "unique",
+          "inclus": [
+            "Fiche Google",
+            "Présence sur AFROEAT"
+          ]
+        },
+        {
+          "id": "formule-vitrine",
+          "nom": "Formule Vitrine",
+          "prix": 490,
+          "devises": {
+            "EUR": 529
+          },
+          "unite": "unique",
+          "mensuel": {
+            "prix": 19,
+            "devises": {
+              "EUR": 21
+            }
+          },
+          "inclus": [
+            "Tout l’Essentiel",
+            "Mini-site",
+            "Nom de domaine"
+          ]
+        },
+        {
+          "id": "formule-pro",
+          "nom": "Formule Pro",
+          "prix": 990,
+          "devises": {
+            "EUR": 1069
+          },
+          "unite": "unique",
+          "mensuel": {
+            "prix": 39,
+            "devises": {
+              "EUR": 42
+            }
+          },
+          "inclus": [
+            "Tout Vitrine",
+            "Réseaux sociaux"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sites",
+      "titre": "Sites web",
+      "intro": "Création ou refonte, avec un périmètre écrit avant de commencer.",
+      "items": [
+        {
+          "id": "vitrine",
+          "nom": "Site vitrine sur mesure",
+          "prix": 890,
+          "unite": "unique",
+          "inclus": [
+            "Jusqu’à 5 pages",
+            "Affichage adapté au mobile",
+            "Formulaire de contact",
+            "Bases de référencement",
+            "Mise en ligne avec domaine et hébergement configurés"
+          ],
+          "note": "Pour indépendants, commerces et entreprises de services."
+        },
+        {
+          "id": "refonte",
+          "nom": "Refonte d’un site existant",
+          "prix": 890,
+          "unite": "unique",
+          "inclus": [
+            "Audit du site actuel",
+            "Nouveau design adapté au mobile",
+            "Redirections des URL existantes",
+            "Conservation du contenu utile"
+          ]
+        },
+        {
+          "id": "boutique",
+          "nom": "Boutique en ligne",
+          "prix": 1900,
+          "unite": "unique",
+          "inclus": [
+            "Catalogue produits",
+            "Panier et paiement en ligne",
+            "Livraison et taxes configurées",
+            "Prise en main de la gestion quotidienne"
+          ],
+          "note": "Les abonnements et commissions des outils tiers (plateforme, paiement) sont facturés séparément par leurs éditeurs."
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "titre": "Applications",
+      "intro": "Un outil métier ou une application pour un usage précis.",
+      "items": [
+        {
+          "id": "prototype",
+          "nom": "Prototype d’application",
+          "prix": 900,
+          "unite": "unique",
+          "inclus": [
+            "Cadrage du besoin",
+            "Maquettes interactives",
+            "Prototype testable"
+          ]
+        },
+        {
+          "id": "webapp",
+          "nom": "Application web sur mesure",
+          "prix": 2500,
+          "unite": "unique",
+          "inclus": [
+            "Cadrage et périmètre écrit",
+            "Développement par étapes avec validations",
+            "Mise en ligne et hébergement"
+          ]
+        },
+        {
+          "id": "mobile",
+          "nom": "Application mobile",
+          "prix": 4500,
+          "unite": "unique",
+          "inclus": [
+            "iOS et Android",
+            "Cadrage et périmètre écrit",
+            "Publication sur les stores accompagnée"
+          ],
+          "note": "Les comptes développeur Apple et Google sont facturés au coût réel."
+        }
+      ]
+    },
+    {
+      "id": "visibilite",
+      "titre": "Référencement SEO",
+      "intro": "Être trouvé sur les recherches utiles à votre activité.",
+      "items": [
+        {
+          "id": "audit-seo",
+          "nom": "Audit SEO",
+          "prix": 390,
+          "unite": "unique",
+          "inclus": [
+            "Audit technique du site",
+            "Analyse des recherches utiles",
+            "Plan d’action priorisé"
+          ]
+        },
+        {
+          "id": "seo-mensuel",
+          "nom": "Accompagnement SEO",
+          "prix": 290,
+          "unite": "mois",
+          "inclus": [
+            "Corrections techniques",
+            "Contenus et optimisation locale",
+            "Suivi Search Console et rapport mensuel"
+          ],
+          "note": "Aucun classement ni nombre de clients n’est garanti."
+        }
+      ]
+    },
+    {
+      "id": "reseaux",
+      "titre": "Gestion des réseaux sociaux",
+      "intro": "Abonnement mensuel : BK crée et publie vos contenus.",
+      "items": [
+        {
+          "id": "reseaux-essentiel",
+          "nom": "Réseaux sociaux — Essentiel",
+          "prix": 290,
+          "unite": "mois",
+          "inclus": [
+            "1 réseau social",
+            "8 publications par mois",
+            "Visuels et textes créés par BK",
+            "Calendrier éditorial"
+          ]
+        },
+        {
+          "id": "reseaux-croissance",
+          "nom": "Réseaux sociaux — Croissance",
+          "prix": 490,
+          "unite": "mois",
+          "inclus": [
+            "2 réseaux sociaux",
+            "12 publications par mois et stories",
+            "Visuels et textes créés par BK",
+            "Rapport mensuel"
+          ]
+        },
+        {
+          "id": "reseaux-complet",
+          "nom": "Réseaux sociaux — Complet",
+          "prix": 890,
+          "unite": "mois",
+          "inclus": [
+            "3 réseaux sociaux",
+            "20 publications par mois",
+            "Vidéos courtes",
+            "Rapport et point de suivi mensuels"
+          ],
+          "note": "Le budget de publicité en ligne éventuel est facturé en plus."
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "titre": "Design et identité",
+      "intro": "Une image cohérente, du logo aux supports imprimés.",
+      "items": [
+        {
+          "id": "logo",
+          "nom": "Logo",
+          "prix": 150,
+          "unite": "unique",
+          "inclus": [
+            "2 propositions",
+            "Fichiers pour écran et impression"
+          ]
+        },
+        {
+          "id": "identite",
+          "nom": "Identité visuelle complète",
+          "prix": 390,
+          "unite": "unique",
+          "inclus": [
+            "Logo et déclinaisons",
+            "Couleurs et typographies",
+            "Charte graphique"
+          ]
+        },
+        {
+          "id": "supports",
+          "nom": "Affiche, flyer, menu ou carte",
+          "prix": 50,
+          "unite": "support",
+          "inclus": [
+            "Mise en page prête à imprimer",
+            "Version pour les réseaux sociaux"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it",
+      "titre": "IT et maintenance",
+      "intro": "Ce qui fait tenir un projet dans la durée.",
+      "items": [
+        {
+          "id": "maintenance",
+          "nom": "Maintenance de site",
+          "prix": 29,
+          "unite": "mois",
+          "inclus": [
+            "Mises à jour et correctifs",
+            "Sauvegardes",
+            "Surveillance"
+          ]
+        },
+        {
+          "id": "assistance",
+          "nom": "Assistance informatique",
+          "prix": 70,
+          "unite": "heure",
+          "inclus": [
+            "Dépannage et configuration",
+            "Messagerie, comptes et outils du quotidien"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ia",
+      "titre": "IA et automatisation",
+      "intro": "Retirer les tâches répétitives, avec une validation humaine.",
+      "items": [
+        {
+          "id": "automatisation",
+          "nom": "Automatisation d’une tâche",
+          "prix": 490,
+          "unite": "unique",
+          "inclus": [
+            "Analyse de la tâche et des données",
+            "Mise en place et tests",
+            "Validation humaine avant mise en service"
+          ]
+        },
+        {
+          "id": "workers",
+          "nom": "BK-AI-WORKERS (plateforme distincte)",
+          "prix": null,
+          "unite": "unique",
+          "inclus": [
+            "Plateforme indépendante de BK Entreprise",
+            "Abonnements et tarifs propres, affichés sur son site"
+          ],
+          "lien": "https://bk-ai-workers.com",
+          "lien_label": "Voir les tarifs de BK-AI-WORKERS"
+        }
+      ]
+    },
+    {
+      "id": "conseil",
+      "titre": "Conseil",
+      "intro": "Structurer une idée pour la faire avancer.",
+      "items": [
+        {
+          "id": "diagnostic",
+          "nom": "Diagnostic digital",
+          "prix": 290,
+          "unite": "unique",
+          "inclus": [
+            "Revue du site, des réseaux et de la visibilité",
+            "Constat écrit et priorités"
+          ]
+        },
+        {
+          "id": "conseil-heure",
+          "nom": "Conseil à l’heure",
+          "prix": 90,
+          "unite": "heure",
+          "inclus": [
+            "Positionnement, stratégie digitale, cadrage de projet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evenementiel",
+      "titre": "Événementiel",
+      "intro": "Une image identifiable avant, pendant et après l’événement.",
+      "items": [
+        {
+          "id": "evt-pack",
+          "nom": "Pack communication d’événement",
+          "prix": 250,
+          "unite": "unique",
+          "inclus": [
+            "Affiche et flyer",
+            "Déclinaison pour les réseaux sociaux"
+          ]
+        },
+        {
+          "id": "evt-univers",
+          "nom": "Univers visuel complet",
+          "prix": 590,
+          "unite": "unique",
+          "inclus": [
+            "Identité de l’événement",
+            "Supports sur place",
+            "Contenus après l’événement"
+          ]
+        }
+      ]
+    }
+  ],
+  "packs": [
+    {
+      "id": "lancement",
+      "nom": "Pack Lancement d’activité",
+      "cible": "Vous démarrez : un logo, un site et vos trois premiers mois de réseaux sociaux.",
+      "contient": [
+        [
+          "logo",
+          1
+        ],
+        [
+          "vitrine",
+          1
+        ],
+        [
+          "reseaux-essentiel",
+          3
+        ]
+      ],
+      "prix": 1590,
+      "bonus": [
+        "Maintenance du site offerte les 3 premiers mois"
+      ],
+      "populaire": true
+    },
+    {
+      "id": "image-site",
+      "nom": "Pack Image et site",
+      "cible": "Une identité visuelle complète et le site vitrine qui la met en valeur.",
+      "contient": [
+        [
+          "identite",
+          1
+        ],
+        [
+          "vitrine",
+          1
+        ]
+      ],
+      "prix": 1150,
+      "bonus": []
+    },
+    {
+      "id": "boutique",
+      "nom": "Pack Boutique prête à vendre",
+      "cible": "Boutique en ligne, identité visuelle et premier mois de réseaux pour annoncer l’ouverture.",
+      "contient": [
+        [
+          "boutique",
+          1
+        ],
+        [
+          "identite",
+          1
+        ],
+        [
+          "reseaux-essentiel",
+          1
+        ]
+      ],
+      "prix": 2290,
+      "bonus": [
+        "Maintenance de la boutique offerte les 3 premiers mois"
+      ]
+    },
+    {
+      "id": "visibilite",
+      "nom": "Pack Visibilité",
+      "cible": "Un accompagnement SEO de 3 mois, avec l’audit de départ offert.",
+      "contient": [
+        [
+          "audit-seo",
+          1
+        ],
+        [
+          "seo-mensuel",
+          3
+        ]
+      ],
+      "prix": 870,
+      "bonus": []
+    },
+    {
+      "id": "evenement",
+      "nom": "Pack Événement",
+      "cible": "La communication de votre événement et sa promotion sur les réseaux.",
+      "contient": [
+        [
+          "evt-pack",
+          1
+        ],
+        [
+          "reseaux-essentiel",
+          1
+        ]
+      ],
+      "prix": 490,
+      "bonus": []
+    }
+  ]
+}
