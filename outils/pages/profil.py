@@ -221,8 +221,7 @@ def body():
           Depuis, ce sont des identités de marque complètes — logos, chartes, supports imprimés —,
           des sites vitrines et des boutiques en ligne, des campagnes et de la gestion de réseaux
           sociaux. Des épiceries, des restaurants, des marques de beauté, des salons, des clubs
-          sportifs et des associations. Plus de 1000 créations graphiques et plus de 100 sites
-          web réalisés à ce jour, pour des clients un peu partout dans le monde — une sélection
+          sportifs et des associations. Des projets web, visuels et supports de communication web réalisés à ce jour, pour des clients un peu partout dans le monde — une sélection
           <a href="portfolio.html" style="color:var(--gold-strong);font-weight:600;">est présentée
           sur ce site</a>, chacune sous son vrai nom.
         </p>
