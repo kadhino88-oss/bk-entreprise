@@ -1,684 +1,289 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Contact - Demande de devis, création de site internet et services IT | BK Entreprise</title>
-  <meta name="description" content="Contactez BK Entreprise pour vos besoins en création de sites internet, services IT, communication digitale, événementiel et conseil. Demandez un devis ou échangez sur votre projet." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.bk-entreprise.com/contact.html" />
-
-  <meta property="og:title" content="Contact - Demande de devis, création de site internet et services IT | BK Entreprise" />
-  <meta property="og:description" content="Contactez BK Entreprise pour vos besoins en création de sites internet, services IT, communication digitale, événementiel et conseil." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.bk-entreprise.com/contact.html" />
-  <meta property="og:image" content="https://www.bk-entreprise.com/images/logo.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact - BK Entreprise" />
-  <meta name="twitter:description" content="Demandez un devis ou échangez avec BK Entreprise au sujet de votre projet." />
-  <meta name="twitter:image" content="https://www.bk-entreprise.com/images/logo.png" />
-
-  <link rel="icon" href="images/logo.png" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact BK Entreprise",
-    "url": "https://www.bk-entreprise.com/contact.html",
-    "description": "Page de contact de BK Entreprise pour toute demande de devis ou d'accompagnement en création de sites internet, services IT, communication digitale, événementiel et conseil.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "BK Entreprise",
-      "url": "https://www.bk-entreprise.com/",
-      "logo": "https://www.bk-entreprise.com/images/logo.png",
-      "sameAs": [
-        "https://www.tiktok.com/@bkentreprise7",
-        "https://www.instagram.com/bk_entreprise7/",
-        "https://facebook.com/profile.php?id=61576414298574"
-      ]
-    }
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg-dark: #071a2f;
-      --bg-mid: #0b2747;
-      --bg-light: #0f3b68;
-      --accent: #f5b041;
-      --text: #ffffff;
-      --muted: rgba(255,255,255,0.78);
-      --card: rgba(255,255,255,0.08);
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 20px 50px rgba(0,0,0,0.28);
-      --shadow-soft: 0 10px 30px rgba(0,0,0,0.22);
-      --input-bg: rgba(255,255,255,0.06);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10) 1px, transparent 1.6px),
-        radial-gradient(circle at 80% 25%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
-        radial-gradient(circle at 35% 75%, rgba(255,255,255,0.08) 1px, transparent 1.6px),
-        linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 45%, var(--bg-light) 100%);
-      background-size: 220px 220px, 300px 300px, 260px 260px, cover;
-      background-attachment: fixed;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.35;
-      background-image:
-        radial-gradient(2px 2px at 10% 18%, rgba(255,255,255,0.90), transparent 60%),
-        radial-gradient(2px 2px at 22% 74%, rgba(255,255,255,0.75), transparent 60%),
-        radial-gradient(1.8px 1.8px at 37% 42%, rgba(255,255,255,0.85), transparent 60%),
-        radial-gradient(2px 2px at 56% 20%, rgba(255,255,255,0.70), transparent 60%),
-        radial-gradient(1.5px 1.5px at 68% 58%, rgba(255,255,255,0.70), transparent 60%),
-        radial-gradient(2px 2px at 83% 33%, rgba(255,255,255,0.82), transparent 60%),
-        radial-gradient(1.5px 1.5px at 92% 76%, rgba(255,255,255,0.65), transparent 60%);
-      animation: starsFloat 10s linear infinite alternate;
-    }
-
-    @keyframes starsFloat {
-      0% { opacity: 0.2; transform: translateY(0); }
-      100% { opacity: 0.38; transform: translateY(-8px); }
-    }
-
-    header, nav, section, footer, .container, .card, .hero, .content {
-      position: relative;
-      z-index: 1;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 99;
-      backdrop-filter: blur(12px);
-      background: rgba(7,26,47,0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .navbar {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 10px 0;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-wrap img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-    }
-
-    .logo-text {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      font-weight: 600;
-      opacity: 0.92;
-      transition: 0.25s ease;
-      padding: 8px 0;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--accent);
-    }
-
-    .header-social {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 8px;
-      padding-left: 12px;
-      border-left: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .header-social a {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .header-social a:hover {
-      color: var(--accent);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .btn,
-    .btn-outline {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: 0.3s ease;
-      cursor: pointer;
-    }
-
-    .btn {
-      background: linear-gradient(135deg, var(--accent), #ffcf6b);
-      color: #071a2f;
-      box-shadow: 0 14px 28px rgba(245,176,65,0.28);
-      border: 0;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .page-hero {
-      min-height: 58vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(7,26,47,0.72), rgba(7,26,47,0.88)),
-        radial-gradient(circle at center, rgba(0,194,255,0.10), transparent 45%);
-    }
-
-    .hero-content {
-      max-width: 860px;
-      padding: 120px 0 60px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.07);
-      border-radius: 999px;
-      margin-bottom: 18px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .hero-content h1 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1.08;
-      margin-bottom: 18px;
-    }
-
-    .hero-text {
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 760px;
-    }
-
-    .section-label {
-      display: inline-block;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .contact-box {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: start;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
-
-    .contact-copy h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
-    .contact-copy p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .contact-details {
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .contact-details p {
-      margin-bottom: 10px;
-      color: var(--text);
-    }
-
-    .contact-form {
-      display: grid;
-      gap: 14px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: var(--input-bg);
-      color: #fff;
-      border-radius: 16px;
-      padding: 14px 16px;
-      outline: none;
-      font: inherit;
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: rgba(255,255,255,0.58);
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: rgba(245,176,65,0.5);
-      box-shadow: 0 0 0 3px rgba(245,176,65,0.12);
-    }
-
-    .contact-form textarea {
-      min-height: 160px;
-      resize: vertical;
-    }
-
-    .info-box,
-    .cta-box,
-    .social-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 22px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
-
-    .info-box h2,
-    .cta-box h2 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-
-    .info-box p,
-    .cta-box p,
-    .social-card p {
-      color: var(--muted);
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 10px;
-    }
-
-    .social-card {
-      transition: 0.35s ease;
-    }
-
-    .social-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245,176,65,0.32);
-    }
-
-    .social-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(245,176,65,0.22), rgba(0,194,255,0.18));
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .social-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
-
-    .social-card span {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      padding: 36px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      background: rgba(0,0,0,0.12);
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .footer-social a {
-      color: var(--muted);
-    }
-
-    .footer-social a:hover {
-      color: var(--accent);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1100px) {
-      .contact-box,
-      .social-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .menu-toggle {
-        display: inline-block;
-      }
-
-      .navbar {
-        flex-wrap: wrap;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 14px 0 6px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .header-social {
-        border-left: 0;
-        padding-left: 0;
-        margin-left: 0;
-      }
-
-      .hero-content {
-        padding: 110px 0 60px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact et demande de devis | BK Entreprise</title>
+<meta name="description" content="Contactez BK Entreprise, agence digitale basée à Genève, pour un site web, une identité visuelle, de la communication, de l'IT, du conseil ou des agents IA. +41 79 934 99 46 — contact@bk-entreprise.com">
+<link rel="canonical" href="https://www.bk-entreprise.com/contact.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BK Entreprise">
+<meta property="og:title" content="Contact et demande de devis | BK Entreprise">
+<meta property="og:description" content="Contactez BK Entreprise, agence digitale basée à Genève, pour un site web, une identité visuelle, de la communication, de l'IT, du conseil ou des agents IA. +41 79 934 99 46 — contact@bk-entreprise.com">
+<meta property="og:url" content="https://www.bk-entreprise.com/contact.html">
+<meta property="og:image" content="https://www.bk-entreprise.com/images/apercu-tresorsbyninel.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="images/logo.png">
+<meta name="theme-color" content="#0B0F17">
+<link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="bk.css?v=contact-20261113-3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "BK Entreprise",
+  "image": "https://www.bk-entreprise.com/images/logo.png",
+  "logo": "https://www.bk-entreprise.com/images/logo.png",
+  "url": "https://www.bk-entreprise.com/",
+  "telephone": "+41799349946",
+  "email": "contact@bk-entreprise.com",
+  "areaServed": ["Suisse", "France", "En ligne, partout dans le monde"],
+  "sameAs": [
+    "https://www.instagram.com/bk_entreprise7/",
+    "https://www.tiktok.com/@bkentreprise7",
+    "https://www.facebook.com/profile.php?id=61576414298574"
+  ],
+  "description": "Agence digitale basée à Genève : sites web, identités visuelles, communication, IT et agents IA pour commerces, restaurants, marques et associations, en Suisse, en France et à distance.",
+  "priceRange": "$$"
+}
+</script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container navbar">
-      <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo BK Entreprise" />
-        <div class="logo-text">BK ENTREPRISE</div>
-      </a>
+<!-- ===== HEADER COMMUN ===== -->
+<header class="hdr hdr--light">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="index.html"><img src="images/logo.png" alt="BK Entreprise"></a>
+    <nav class="hdr__nav" aria-label="Navigation principale">
+      <a href="expertises.html">Expertises</a>
+      <a href="portfolio.html">Réalisations</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="workers.html">Workers</a>
+      <a href="profil.html">Profil</a>
+    </nav>
+    <a class="btn btn--gold hdr__cta" href="contact.html">Demander un devis</a>
+    <button class="hdr__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+</header>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
+<nav class="mnav" id="mnav" aria-label="Menu mobile">
+  <a href="index.html">Accueil <span>01</span></a>
+  <a href="expertises.html">Expertises <span>02</span></a>
+  <a href="portfolio.html">Réalisations <span>03</span></a>
+  <a href="tarifs.html">Tarifs <span>04</span></a>
+  <a href="services-it.html">IT &amp; Digital <span>05</span></a>
+  <a href="conseil.html">Conseil <span>06</span></a>
+  <a href="evenement.html">Événementiel <span>07</span></a>
+  <a href="workers.html">Workers <span>08</span></a>
+  <a href="integrations.html">Intégrations <span>09</span></a>
+  <a href="profil.html">Profil <span>10</span></a>
+  <a href="contact.html" aria-current="page">Contact <span>11</span></a>
+  <a class="btn btn--gold mnav__cta" href="contact.html">Demander un devis</a>
+</nav>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Accueil</a>
-        <a href="services-it.html">Services IT</a>
-        <a href="evenement.html">Événementiel</a>
-        <a href="conseil.html">Conseil</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="profil.html">Profil</a>
-        <a href="contact.html" class="active">Contact</a>
+<main>
 
-        <div class="header-social">
-          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </nav>
+<section class="sec sec--night" style="padding-top:clamp(140px,15vw,210px);">
+  <div class="wrap">
+    <span class="eyebrow rv">Parlons-en</span>
+    <h1 class="h-xl rv rv-d1" style="margin-top:24px;max-width:18ch;">Présentez-nous <span class="it">votre projet</span></h1>
+    <p class="lead rv rv-d2" style="margin-top:26px;">Votre activité, votre objectif et vos coordonnées suffisent pour démarrer. Expliquez ce que vous souhaitez construire, améliorer ou développer. On part de là.</p>
+    <div class="rv rv-d3" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;">
+      <a class="btn btn--gold" href="#formulaire">Décrire mon projet</a>
+      <a class="btn btn--ghost" href="tel:+41799349946">+41 79 934 99 46</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="page-hero">
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Contact</p>
-        <h1>Contactez BK Entreprise pour votre projet</h1>
-        <p class="hero-text">
-          Vous avez besoin d’un site internet professionnel, de services IT, d’une communication digitale plus forte,
-          d’un accompagnement en événementiel ou d’un conseil stratégique ? Parlons de votre projet et trouvons une
-          solution adaptée à votre activité.
+<!-- ===== FORMULAIRE ===== -->
+<section class="sec sec--night" id="formulaire" style="padding-top:clamp(56px,6vw,88px);">
+  <div class="wrap">
+    <div class="split split--wide" style="align-items:start;">
+
+      <form class="rv contact-form" method="POST" action="https://formsubmit.co/bkentreprise88@gmail.com">
+        <input type="hidden" name="_next" value="https://www.bk-entreprise.com/merci.html">
+        <input type="hidden" name="_subject" value="Nouvelle demande depuis bk-entreprise.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <fieldset class="contact-choices" id="prestations"><legend>1. Quelle prestation vous intéresse ? *</legend><div class="contact-options"><label class="contact-option" for="sujet-bkplus"><input type="radio" id="sujet-bkplus" name="sujet" value="BK CLIENTS+" required><span><strong>BK CLIENTS+</strong><small>Site vitrine et visibilité locale</small></span></label><label class="contact-option" for="sujet-diagnostic"><input type="radio" id="sujet-diagnostic" name="sujet" value="Diagnostic gratuit" required><span><strong>Diagnostic gratuit</strong><small>Échange initial de 15 minutes</small></span></label><label class="contact-option" for="sujet-0"><input type="radio" id="sujet-0" name="sujet" value="Site web" required><span><strong>Site web</strong><small>Création ou refonte</small></span></label><label class="contact-option" for="sujet-1"><input type="radio" id="sujet-1" name="sujet" value="Application" required><span><strong>Application</strong><small>Web ou mobile</small></span></label><label class="contact-option" for="sujet-2"><input type="radio" id="sujet-2" name="sujet" value="Référencement SEO" required><span><strong>Référencement SEO</strong><small>Visibilité sur Google</small></span></label><label class="contact-option" for="sujet-3"><input type="radio" id="sujet-3" name="sujet" value="IA / Automatisation" required><span><strong>IA / Automatisation</strong><small>Tâches et outils métier</small></span></label><label class="contact-option" for="sujet-4"><input type="radio" id="sujet-4" name="sujet" value="Design" required><span><strong>Design</strong><small>Logo et identité visuelle</small></span></label><label class="contact-option" for="sujet-5"><input type="radio" id="sujet-5" name="sujet" value="Communication" required><span><strong>Communication</strong><small>Contenus et supports</small></span></label><label class="contact-option" for="sujet-6"><input type="radio" id="sujet-6" name="sujet" value="IT" required><span><strong>IT</strong><small>Assistance et infrastructure</small></span></label><label class="contact-option" for="sujet-7"><input type="radio" id="sujet-7" name="sujet" value="Conseil" required><span><strong>Conseil</strong><small>Cadrage et stratégie</small></span></label><label class="contact-option" for="sujet-8"><input type="radio" id="sujet-8" name="sujet" value="Événementiel" required><span><strong>Événementiel</strong><small>Communication événementielle</small></span></label><label class="contact-option" for="sujet-9"><input type="radio" id="sujet-9" name="sujet" value="Autre" required><span><strong>Autre</strong><small>À préciser ensemble</small></span></label></div></fieldset>
+<p id="pack-notice" class="contact-required" style="color:var(--gold-strong);font-weight:500;" hidden></p>
+<fieldset class="contact-choices"><legend>2. Quel budget envisagez-vous ? (facultatif)</legend><p class="contact-required" style="margin:-8px 0 16px;"><a href="tarifs.html" style="color:var(--gold-strong);text-decoration:underline;text-underline-offset:3px;">Consulter la grille tarifaire</a></p><div class="contact-options"><label class="contact-option" for="budget-0"><input type="radio" id="budget-0" name="budget" value="À définir ensemble"><span><strong>À définir ensemble</strong></span></label><label class="contact-option" for="budget-1"><input type="radio" id="budget-1" name="budget" value="Moins de 1 500 CHF" data-cur-tpl="Moins de 1 500 {c}"><span><strong data-cur-tpl="Moins de 1 500 {c}">Moins de 1 500 CHF</strong></span></label><label class="contact-option" for="budget-2"><input type="radio" id="budget-2" name="budget" value="1 500 à 3 000 CHF" data-cur-tpl="1 500 à 3 000 {c}"><span><strong data-cur-tpl="1 500 à 3 000 {c}">1 500 à 3 000 CHF</strong></span></label><label class="contact-option" for="budget-3"><input type="radio" id="budget-3" name="budget" value="3 000 à 6 000 CHF" data-cur-tpl="3 000 à 6 000 {c}"><span><strong data-cur-tpl="3 000 à 6 000 {c}">3 000 à 6 000 CHF</strong></span></label><label class="contact-option" for="budget-4"><input type="radio" id="budget-4" name="budget" value="Plus de 6 000 CHF" data-cur-tpl="Plus de 6 000 {c}"><span><strong data-cur-tpl="Plus de 6 000 {c}">Plus de 6 000 CHF</strong></span></label></div></fieldset><label class="field contact-budget"><span>Ou indiquez votre montant en <span data-cur>CHF</span> (facultatif)</span><input type="number" name="budget_libre" min="0" step="1" inputmode="numeric" placeholder="Ex. 2500"><small>Une indication pour cadrer le projet, pas un engagement.</small></label>
+<fieldset class="contact-choices"><legend>3. Comment nous avez-vous connu ? (facultatif)</legend><div class="contact-options"><label class="contact-option" for="origine_declaree-0"><input type="radio" id="origine_declaree-0" name="origine_declaree" value="Recherche Google"><span><strong>Recherche Google</strong></span></label><label class="contact-option" for="origine_declaree-1"><input type="radio" id="origine_declaree-1" name="origine_declaree" value="Google Maps"><span><strong>Google Maps</strong></span></label><label class="contact-option" for="origine_declaree-2"><input type="radio" id="origine_declaree-2" name="origine_declaree" value="Recommandation"><span><strong>Recommandation</strong></span></label><label class="contact-option" for="origine_declaree-3"><input type="radio" id="origine_declaree-3" name="origine_declaree" value="Instagram / Facebook / TikTok"><span><strong>Instagram / Facebook / TikTok</strong></span></label><label class="contact-option" for="origine_declaree-4"><input type="radio" id="origine_declaree-4" name="origine_declaree" value="Chat ou moteur IA"><span><strong>Chat ou moteur IA</strong></span></label><label class="contact-option" for="origine_declaree-5"><input type="radio" id="origine_declaree-5" name="origine_declaree" value="Autre"><span><strong>Autre</strong></span></label></div></fieldset>
+<h2 class="h-md contact-details-title">4. Votre projet et vos coordonnées</h2><p class="contact-required">* Champs obligatoires : prestation, nom, e-mail et description du projet.</p>
+
+        
+
+        <label class="field">
+          <span>Nom et prénom *</span>
+          <input type="text" name="nom" required autocomplete="name" placeholder="Votre nom">
+        </label>
+
+        <div class="contact-row">
+          <label class="field">
+            <span>E-mail *</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="vous@exemple.com">
+          </label>
+          <label class="field">
+            <span>Téléphone <em style="text-transform:none;letter-spacing:0;opacity:.6;">(facultatif)</em></span>
+            <input type="tel" name="telephone" autocomplete="tel" placeholder="+41 …">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Votre activité et votre ville ou pays <em style="text-transform:none;letter-spacing:0;opacity:.6;">(facultatif)</em></span>
+          <input type="text" name="activite" placeholder="Ex. restaurant à Lyon, boutique à Genève, cabinet à Abidjan…">
+        </label>
+
+        <label class="field">
+          <span>Décrivez votre projet *</span>
+          <textarea name="message" required
+            placeholder="Votre objectif, ce qui existe déjà (site, logo, réseaux), et votre échéance si vous en avez une."></textarea>
+        </label>
+
+        <label class="field"><span>Votre site actuel (facultatif)</span><input type="url" name="site_actuel" placeholder="https://votre-site.ch" autocomplete="url"></label>
+
+<input type="hidden" name="devise" id="devise-visiteur" value="CHF"><input type="hidden" name="offre_choisie" id="pack-demande" value=""><input type="hidden" name="page_demande" id="page-demande" value="contact.html"><input type="hidden" name="source_campagne" id="source-campagne" value="directe ou non renseignée">
+
+        <p style="margin:16px 0">Après l’envoi, terminez la vérification anti-spam pour transmettre votre demande. En cas de difficulté, <a href="mailto:contact@bk-entreprise.com">écrivez-nous directement</a> ou appelez le <a href="tel:+41799349946">+41 79 934 99 46</a>.</p>
+        <p id="contact-feedback" role="status" aria-live="polite" style="margin:16px 0;color:#f2cd7d"></p>
+        <button class="btn btn--gold" type="submit" style="width:100%;justify-content:center;">
+          Demander ma proposition
+        </button>
+        <p style="margin-top:16px;font-size:13px;color:var(--tx-inv-muted);">
+          Vos informations et l’origine déclarée de votre demande servent à traiter votre projet et comprendre comment vous nous avez trouvé. <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.
         </p>
-      </div>
-    </section>
+      </form>
 
-    <section class="section">
-      <div class="container">
-        <div class="contact-box reveal">
-          <div class="contact-copy">
-            <p class="section-label">BK ENTREPRISE</p>
-            <h2>Une réponse simple, rapide et professionnelle</h2>
-
-            <p>
-              BK Entreprise accompagne les entrepreneurs, les entreprises, les commerces, les associations et les porteurs de projet qui souhaitent améliorer leur présence en ligne, leur image de marque et leur communication.
-            </p>
-
-            <p>
-              Nous intervenons dans la création de sites internet, les services IT, l’optimisation digitale, l’événementiel, les supports de communication et le conseil. Chaque demande est étudiée avec attention afin de proposer une réponse claire, efficace et adaptée à vos besoins.
-            </p>
-
-            <p>
-              Vous pouvez nous contacter pour une demande de devis, une question sur nos prestations ou un accompagnement personnalisé sur votre projet.
-            </p>
-
-            <div class="contact-details">
-              <p><strong>Adresse :</strong> 122 rue des Lauriers, Cranves-Sales, 74380</p>
-              <p><strong>Email :</strong> contact@bk-entreprise.com</p>
-              <p><strong>Téléphone :</strong> +33 7 74 55 53 70</p>
-            </div>
-          </div>
-
-          <form action="merci.html" class="contact-form">
-            <input type="text" name="nom" placeholder="Nom" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Décrivez votre besoin" required></textarea>
-            <button type="submit" class="btn">Envoyer</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="info-box reveal">
-          <h2>Pourquoi nous contacter ?</h2>
-          <p style="margin-top: 16px;">
-            Cette page permet de présenter clairement votre entreprise à vos futurs clients et à Google. Une page contact bien structurée améliore la confiance, facilite la prise de contact et renforce la crédibilité globale de votre site internet.
-          </p>
-          <p style="margin-top: 16px;">
-            Si vous recherchez un prestataire pour la création de sites internet, les services informatiques, la communication visuelle, l’événementiel ou le conseil, BK Entreprise peut vous accompagner avec une approche sérieuse, moderne et professionnelle.
+      <aside class="rv rv--r rv-d1">
+        <div class="card" style="background:rgba(255,255,255,.05);">
+          <div class="card__t">Par téléphone</div>
+          <p class="card__d" style="font-size:1.15rem;margin-top:12px;">
+            <a href="tel:+41799349946" style="color:var(--gold-strong);font-weight:600;">+41 79 934 99 46</a>
           </p>
         </div>
-      </div>
-    </section>
 
-    <section class="section reveal" id="social-media">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Retrouvez aussi BK Entreprise sur les réseaux</h2>
-          <p style="margin: 12px 0 24px;">
-            Notre univers digital et visuel se prolonge sur TikTok, Instagram et Facebook pour partager nos réalisations, nos contenus et notre actualité.
+        <div class="card" style="background:rgba(255,255,255,.05);margin-top:20px;">
+          <div class="card__t">Par email</div>
+          <p class="card__d" style="margin-top:12px;">
+            <a href="mailto:contact@bk-entreprise.com" style="color:var(--gold-strong);font-weight:600;">contact@bk-entreprise.com</a>
           </p>
+        </div>
 
-          <div class="social-grid">
-            <a class="social-card" href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">🎵</div>
-              <h3>TikTok</h3>
-              <p>Vidéos, ambiance, visibilité et contenus dynamiques autour de BK Entreprise.</p>
-              <span>@bkentreprise7</span>
-            </a>
+        <div class="card" style="background:rgba(255,255,255,.05);margin-top:20px;">
+          <div class="card__t">Adresse</div>
+          <p class="card__d" style="margin-top:12px;">
+            Genève · Prestations sur rendez-vous
+          </p>
+        </div>
 
-            <a class="social-card" href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">📸</div>
-              <h3>Instagram</h3>
-              <p>Visuels, publications et contenus haut de gamme pour mettre en valeur notre univers et nos réalisations.</p>
-              <span>@bk_entreprise7</span>
-            </a>
-
-            <a class="social-card" href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">
-              <div class="social-icon">📘</div>
-              <h3>Facebook</h3>
-              <p>Page professionnelle, communication, publications et présence digitale autour de nos activités.</p>
-              <span>Voir la page</span>
-            </a>
+        <div class="card" style="background:rgba(255,255,255,.05);margin-top:20px;">
+          <div class="card__t">Réseaux</div>
+          <div class="ftr__soc" style="margin-top:14px;">
+            <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener">Facebook</a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container" style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <a class="card" href="portfolio.html" style="background:rgba(255,255,255,.05);margin-top:20px;display:block;">
+          <div class="card__t">Avant d'écrire</div>
+          <p class="card__d" style="margin-top:12px;">
+            Plus de 1000 créations graphiques et plusieurs réalisations à consulter — voir des exemples concrets.
+          </p>
+          <span class="link-arrow" style="margin-top:14px;">Voir le portfolio</span>
+        </a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CE QUI SE PASSE ENSUITE ===== -->
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Ce qui se passe ensuite</span>
+      <h2 class="h-lg" style="margin-top:22px;">Trois étapes, <span class="it">sans engagement</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step__n">01</div><div class="step__t">Échange</div><div class="step__d">Un appel ou un message suffit : on clarifie votre besoin, ce qui existe déjà (site, logo, réseaux) et votre échéance.</div></div>
+      <div class="step"><div class="step__n">02</div><div class="step__t">Proposition</div><div class="step__d">Une direction claire, un périmètre écrit noir sur blanc et un budget réaliste — sans engagement de votre part à ce stade.</div></div>
+      <div class="step"><div class="step__n">03</div><div class="step__t">Réalisation</div><div class="step__d">On construit par étapes, avec un point de validation avant de passer à la suivante.</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER COMMUN ===== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="images/logo.png" alt="BK Entreprise">
+        <p class="ftr__tag">Des idées aux résultats.</p>
+        <div class="ftr__soc">
+          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="ftr__contact">
+          <a href="tel:+41799349946">+41 79 934 99 46</a><br>
+          <a href="mailto:contact@bk-entreprise.com">contact@bk-entreprise.com</a><br>
+          Genève · Prestations sur rendez-vous
+        </div>
+      </div>
+
       <div>
-        <strong>BK ENTREPRISE</strong>
-        <p class="small">Création web • Communication visuelle • Réseaux sociaux • Événementiel • Conseil</p>
-
-        <div class="footer-social">
-          <a href="https://www.tiktok.com/@bkentreprise7" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/bk_entreprise7/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://facebook.com/profile.php?id=61576414298574" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
+        <h4>Expertises</h4>
+        <ul>
+          <li><a href="services-it.html">Création de sites web</a></li><li><a href="creation-application-geneve.html">Applications</a></li><li><a href="referencement-seo-geneve.html">Référencement SEO</a></li>
+          <li><a href="expertises.html#design">Design &amp; Identité</a></li>
+          <li><a href="expertises.html#communication">Communication</a></li>
+          <li><a href="services-it.html#it">IT &amp; Technologie</a></li>
+          <li><a href="automatisation-ia-geneve.html">IA &amp; Automatisation</a></li>
+          <li><a href="conseil.html">Conseil &amp; Stratégie</a></li>
+        </ul>
       </div>
 
-      <div style="display:flex; gap:18px; flex-wrap:wrap;">
-        <a href="index.html">Accueil</a>
-        <a href="services-it.html">Services IT</a>
-        <a href="evenement.html">Événementiel</a>
-        <a href="conseil.html">Conseil</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="profil.html">Profil</a>
-        <a href="contact.html">Contact</a>
+      <div>
+        <h4>Réalisations</h4>
+        <ul>
+          <li><a href="portfolio.html">Tous les projets</a></li>
+          <li><a href="evenement.html">Événementiel</a></li>
+          <li><a href="portfolio.html#identite">Identité visuelle</a></li>
+          <li><a href="portfolio.html#video">Contenus vidéo</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Workers</h4>
+        <ul>
+          <li><a href="workers.html">Les 17 Workers</a></li>
+          <li><a href="workers.html#chloe">Chloé — Agent Maître</a></li>
+          <li><a href="workers.html#mission">Créer une mission</a></li>
+          <li><a href="integrations.html">Intégrations</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="profil.html">À propos</a></li>
+          <li><a href="conseil.html">Conseil</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Accueil</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+    <nav class="ftr__legal" aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+      <a href="conditions-utilisation.html">Conditions d’utilisation</a>
+    </nav>
 
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
+    <div class="ftr__bot">
+      <span>© <span data-year>2026</span> BK Entreprise — Tous droits réservés.</span>
+      <a class="totop" href="#" aria-label="Revenir en haut">↑</a>
+    </div>
+  </div>
+</footer>
 
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.88;
-
-      revealElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < triggerBottom) {
-          el.classList.add('show');
-        }
-      });
-    };
-
-    revealOnScroll();
-    window.addEventListener('scroll', revealOnScroll);
-  </script>
-<script defer src="/_vercel/insights/script.js"></script>
-    </body>
+<script src="bk.js?v=contact-20261113-3"></script>
+</body>
 </html>

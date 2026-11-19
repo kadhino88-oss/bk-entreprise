@@ -1,0 +1,53 @@
+BK ENTREPRISE — REFONTE COMPLÈTE
+=================================
+Généré le 20 septembre 2026. RIEN N'A ÉTÉ DÉPLOYÉ.
+
+CE QUE CONTIENT CETTE ARCHIVE
+-----------------------------
+Les 11 pages HTML, le système graphique commun (bk.css / bk.js),
+les polices auto-hébergées, le SEO et les outils de maintenance.
+
+Les dossiers images/ et videos/ NE SONT PAS inclus : tu les as déjà,
+et ils ne doivent surtout pas être écrasés.
+
+INSTALLATION
+------------
+1. SAUVEGARDE d'abord ton dossier actuel (copie-le ailleurs).
+2. Extrais cette archive dans C:\Users\FEUCOM\Desktop\bk-entreprise-html
+   en remplaçant les fichiers proposés.
+3. NE SUPPRIME PAS images/ ni videos/.
+4. IMPORTANT — les 18 portraits : le dossier images/agents-clean/ de cette
+   archive contient des ronds provisoires avec des initiales. Garde TES
+   vrais portraits : si tu as déjà images/agents-clean/ dans ton dossier,
+   refuse le remplacement de ce dossier-là.
+5. Ouvre index.html dans ton navigateur et clique partout.
+
+CE QUI A ÉTÉ RETIRÉ DE LA PUBLICATION
+-------------------------------------
+Déplacés dans _prive-ne-pas-publier/ (rien n'est supprimé) :
+  - CV_Christ_Kader_Berte.pdf
+  - Lettre_de_motivation_Christ_Kader_Berte.pdf
+  - linkedin-profil-optimise.md
+  - robots.txt.txt (doublon fautif)
+Déplacés dans _ancien/ : style.css, scripte.js, stars.js (plus utilisés).
+
+À supprimer aussi de ton dossier, s'ils y sont encore :
+  README.txt, README-IMPORTANT.txt, structure-site.txt,
+  rapport-suivi-2026-09-15.md, index-ancien.html,
+  portfolio-realisation-verifiees.html,
+  BK-Entreprise-V6.zip, BK-ENTREPRISE-REPARATION-VIVANTE.zip
+
+OUTILS DE MAINTENANCE (dossier outils/)
+---------------------------------------
+  python3 outils/bk_build.py       régénère les 11 pages
+  python3 outils/bk_verifier.py    contrôle liens, images, vidéos, portraits
+
+Le header, le footer et le <head> viennent tous d'UN SEUL fichier
+(outils/bk_build.py). Modifie-les là, relance bk_build.py, et les
+11 pages restent cohérentes. C'est ce qui empêche la homepage de
+diverger des autres pages.
+
+DÉPLOIEMENT
+-----------
+Seulement après ta validation visuelle :
+  vercel --prod
