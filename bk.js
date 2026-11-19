@@ -1,6 +1,6 @@
 /* ============================================================
    BK ENTREPRISE — COMPORTEMENTS COMMUNS
-   Header réactif · menu mobile · animations au scroll · parallaxe
+   Header réactif · menu mobile · animations au scroll · devise selon le pays
    carousels · filtres · orbite Workers · constructeur de mission
    ============================================================ */
 (function () {
@@ -60,29 +60,6 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (el) { io.observe(el); });
-  }
-
-  /* ---------- 4. PARALLAXE DOUCE ---------- */
-  function parallax() {
-    var els = $$('[data-px]');
-    if (!els.length || reduced) return;
-    var raf = null;
-    var run = function () {
-      raf = null;
-      var vh = window.innerHeight;
-      els.forEach(function (el) {
-        var r = el.getBoundingClientRect();
-        if (r.bottom < -200 || r.top > vh + 200) return;
-        var speed = parseFloat(el.getAttribute('data-px')) || 0.12;
-        var offset = (r.top + r.height / 2 - vh / 2) * speed * -1;
-        el.style.transform = 'translate3d(0,' + offset.toFixed(2) + 'px,0)';
-      });
-    };
-    window.addEventListener('scroll', function () {
-      if (!raf) raf = requestAnimationFrame(run);
-    }, { passive: true });
-    window.addEventListener('resize', run, { passive: true });
-    run();
   }
 
   /* ---------- 5. CAROUSEL (flèches, molette, glisser, clavier) ---------- */
@@ -293,24 +270,37 @@
 
   /* ---------- 10. FORMULAIRE CONTACT — sujets cliquables ---------- */
   function contactChips() {
-    var wrap = $('[data-subject-chips]');
-    if (!wrap) return;
-    var hidden = $('#sujet');
-    $$('.chip', wrap).forEach(function (chip) {
-      chip.addEventListener('click', function () {
-        $$('.chip', wrap).forEach(function (c) { c.classList.toggle('is-on', c === chip); });
-        if (hidden) hidden.value = chip.textContent.trim();
+    var params = new URLSearchParams(location.search);
+    var selected = params.get('prestation');
+    if (selected) {
+      $$('input[type="radio"][name="sujet"]').forEach(function (radio) {
+        if (radio.value === selected) radio.checked = true;
       });
-    });
-  }
-
-  /* ---------- 10b. PRÉ-SÉLECTION DE L'OFFRE DEPUIS LES CTA ---------- */
-  function bkPrefillSubject() {
-    var selected = new URLSearchParams(window.location.search).get('prestation');
-    if (!selected) return;
-    $('[data-subject-chips] .chip').forEach(function (chip) {
-      if (chip.textContent.trim() === selected) chip.click();
-    });
+    }
+    var campaign = ['utm_source', 'utm_medium', 'utm_campaign'].map(function (key) {
+      var value = params.get(key);
+      return value ? key + '=' + value.replace(/[^a-zA-Z0-9_. -]/g, '').slice(0, 80) : '';
+    }).filter(Boolean).join('; ');
+    var source = $('#source-campagne');
+    if (source && campaign) source.value = campaign;
+    if (campaign) {
+      $$('a[href^="contact.html"]').forEach(function (link) {
+        var target = new URL(link.getAttribute('href'), location.href);
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (key) {
+          var value = params.get(key);
+          if (value) target.searchParams.set(key, value.replace(/[^a-zA-Z0-9_. -]/g, '').slice(0, 80));
+        });
+        link.href = target.pathname + target.search + target.hash;
+      });
+    }
+    var pack = (params.get('pack') || '').replace(/[^\wÀ-ÿ’' .,-]/g, '').slice(0, 80);
+    var packField = $('#pack-demande'), packNote = $('#pack-notice');
+    if (pack && packField) {
+      packField.value = pack;
+      if (packNote) { packNote.textContent = 'Offre sélectionnée : ' + pack; packNote.hidden = false; }
+    }
+    var page = $('#page-demande');
+    if (page) page.value = location.pathname;
   }
 
   /* ---------- 11. VIDÉO : lecture uniquement quand visible ---------- */
@@ -346,11 +336,123 @@
     $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
   }
 
+  function contactValidation() {
+    var form = $('.contact-form');
+    if (!form) return;
+    var feedback = $('#contact-feedback');
+    form.addEventListener('invalid', function () {
+      if (feedback) feedback.textContent = 'La demande n’a pas encore été envoyée. Complétez les champs obligatoires : prestation, nom, e-mail et description du projet.';
+    }, true);
+    form.addEventListener('submit', function () {
+      if (feedback) feedback.textContent = 'Ouverture de la vérification anti-spam. Terminez cette étape pour poursuivre l’envoi.';
+    });
+  }
+
+  /* ---------- 14. DEVISE SELON LE PAYS ---------- */
+  /* Le pays vient de /api/region (en-tête géographique de Vercel, non conservé).
+     Repli : région de la langue du navigateur. Par défaut : CHF.
+     Test : ?devise=EUR  ou  ?pays=FR */
+  var EURO = 'AT BE HR CY EE FI FR DE GR IE IT LV LT LU MT NL PT SK SI ES MC SM VA AD ME BG'.split(' ');
+  var OTHER = { CH: 'CHF', LI: 'CHF', GB: 'GBP', US: 'USD', CA: 'CAD', AU: 'AUD', MA: 'MAD',
+                SN: 'XOF', CI: 'XOF', BJ: 'XOF', BF: 'XOF', ML: 'XOF', NE: 'XOF', TG: 'XOF', GW: 'XOF',
+                CM: 'XAF', GA: 'XAF', CG: 'XAF', TD: 'XAF', CF: 'XAF', GQ: 'XAF' };
+  /* Tranches de budget par devise : mêmes paliers, ordre de grandeur adapté. */
+  var TIERS = { CHF: [1500, 3000, 6000], EUR: [1500, 3000, 6000], USD: [1500, 3000, 6000],
+                GBP: [1500, 3000, 6000], CAD: [2000, 4000, 8000], AUD: [2000, 4000, 8000],
+                MAD: [15000, 30000, 60000], XOF: [900000, 1800000, 3600000], XAF: [900000, 1800000, 3600000] };
+
+  function currencyFor(country) {
+    country = (country || '').toUpperCase();
+    if (EURO.indexOf(country) > -1) return 'EUR';
+    return OTHER[country] || (country ? 'USD' : 'CHF');
+  }
+  function fmt(n) { try { return n.toLocaleString('fr-FR'); } catch (e) { return String(n); } }
+
+  /* Taux indicatifs depuis le franc suisse (prix de base, hors taxes) : à valider et à mettre à jour. */
+  var RATES = { CHF: 1, EUR: 1.07, USD: 1.2, GBP: 0.92, CAD: 1.7, AUD: 1.85, MAD: 11.5, XOF: 700, XAF: 700 };
+  function roundPrice(n) {
+    var step = n < 100 ? 5 : n < 1000 ? 10 : n < 10000 ? 50 : n < 100000 ? 500 : 5000;
+    return Math.round(n / step) * step;
+  }
+
+  function applyCurrency(cur) {
+    if (!TIERS[cur]) cur = 'USD';
+    document.documentElement.setAttribute('data-currency', cur);
+    $$('[data-cur]').forEach(function (el) { el.textContent = cur; });
+    var rate = RATES[cur] || 1;
+    $$('[data-price]').forEach(function (el) {
+      var base = parseFloat(el.getAttribute('data-price'));
+      if (!isFinite(base)) return;
+      var fixed = parseFloat(el.getAttribute('data-price-' + cur.toLowerCase()));
+      el.textContent = fmt(isFinite(fixed) ? fixed : roundPrice(base * rate)) + ' ' + cur;
+    });
+    var t = TIERS[cur];
+    $$('[data-cur-tpl]').forEach(function (el) {
+      var txt = el.getAttribute('data-cur-tpl')
+        .replace(/1[\s\u00a0\u202f]?500/, fmt(t[0]))
+        .replace(/3[\s\u00a0\u202f]?000/, fmt(t[1]))
+        .replace(/6[\s\u00a0\u202f]?000/, fmt(t[2]))
+        .replace('{c}', cur);
+      if (el.tagName === 'INPUT') el.value = txt; else el.textContent = txt;
+    });
+    var hid = $('#devise-visiteur');
+    if (hid) hid.value = cur;
+  }
+
+  function currency() {
+    if (!$('[data-cur]') && !$('[data-cur-tpl]') && !$('[data-price]')) return;
+    var params = new URLSearchParams(location.search);
+    var forced = (params.get('devise') || '').toUpperCase();
+    if (forced && TIERS[forced]) { applyCurrency(forced); return; }
+    var cached = null;
+    try { cached = sessionStorage.getItem('bk-devise'); } catch (e) {}
+    if (cached && TIERS[cached]) { applyCurrency(cached); return; }
+
+    var finished = false;
+    var done = function (country) {
+      if (finished) return;
+      finished = true;
+      var cur = currencyFor(country);
+      applyCurrency(cur);
+      try { sessionStorage.setItem('bk-devise', cur); } catch (e) {}
+    };
+    var fromLang = function () {
+      var m = /[-_]([A-Za-z]{2})\b/.exec(navigator.language || '');
+      return m ? m[1] : '';
+    };
+    var pays = (params.get('pays') || '').toUpperCase();
+    if (pays) { done(pays); return; }
+    if (!window.fetch) { done(fromLang()); return; }
+    var timer = setTimeout(function () { done(fromLang()); }, 1800);
+    fetch('/api/region', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (d) { clearTimeout(timer); done((d && d.country) || fromLang()); })
+      .catch(function () { clearTimeout(timer); done(fromLang()); });
+  }
+
+  /* Pré-sélection du diagnostic ou du pack depuis les boutons du site. */
+  function bkPrefillSubject() {
+    var selected = new URLSearchParams(window.location.search).get('prestation');
+    if (!selected) return;
+    // Le formulaire actuel utilise des boutons radio, les anciennes versions des chips.
+    $$('input[type="radio"][name="sujet"]').forEach(function(el) {
+      if (el.value === selected) {
+        el.checked = true;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+    $$('[data-subject-chips] .chip').forEach(function(chip) {
+      if (chip.textContent.trim() === selected) chip.click();
+    });
+    var chosen = $('#pack-demande');
+    if (chosen) chosen.value = selected;
+  }
+
   /* ---------- INIT ---------- */
   function init() {
-    header(); mobileNav(); reveal(); parallax(); carousels();
+    header(); mobileNav(); reveal(); carousels();
     filters(); orbit(); missionBuilder(); openWorkerFromUrl();
-    contactChips(); bkPrefillSubject(); smartVideo(); anchors(); year();
+    contactChips(); bkPrefillSubject(); contactValidation(); smartVideo(); anchors(); year(); currency();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();

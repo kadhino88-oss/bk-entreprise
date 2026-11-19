@@ -1,0 +1,9 @@
+{
+ "redirects": [
+ {"source":"/index.html","destination":"/","permanent":true},
+ {"source":"/mentions-legales_4.html","destination":"/mentions-legales.html","permanent":true},
+ {"source":"/politique-de-confidentialite_4.html","destination":"/politique-de-confidentialite.html","permanent":true},
+ {"source":"/conditions-utilisation_4.html","destination":"/conditions-utilisation.html","permanent":true}
+ ],
+ "headers":[{"source":"/merci.html","headers":[{"key":"X-Robots-Tag","value":"noindex, follow"}]}]
+}
