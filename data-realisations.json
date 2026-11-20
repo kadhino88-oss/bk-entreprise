@@ -80,7 +80,6 @@
     }
   ],
   "videos": [
-    { "src": "videos/sweltr.mp4", "titre": "Sweltr — Vidéo de présentation" },
     { "src": "videos/hero-video.mp4", "titre": "Vidéo d’accueil" },
     { "src": "videos/presentation.mp4", "titre": "Présentation" },
     { "src": "videos/presentation1.mp4", "titre": "Présentation 1" },
