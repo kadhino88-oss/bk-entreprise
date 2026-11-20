@@ -306,7 +306,9 @@
   /* ---------- 11. VIDÉO : lecture uniquement quand visible ---------- */
   function smartVideo() {
     var vids = $$('video[data-auto]');
-    if (!vids.length || !('IntersectionObserver' in window)) return;
+    if (!vids.length) return;
+    if (reduced) { vids.forEach(function (v) { v.pause(); }); return; }
+    if (!('IntersectionObserver' in window)) return;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         var v = en.target;
