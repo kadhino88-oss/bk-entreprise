@@ -308,6 +308,11 @@
     var vids = $$('video[data-auto]');
     if (!vids.length) return;
     if (reduced) { vids.forEach(function (v) { v.pause(); }); return; }
+    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (connection && (connection.saveData || /^(slow-2g|2g)$/.test(connection.effectiveType || ''))) {
+      vids.forEach(function (v) { v.pause(); });
+      return;
+    }
     if (!('IntersectionObserver' in window)) return;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
