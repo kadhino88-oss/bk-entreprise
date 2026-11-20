@@ -1,3 +1,9 @@
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_prive-ne-pas-publier/
+Disallow: /_ancien/
+Disallow: /outils/
+
 User-agent: *
 Allow: /
 Disallow: /_prive-ne-pas-publier/

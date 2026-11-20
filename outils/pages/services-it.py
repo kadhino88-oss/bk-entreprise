@@ -3,9 +3,9 @@
 from bk_build import page_hero, CTA_FINAL
 
 PAGE  = "services-it.html"
-TITLE = "Création site web Genève — IT & Digital | BK Entreprise"
-DESC  = ("Création de site web à Genève, développement, maintenance, infrastructure, sécurité, "
-         "agents IA pour PME et automatisation : la partie technique de vos projets, prise en charge par BK Entreprise.")
+TITLE = "Création de site web à Genève | BK Entreprise"
+DESC  = ("Sites vitrines, boutiques et landing pages créés ou refondus à Genève pour PME, commerces et "
+         "indépendants. Projets aussi à distance en Suisse et en France.")
 OG    = "images/project6.jpg"
 
 CREATION = [
@@ -50,10 +50,11 @@ def body():
       </div>""" for i, (t, d) in enumerate(IA, 1))
 
     return page_hero(
-        eyebrow="IT &amp; Digital",
-        title_html='La technique qui rend votre projet <span class="it">solide et utile.</span>',
-        lead=("Création de sites, sites marchands, développement, maintenance, infrastructure, sécurité, IA et "
-              "automatisation : tout ce qui fait qu'un projet digital fonctionne — et continue de fonctionner."),
+        eyebrow="Création de site web · Genève",
+        title_html='Création de site web <span class="it">à Genève</span>',
+        lead=("Sites vitrines, landing pages et boutiques en ligne pour PME, commerces et indépendants. "
+              "BK Entreprise se déplace à Genève et dans les communes proches, et réalise aussi des projets "
+              "à distance en Suisse et en France."),
         cta1=("contact.html", "Parler de mon projet"),
         cta2=("#creation", "Voir les prestations ↓"),
     ) + f"""
