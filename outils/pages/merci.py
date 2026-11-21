@@ -1,54 +1,33 @@
 # -*- coding: utf-8 -*-
-"""Page Merci — confirmation après envoi du formulaire de contact."""
-from bk_build import page_hero
+"""Page Merci — confirmation après la validation du formulaire de contact."""
 
-PAGE  = "merci.html"
-TITLE = "Merci — votre demande est bien partie | BK Entreprise"
-DESC  = "Votre demande a bien été transmise à BK Entreprise. Réponse sous 24 à 48 heures ouvrées."
-OG    = "images/project5.jpg"
+PAGE = "merci.html"
+TITLE = "Merci pour votre demande | BK Entreprise"
+DESC = ("Votre demande a été transmise à BK Entreprise. Nous vous recontacterons à l’adresse "
+        "e-mail indiquée dans le formulaire.")
+OG = "images/project5.jpg"
 
 
 def body():
     return """
-<section class="sec sec--night" style="min-height:82svh;display:flex;align-items:center;padding-top:clamp(140px,15vw,200px);">
+<section class="sec sec--night" style="min-height:78svh;display:flex;align-items:center;padding-top:clamp(140px,15vw,200px);">
   <div class="halo halo--gold" style="width:620px;height:620px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
-  <div class="wrap" style="text-align:center;">
-    <div class="rv" style="width:78px;height:78px;border-radius:50%;margin:0 auto 30px;display:grid;place-items:center;
-         background:linear-gradient(135deg,var(--gold-strong),var(--gold));color:#1B1405;font-size:34px;">✓</div>
-    <span class="eyebrow rv rv-d1" style="justify-content:center;">Demande envoyée</span>
-    <h1 class="h-xl rv rv-d2" style="margin-top:22px;max-width:16ch;margin-inline:auto;">
-      Merci, c'est <span class="it">bien parti.</span>
-    </h1>
-    <p class="lead rv rv-d3" style="margin:26px auto 0;">
-      Votre message a été transmis. Vous recevrez une réponse sous 24 à 48 heures ouvrées,
-      à l'adresse que vous avez indiquée.
-    </p>
-    <div class="rv rv-d4" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:40px;">
-      <a class="btn btn--gold" href="index.html">Retour à l'accueil <span class="arr">↗</span></a>
-      <a class="btn btn--ghost" href="portfolio.html">Voir les réalisations</a>
-    </div>
-    <p class="lead rv rv-d5" style="margin:40px auto 0;font-size:14.5px;">
-      Une urgence ? <a href="tel:+41799349946" style="color:var(--gold-strong);font-weight:600;">+41 79 934 99 46</a>
-    </p>
-  </div>
-</section>
+  <div class="wrap" style="max-width:920px;text-align:center;">
+    <div class="rv" style="width:78px;height:78px;border-radius:50%;margin:0 auto 30px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-strong),var(--gold));color:#1B1405;font-size:34px;">✓</div>
+    <span class="eyebrow rv rv-d1" style="justify-content:center;">Demande transmise</span>
+    <h1 class="h-xl rv rv-d2" style="margin:22px auto 0;max-width:18ch;">Votre demande <span class="it">est bien envoyée.</span></h1>
+    <p class="lead rv rv-d3" style="margin:26px auto 0;">Merci pour votre message. BK Entreprise va prendre connaissance de votre projet et vous recontacter à l’adresse e-mail indiquée dans le formulaire.</p>
 
-<section class="sec sec--cream">
-  <div class="wrap">
-    <div class="sec-head rv" style="text-align:center;margin-inline:auto;">
-      <span class="eyebrow" style="justify-content:center;">En attendant</span>
-      <h2 class="h-md" style="margin-top:20px;">Il y a de quoi <span class="it">regarder.</span></h2>
+    <div class="steps rv rv-d4" style="margin-top:40px;text-align:left;">
+      <div class="step"><div class="step__n">01</div><div class="step__t">Nous lisons votre demande</div><div class="step__d">La prestation choisie, votre objectif et les informations transmises nous aident à comprendre votre besoin.</div></div>
+      <div class="step"><div class="step__n">02</div><div class="step__t">Nous précisons le projet</div><div class="step__d">Si nécessaire, nous vous posons quelques questions avant de préparer une proposition adaptée.</div></div>
+      <div class="step"><div class="step__n">03</div><div class="step__t">Vous décidez</div><div class="step__d">Le périmètre, le calendrier et le prix sont précisés avant tout engagement.</div></div>
     </div>
-    <div class="cards">
-      <a class="card rv" href="portfolio.html"><div class="card__i">◈</div><div class="card__t">Les réalisations</div>
-        <p class="card__d">Plus de 1000 créations graphiques et 100+ sites réalisés dans le monde.</p>
-        <span class="link-arrow" style="margin-top:16px;">Voir ↗</span></a>
-      <a class="card rv rv-d1" href="portfolio.html#grands-projets"><div class="card__i">◆</div><div class="card__t">Les grands projets</div>
-        <p class="card__d">BK-AI-WORKERS, une plateforme SaaS complète en exploitation active — et d'autres sites marchands réels.</p>
-        <span class="link-arrow" style="margin-top:16px;">Découvrir ↗</span></a>
-      <a class="card rv rv-d2" href="profil.html"><div class="card__i">★</div><div class="card__t">Le profil</div>
-        <p class="card__d">Qui est derrière BK Entreprise, et comment le projet s'est construit.</p>
-        <span class="link-arrow" style="margin-top:16px;">Lire ↗</span></a>
+
+    <p class="lead rv rv-d5" style="margin:34px auto 0;font-size:15px;">Une précision à ajouter ou une demande urgente ? Écrivez à <a href="mailto:contact@bk-entreprise.com" style="color:var(--gold-strong);font-weight:600;">contact@bk-entreprise.com</a> ou appelez le <a href="tel:+41799349946" style="color:var(--gold-strong);font-weight:600;">+41 79 934 99 46</a>.</p>
+    <div class="rv rv-d5" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px;">
+      <a class="btn btn--gold" href="portfolio.html">Découvrir nos réalisations <span class="arr">↗</span></a>
+      <a class="btn btn--ghost" href="index.html">Retour à l’accueil</a>
     </div>
   </div>
 </section>

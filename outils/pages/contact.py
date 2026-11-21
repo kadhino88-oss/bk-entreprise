@@ -1,19 +1,76 @@
 # -*- coding: utf-8 -*-
-"""Page Contact — formulaire vivant, numéro suisse officiel, aucune trace de l'ancien numéro français."""
+"""Page Contact — demandes envoyées à la boîte Gmail de BK Entreprise."""
+from html import escape
+
 from bk_build import page_hero
 
-PAGE  = "contact.html"
-TITLE = "Contact — Agence digitale à Genève | BK Entreprise"
-DESC  = ("Contactez BK Entreprise, agence digitale à Genève : création de site web, identité visuelle, "
-         "communication, IT, conseil, événementiel ou agents IA. +41 79 934 99 46 — contact@bk-entreprise.com")
-OG    = "images/project5.jpg"
+PAGE = "contact.html"
+TITLE = "Contact — Création de site web à Genève | BK Entreprise"
+DESC = ("Parlez à BK Entreprise de votre site web, refonte, application, référencement SEO, "
+        "CRO ou automatisation IA à Genève. Projets à distance en Suisse et en France.")
+OG = "images/apercu-tresorsbyninel.jpg"
 
-SUJETS = ["BK CLIENTS+", "Diagnostic gratuit", "Site web", "Design", "Communication", "IT",
-          "Conseil", "Événementiel", "IA / Automatisation", "Autre"]
+PRESTATIONS = [
+    ("BK CLIENTS+", "Site vitrine et visibilité locale"),
+    ("Diagnostic gratuit", "Échange initial de 15 minutes"),
+    ("Site web", "Création ou refonte"),
+    ("Application", "Web ou mobile"),
+    ("Référencement SEO", "Visibilité sur Google"),
+    ("IA / Automatisation", "Tâches et outils métier"),
+    ("Design", "Logo et identité visuelle"),
+    ("Communication", "Contenus et supports"),
+    ("IT", "Assistance et infrastructure"),
+    ("Conseil", "Cadrage et stratégie"),
+    ("Événementiel", "Communication événementielle"),
+    ("Autre", "À préciser ensemble"),
+]
+
+BUDGETS = [
+    ("À définir ensemble", ""),
+    ("Moins de 1 500 CHF", ""),
+    ("1 500 à 3 000 CHF", ""),
+    ("3 000 à 6 000 CHF", ""),
+    ("Plus de 6 000 CHF", ""),
+]
+
+ORIGINES = [
+    ("Recherche Google", ""),
+    ("Google Maps", ""),
+    ("Recommandation", ""),
+    ("Instagram / Facebook / TikTok", ""),
+    ("Chat ou moteur IA", ""),
+    ("Autre", ""),
+]
+
+
+def radio_cards(name, prefix, choices, required=False, currency=False):
+    cards = []
+    for index, (label, detail) in enumerate(choices):
+        field_id = f"{prefix}-{index}"
+        value = escape(label, quote=True)
+        visible = escape(label)
+        required_attr = " required" if required else ""
+        input_currency_attr = ""
+        text_currency_attr = ""
+        if currency and "CHF" in label:
+            template = escape(label.replace("CHF", "{c}"), quote=True)
+            input_currency_attr = f' data-cur-tpl="{template}"'
+            text_currency_attr = f' data-cur-tpl="{template}"'
+        subline = f"<small>{escape(detail)}</small>" if detail else ""
+        cards.append(
+            f'<label class="contact-option" for="{field_id}">'
+            f'<input type="radio" id="{field_id}" name="{name}" value="{value}"'
+            f'{required_attr}{input_currency_attr}>'
+            f'<span><strong{text_currency_attr}>{visible}</strong>{subline}</span>'
+            "</label>"
+        )
+    return "".join(cards)
 
 
 def body():
-    chips = "".join('<button type="button" class="chip">%s</button>' % s for s in SUJETS)
+    prestation_cards = radio_cards("sujet", "sujet", PRESTATIONS, required=True)
+    budget_cards = radio_cards("budget", "budget", BUDGETS, currency=True)
+    origin_cards = radio_cards("origine_declaree", "origine_declaree", ORIGINES)
 
     return page_hero(
         eyebrow="Parlons-en",
@@ -25,28 +82,50 @@ def body():
     ) + f"""
 <!-- ===== FORMULAIRE ===== -->
 <section class="sec sec--night" id="formulaire" style="padding-top:clamp(56px,6vw,88px);">
-  <div class="halo halo--gold" style="width:560px;height:560px;bottom:-220px;right:-180px;"></div>
   <div class="wrap">
     <div class="split split--wide" style="align-items:start;">
-
-      <form class="rv" method="POST" action="https://formsubmit.co/contact@bk-entreprise.com">
+      <form class="rv contact-form" method="POST" action="https://formsubmit.co/bkentreprise88@gmail.com">
         <input type="hidden" name="_next" value="https://www.bk-entreprise.com/merci.html">
         <input type="hidden" name="_subject" value="Nouvelle demande depuis bk-entreprise.com">
+        <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <input type="hidden" name="sujet" id="sujet" value="">
 
-        <span class="eyebrow">Votre projet porte sur</span>
-        <div class="chips" data-subject-chips style="margin:16px 0 34px;">{chips}</div>
+        <fieldset class="contact-choices" id="prestations">
+          <legend>1. Quelle prestation vous intéresse ? *</legend>
+          <div class="contact-options">{prestation_cards}</div>
+        </fieldset>
+        <p id="pack-notice" class="contact-required" style="color:var(--gold-strong);font-weight:500;" hidden></p>
+
+        <fieldset class="contact-choices">
+          <legend>2. Quel budget envisagez-vous ? (facultatif)</legend>
+          <p class="contact-required" style="margin:-8px 0 16px;">
+            <a href="tarifs.html" style="color:var(--gold-strong);text-decoration:underline;text-underline-offset:3px;">Consulter la grille tarifaire</a>
+          </p>
+          <div class="contact-options">{budget_cards}</div>
+        </fieldset>
+        <label class="field contact-budget">
+          <span>Ou indiquez votre montant en <span data-cur>CHF</span> (facultatif)</span>
+          <input type="number" name="budget_libre" min="0" step="1" inputmode="numeric" placeholder="Ex. 2500">
+          <small>Une indication pour cadrer le projet, pas un engagement.</small>
+        </label>
+
+        <fieldset class="contact-choices">
+          <legend>3. Comment nous avez-vous connu ? (facultatif)</legend>
+          <div class="contact-options">{origin_cards}</div>
+        </fieldset>
+
+        <h2 class="h-md contact-details-title">4. Votre projet et vos coordonnées</h2>
+        <p class="contact-required">* Champs obligatoires : prestation, nom, e-mail et description du projet.</p>
 
         <label class="field">
-          <span>Nom et prénom</span>
+          <span>Nom et prénom *</span>
           <input type="text" name="nom" required autocomplete="name" placeholder="Votre nom">
         </label>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div class="contact-row">
           <label class="field">
-            <span>Email</span>
+            <span>E-mail *</span>
             <input type="email" name="email" required autocomplete="email" placeholder="vous@exemple.com">
           </label>
           <label class="field">
@@ -56,21 +135,32 @@ def body():
         </div>
 
         <label class="field">
-          <span>Votre activité <em style="text-transform:none;letter-spacing:0;opacity:.6;">(facultatif)</em></span>
-          <input type="text" name="activite" placeholder="Restaurant, commerce, association…">
+          <span>Votre activité et votre ville ou pays <em style="text-transform:none;letter-spacing:0;opacity:.6;">(facultatif)</em></span>
+          <input type="text" name="activite" placeholder="Ex. boutique à Genève, entreprise à Lyon…">
         </label>
 
         <label class="field">
-          <span>Décrivez votre projet</span>
-          <textarea name="message" required
-            placeholder="Votre objectif, ce qui existe déjà (site, logo, réseaux), et votre échéance si vous en avez une."></textarea>
+          <span>Décrivez votre projet *</span>
+          <textarea name="message" required placeholder="Votre objectif, ce qui existe déjà (site, logo, réseaux), et votre échéance si vous en avez une."></textarea>
         </label>
 
+        <label class="field">
+          <span>Votre site actuel (facultatif)</span>
+          <input type="url" name="site_actuel" placeholder="https://votre-site.ch" autocomplete="url">
+        </label>
+
+        <input type="hidden" name="devise" id="devise-visiteur" value="CHF">
+        <input type="hidden" name="offre_choisie" id="pack-demande" value="">
+        <input type="hidden" name="page_demande" id="page-demande" value="contact.html">
+        <input type="hidden" name="source_campagne" id="source-campagne" value="directe ou non renseignée">
+
+        <p style="margin:16px 0;">Après l’envoi, terminez la vérification anti-spam pour transmettre votre demande. En cas de difficulté, <a href="mailto:contact@bk-entreprise.com">écrivez-nous directement</a> ou appelez le <a href="tel:+41799349946">+41 79 934 99 46</a>.</p>
+        <p id="contact-feedback" role="status" aria-live="polite" style="margin:16px 0;color:#f2cd7d"></p>
         <button class="btn btn--gold" type="submit" style="width:100%;justify-content:center;">
-          Envoyer ma demande <span class="arr">↗</span>
+          Demander ma proposition <span class="arr">↗</span>
         </button>
         <p style="margin-top:16px;font-size:13px;color:var(--tx-inv-muted);">
-          Vos informations servent uniquement à répondre à votre demande.
+          Vos informations et l’origine déclarée de votre demande servent à traiter votre projet et comprendre comment vous nous avez trouvé. <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.
         </p>
       </form>
 
@@ -93,10 +183,8 @@ def body():
 
         <div class="card" style="background:rgba(255,255,255,.05);margin-top:20px;">
           <div class="card__i">◎</div>
-          <div class="card__t">Adresse</div>
-          <p class="card__d" style="margin-top:12px;">
-            Genève et Haute-Savoie · prestations à distance ou sur rendez-vous
-          </p>
+          <div class="card__t">Zone d’intervention</div>
+          <p class="card__d" style="margin-top:12px;">Genève et communes voisines chez les clients · prestations numériques à distance en Suisse et en France.</p>
         </div>
 
         <div class="card" style="background:rgba(255,255,255,.05);margin-top:20px;">
@@ -111,14 +199,11 @@ def body():
 
         <a class="card" href="portfolio.html" style="background:rgba(255,255,255,.05);margin-top:20px;display:block;">
           <div class="card__i">◎</div>
-          <div class="card__t">Avant d'écrire</div>
-          <p class="card__d" style="margin-top:12px;">
-            Des exemples concrets de design et des projets web à découvrir — voir des exemples concrets.
-          </p>
+          <div class="card__t">Avant d’écrire</div>
+          <p class="card__d" style="margin-top:12px;">Découvrez des exemples de sites, de design et de projets réalisés.</p>
           <span class="link-arrow" style="margin-top:14px;">Voir le portfolio ↗</span>
         </a>
       </aside>
-
     </div>
   </div>
 </section>
@@ -131,8 +216,8 @@ def body():
       <h2 class="h-lg" style="margin-top:22px;">Trois étapes, <span class="it">sans engagement.</span></h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="step__n">01</div><div class="step__t">Échange</div><div class="step__d">Un appel ou un message suffit : on clarifie votre besoin, ce qui existe déjà (site, logo, réseaux) et votre échéance.</div></div>
-      <div class="step"><div class="step__n">02</div><div class="step__t">Proposition</div><div class="step__d">Une direction claire, un périmètre écrit noir sur blanc et un budget réaliste — sans engagement de votre part à ce stade.</div></div>
+      <div class="step"><div class="step__n">01</div><div class="step__t">Échange</div><div class="step__d">Un appel ou un message suffit : on clarifie votre besoin, ce qui existe déjà et votre échéance.</div></div>
+      <div class="step"><div class="step__n">02</div><div class="step__t">Proposition</div><div class="step__d">Une direction claire, un périmètre écrit et un budget réaliste, sans engagement à ce stade.</div></div>
       <div class="step"><div class="step__n">03</div><div class="step__t">Réalisation</div><div class="step__d">On construit par étapes, avec un point de validation avant de passer à la suivante.</div></div>
     </div>
   </div>

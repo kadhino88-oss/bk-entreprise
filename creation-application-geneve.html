@@ -13,7 +13,7 @@
 <meta property="og:description" content="Applications web et mobiles et outils métier pour PME à Genève. Cadrage, prototype, développement et suivi, aussi à distance en Suisse et en France.">
 <meta property="og:url" content="https://www.bk-entreprise.com/creation-application-geneve.html">
 <meta property="og:image" content="https://www.bk-entreprise.com/images/apercu-tresorsbyninel.jpg">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:locale" content="fr_CH">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="images/logo.png">
@@ -24,21 +24,44 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "BK Entreprise",
-  "image": "https://www.bk-entreprise.com/images/logo.png",
-  "logo": "https://www.bk-entreprise.com/images/logo.png",
-  "url": "https://www.bk-entreprise.com/",
-  "telephone": "+41799349946",
-  "email": "contact@bk-entreprise.com",
-  "areaServed": ["Genève et environs (interventions chez les clients)", "Suisse (prestations numériques à distance)", "France (prestations numériques à distance)"],
-  "sameAs": [
-    "https://www.instagram.com/bk_entreprise7/",
-    "https://www.tiktok.com/@bkentreprise7",
-    "https://www.facebook.com/profile.php?id=61576414298574"
-  ],
-  "description": "BK Entreprise, agence digitale à Genève : création et refonte de sites web et de landing pages, applications web et mobiles, référencement SEO, optimisation de conversion (CRO) et automatisation IA. Interventions en personne à Genève et dans les environs ; accompagnement numérique à distance en Suisse et en France.",
-  "priceRange": "$$"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.bk-entreprise.com/#organization",
+      "name": "BK Entreprise",
+      "url": "https://www.bk-entreprise.com/",
+      "logo": "https://www.bk-entreprise.com/images/logo.png",
+      "telephone": "+41799349946",
+      "email": "contact@bk-entreprise.com",
+      "sameAs": [
+        "https://www.instagram.com/bk_entreprise7/",
+        "https://www.tiktok.com/@bkentreprise7",
+        "https://www.facebook.com/profile.php?id=61576414298574"
+      ],
+      "areaServed": [
+        "Genève et communes voisines (interventions en personne chez les clients)",
+        "Suisse (prestations numériques à distance)",
+        "France (prestations numériques à distance)"
+      ],
+      "description": "BK Entreprise, agence digitale à Genève : création et refonte de sites web et de landing pages, applications web et mobiles, référencement SEO, optimisation de conversion (CRO) et automatisation IA. Interventions en personne à Genève et dans les environs ; accompagnement numérique à distance en Suisse et en France."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.bk-entreprise.com/creation-application-geneve.html#service",
+      "name": "Création d’applications à Genève",
+      "serviceType": "Développement d’applications web et mobiles et d’outils métier",
+      "description": "Applications web et mobiles et outils métier pour PME à Genève. Cadrage, prototype, développement et suivi, aussi à distance en Suisse et en France.",
+      "url": "https://www.bk-entreprise.com/creation-application-geneve.html",
+      "provider": {
+        "@id": "https://www.bk-entreprise.com/#organization"
+      },
+      "areaServed": [
+        "Genève et communes voisines (interventions en personne chez les clients)",
+        "Suisse (prestations numériques à distance)",
+        "France (prestations numériques à distance)"
+      ]
+    }
+  ]
 }
 </script>
 </head>

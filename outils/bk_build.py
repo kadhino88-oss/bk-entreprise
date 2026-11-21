@@ -32,33 +32,75 @@ NAV_TOP = [n for n in NAV if n[0] not in ("index.html", "contact.html", "profil.
 
 NOINDEX = {"merci.html"}   # pages de confirmation : utiles au visiteur, pas à Google
 
-# Données réelles de l'entreprise (identiques au footer) — utilisées pour le
-# balisage Schema.org / LocalBusiness, un signal de référencement local pour Google.
-JSONLD = """<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "BK Entreprise",
-  "image": "https://www.bk-entreprise.com/images/logo.png",
-  "logo": "https://www.bk-entreprise.com/images/logo.png",
-  "url": "https://www.bk-entreprise.com/",
-  "telephone": "+41799349946",
-  "email": "contact@bk-entreprise.com",
-  "priceRange": "$$",
-"areaServed": ["Genève", "Suisse romande", "Haute-Savoie"],
-  "sameAs": [
-    "https://www.instagram.com/bk_entreprise7/",
-    "https://www.tiktok.com/@bkentreprise7",
-    "https://www.facebook.com/profile.php?id=61576414298574"
-  ],
-  "description": "Agence digitale et créative à Genève : sites web, identités visuelles, communication, IT et agents IA pour commerces, restaurants, marques et associations."
+# Entité de l'organisation sans adresse publique : BK Entreprise intervient chez les clients
+# et n'accueille pas de visiteurs à son adresse. Suisse et France : prestations à distance.
+ORGANIZATION = {
+    "@type": "Organization",
+    "@id": "https://www.bk-entreprise.com/#organization",
+    "name": "BK Entreprise",
+    "url": "https://www.bk-entreprise.com/",
+    "logo": "https://www.bk-entreprise.com/images/logo.png",
+    "telephone": "+41799349946",
+    "email": "contact@bk-entreprise.com",
+    "sameAs": [
+        "https://www.instagram.com/bk_entreprise7/",
+        "https://www.tiktok.com/@bkentreprise7",
+        "https://www.facebook.com/profile.php?id=61576414298574",
+    ],
+    "areaServed": [
+        "Genève et communes voisines (interventions en personne chez les clients)",
+        "Suisse (prestations numériques à distance)",
+        "France (prestations numériques à distance)",
+    ],
+    "description": "BK Entreprise, agence digitale à Genève : création et refonte de sites web et de landing pages, applications web et mobiles, référencement SEO, optimisation de conversion (CRO) et automatisation IA. Interventions en personne à Genève et dans les environs ; accompagnement numérique à distance en Suisse et en France.",
 }
-</script>"""
+
+SERVICE_SCHEMA = {
+    "services-it.html": (
+        "Création et refonte de sites web à Genève",
+        "Création de sites web, refonte, landing pages et boutiques en ligne",
+    ),
+    "referencement-seo-geneve.html": (
+        "Référencement SEO à Genève",
+        "Référencement naturel (SEO) pour PME",
+    ),
+    "automatisation-ia-geneve.html": (
+        "Automatisation IA à Genève pour PME",
+        "Automatisation de processus et intégration IA",
+    ),
+    "creation-application-geneve.html": (
+        "Création d’applications à Genève",
+        "Développement d’applications web et mobiles et d’outils métier",
+    ),
+}
+
+
+def structured_data(page, desc):
+    """Génère l'entité de l'organisation et, sur les pages offres, le service concerné."""
+    graph = [ORGANIZATION]
+    if page in SERVICE_SCHEMA:
+        name, service_type = SERVICE_SCHEMA[page]
+        graph.append({
+            "@type": "Service",
+            "@id": f"https://www.bk-entreprise.com/{page}#service",
+            "name": name,
+            "serviceType": service_type,
+            "description": desc,
+            "url": f"https://www.bk-entreprise.com/{page}",
+            "provider": {"@id": ORGANIZATION["@id"]},
+            "areaServed": ORGANIZATION["areaServed"],
+        })
+    schema = {"@context": "https://schema.org"}
+    if len(graph) == 1:
+        schema.update(ORGANIZATION)
+    else:
+        schema["@graph"] = graph
+    return '<script type="application/ld+json">\n' + json.dumps(schema, ensure_ascii=False, indent=2) + '\n</script>'
 
 
 def head(page, title, desc, og_image="images/project5.jpg"):
     robots = '\n<meta name="robots" content="noindex, follow">' if page in NOINDEX else ""
-    jsonld = "" if page in NOINDEX else f"\n{JSONLD}"
+    jsonld = "" if page in NOINDEX else "\n" + structured_data(page, desc)
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -76,7 +118,7 @@ def head(page, title, desc, og_image="images/project5.jpg"):
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="https://www.bk-entreprise.com/{page}">
 <meta property="og:image" content="https://www.bk-entreprise.com/{og_image}">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:locale" content="fr_CH">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="images/logo.png">
@@ -184,6 +226,12 @@ FOOTER = """</main>
         </ul>
       </div>
     </div>
+
+    <nav class="ftr__legal" aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+      <a href="conditions-utilisation.html">Conditions d’utilisation</a>
+    </nav>
 
     <div class="ftr__bot">
       <span>© <span data-year>2026</span> BK Entreprise — Tous droits réservés.</span>
