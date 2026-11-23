@@ -43,7 +43,7 @@ def body():
 <!-- ========== HERO ========== -->
 <section class="hero">
   <video class="hero__video" src="videos/hero-video.mp4" poster="images/hero-poster.jpg"
-         autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+         muted loop playsinline preload="none" data-auto aria-hidden="true"></video>
   <div class="hero__veil"></div>
   <div class="hero__grain"></div>
 
