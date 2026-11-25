@@ -406,7 +406,6 @@
     if (forced && TIERS[forced]) { applyCurrency(forced); return; }
     var cached = null;
     try { cached = sessionStorage.getItem('bk-devise'); } catch (e) {}
-    if (cached && TIERS[cached]) { applyCurrency(cached); return; }
 
     var finished = false;
     var done = function (country) {
@@ -422,6 +421,7 @@
     };
     var pays = (params.get('pays') || '').toUpperCase();
     if (pays) { done(pays); return; }
+    if (cached && TIERS[cached]) { applyCurrency(cached); return; }
     if (!window.fetch) { done(fromLang()); return; }
     var timer = setTimeout(function () { done(fromLang()); }, 1800);
     fetch('/api/region', { cache: 'no-store' })
