@@ -231,4 +231,5 @@ def body():
     </div>
   </div>
 </section>
+<section class="sec sec--night" id="partenariat"><div class="wrap"><span class="eyebrow">Réseau professionnel</span><h2 class="h-lg" style="margin-top:20px">Collaborer sur un <span class="it">projet commun</span></h2><p class="lead" style="margin-top:18px">Vous êtes agence, indépendant ou spécialiste du web, du design, du SEO ou de l’IA ? Présentez votre expertise et vos disponibilités.</p><div class="growth-actions"><a class="btn btn--gold" href="partenaires.html">Espace partenaires ↗</a><a class="btn btn--ghost" href="contact.html?prestation=Autre&amp;pack=Partenariat#formulaire">Proposer une collaboration</a></div></div></section>
 """ + CTA_FINAL
