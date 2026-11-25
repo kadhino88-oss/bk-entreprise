@@ -144,7 +144,7 @@ FOOTER = """</main>
       <div>
         <h4>Expertises</h4>
         <ul>
-          <li><a href="bk-clients-plus.html">BK CLIENTS+ · 1 290 CHF</a></li>
+          <li><a href="bk-clients-plus.html">BK CLIENTS+ · 1 490 CHF</a></li>
           <li><a href="services-it.html">Web &amp; Digital</a></li>
           <li><a href="expertises.html#design">Design &amp; Identité</a></li>
           <li><a href="expertises.html#communication">Communication</a></li>
@@ -184,6 +184,12 @@ FOOTER = """</main>
         </ul>
       </div>
     </div>
+
+    <nav class="ftr__legal" aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+      <a href="conditions-utilisation.html">Conditions d’utilisation</a>
+    </nav>
 
     <div class="ftr__bot">
       <span>© <span data-year>2026</span> BK Entreprise — Tous droits réservés.</span>

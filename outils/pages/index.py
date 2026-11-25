@@ -5,7 +5,7 @@ from bk_build import CTA_FINAL, realisations_diversifiees, media_class, grands_p
 
 PAGE  = "index.html"
 TITLE = "BK Entreprise | Site web & visibilité locale à Genève"
-DESC = "BK CLIENTS+ : site professionnel et visibilité locale à Genève. Offre de lancement à 1 290 CHF et diagnostic gratuit de 15 minutes."
+DESC = "BK Entreprise à Genève : sites web, SEO local et automatisation IA. Offres dès 790 CHF et diagnostic gratuit de 15 minutes."
 OG    = "images/project5.jpg"
 LIGHT_HEADER = False   # le hero vidéo est sombre : navigation en blanc
 
@@ -72,7 +72,7 @@ def body():
 </div><p style="margin-top:22px"><a class="link-arrow" href="tarifs.html">Voir les abonnements mensuels et autres prestations</a></p></div></section>
 
 <!-- OFFRE COMMERCIALE BK CLIENTS+ -->
-<section class="sec sec--cream" id="bk-clients-plus"><div class="wrap bk-plus-layout"><div><span class="eyebrow">Offre phare · BK CLIENTS+</span><h2 class="h-lg">Une présence digitale qui donne envie <span class="it">de vous contacter.</span></h2><p class="lead" style="margin-top:20px">Site vitrine jusqu'à 5 pages, textes commerciaux, SEO de départ et boutons de contact. Pour restaurants, salons, commerces et indépendants.</p><ul class="bk-plus-list"><li>Site professionnel adapté au mobile</li><li>Référencement local de départ</li><li>Appels, WhatsApp ou formulaire de devis</li><li>30 jours d'accompagnement sur le périmètre livré</li></ul><a class="btn btn--ink" href="bk-clients-plus.html">Découvrir le pack ↗</a></div><aside class="bk-plus-price"><span class="eyebrow">Pack de lancement</span><p class="bk-plus-amount">1 290 <small>CHF</small></p><p>650 CHF à la commande + 640 CHF à la livraison.</p><p>Sans abonnement obligatoire. Hébergement et domaine éventuels en supplément.</p><a class="btn btn--gold" href="contact.html?prestation=BK%20CLIENTS%2B#formulaire">Demander ce pack ↗</a></aside></div></section>
+<section class="sec sec--cream" id="bk-clients-plus"><div class="wrap bk-plus-layout"><div><span class="eyebrow">Offre phare · BUSINESS / BK CLIENTS+</span><h2 class="h-lg">Une présence digitale qui donne envie <span class="it">de vous contacter.</span></h2><p class="lead" style="margin-top:20px">Site vitrine jusqu'à 5 pages, textes commerciaux, SEO de départ et boutons de contact. Pour restaurants, salons, commerces et indépendants.</p><ul class="bk-plus-list"><li>Site professionnel adapté au mobile</li><li>Référencement local de départ</li><li>Appels, WhatsApp ou formulaire de devis</li><li>30 jours d'accompagnement sur le périmètre livré</li></ul><a class="btn btn--ink" href="bk-clients-plus.html">Découvrir l’offre BUSINESS ↗</a></div><aside class="bk-plus-price"><span class="eyebrow">BUSINESS · prix fixe</span><p class="bk-plus-amount">1 490 <small>CHF</small></p><p>745 CHF à la commande + 745 CHF à la livraison.</p><p>Sans abonnement obligatoire. Hébergement et domaine éventuels en supplément.</p><a class="btn btn--gold" href="contact.html?prestation=BK%20CLIENTS%2B&amp;pack=BUSINESS#formulaire">Demander BUSINESS ↗</a></aside></div></section>
 
 <!-- ========== CE QUE NOUS FAISONS ========== -->
 <section class="sec sec--cream" id="faire">
