@@ -59,6 +59,7 @@ JSONLD = """<script type="application/ld+json">
 def head(page, title, desc, og_image="images/project5.jpg"):
     robots = '\n<meta name="robots" content="noindex, follow">' if page in NOINDEX else ""
     jsonld = "" if page in NOINDEX else f"\n{JSONLD}"
+    canonical_url = "https://www.bk-entreprise.com/" if page == "index.html" else f"https://www.bk-entreprise.com/{page}"
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -66,7 +67,7 @@ def head(page, title, desc, og_image="images/project5.jpg"):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">{robots}
-<link rel="canonical" href="https://www.bk-entreprise.com/{page}">
+<link rel="canonical" href="{canonical_url}">
 <meta name="geo.region" content="CH-GE">
 <meta name="geo.placename" content="Genève">
 
@@ -74,7 +75,7 @@ def head(page, title, desc, og_image="images/project5.jpg"):
 <meta property="og:site_name" content="BK Entreprise">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:url" content="https://www.bk-entreprise.com/{page}">
+<meta property="og:url" content="{canonical_url}">
 <meta property="og:image" content="https://www.bk-entreprise.com/{og_image}">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
