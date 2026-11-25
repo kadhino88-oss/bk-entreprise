@@ -10,6 +10,33 @@
   var $  = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
+  /* Mesure d'audience Vercel : statistiques de pages, sans données de formulaire.
+     On enlève les paramètres et fragments avant l'envoi pour ne pas transmettre
+     les choix de pack ou les paramètres de campagne dans l'URL mesurée. */
+  function vercelAnalytics() {
+    if (window.location.hostname !== 'www.bk-entreprise.com' ||
+        document.querySelector('[data-bk-vercel-analytics]')) return;
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+    window.va('beforeSend', function (event) {
+      try {
+        var url = new URL(event.url, window.location.origin);
+        url.search = '';
+        url.hash = '';
+        return Object.assign({}, event, { url: url.toString() });
+      } catch (e) {
+        return null;
+      }
+    });
+    var script = document.createElement('script');
+    script.src = '/_vercel/insights/script.js';
+    script.defer = true;
+    script.setAttribute('data-bk-vercel-analytics', '');
+    document.head.appendChild(script);
+  }
+  vercelAnalytics();
+
   /* ---------- 1. HEADER RÉACTIF AU SCROLL ---------- */
   function header() {
     var h = $('.hdr');
